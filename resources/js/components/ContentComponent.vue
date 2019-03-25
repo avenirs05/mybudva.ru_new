@@ -5,14 +5,11 @@
                 column
                 align-center
                 justify-center
-                class="yellow--text"
+                class="white--text"
                 >
                 <h1 class="display-1 text-xs-center">
-                    Аренда вилл и апартаментов в Черногории без посредников
+                    {{ trans('text.header_main') }}
                 </h1>
-                <div class="subheading text-xs-center">
-                    На побережье Адриатического моря
-                </div>
             </v-layout>
         </v-parallax>
         <div>
@@ -61,7 +58,7 @@
     export default {
         mounted () { },
         data: () => ({
-
+            
         })        
     }
 </script>

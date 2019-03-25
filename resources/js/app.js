@@ -24,7 +24,7 @@ import '@mdi/font/css/materialdesignicons.css'
 var Vuetify = require('vuetify');
 Vue.use(Vuetify);
 
-import 'vuetify/dist/vuetify.min.css';
+//import 'vuetify/dist/vuetify.min.css';
 
 /**
  * The following block of code may be used to automatically register your
@@ -74,6 +74,7 @@ const app = new Vue({
         ]
     }
 }).$mount('#app');
+
 
 document.getElementById('parallax').style.height = '100vh';
 

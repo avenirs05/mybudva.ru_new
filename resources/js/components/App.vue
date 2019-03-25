@@ -1,10 +1,10 @@
 <template>
     <v-app id="inspire" dark>        
         <v-navigation-drawer
+          class="hidden-md-and-up"  
           v-model="drawer"
           clipped
-          fixed
-          app 
+          fixed           
         >
             <v-list dense>
                 <v-list-tile 
@@ -30,17 +30,18 @@
             <v-toolbar-title>Application</v-toolbar-title>            
             <v-spacer></v-spacer>            
 
-            <v-toolbar-items >
-                <v-btn class="hidden-sm-and-down"                    
+            <v-toolbar-items>
+                <v-btn                 
+                    class="hidden-sm-and-down"    
+                    :class="activeClass(item.href)" 
                     active-class="v-btn--active yellow--text"
                     v-for="item in menu"
-                    :key="item.icon"
-                    flat
-                    @click="$vuetify.goTo(item.id, scrollOptions)"
-                    :to="item.id"
-                    >
+                    :key="item.title"
+                    flat                                      
+                    :href="item.href"                       
+                >
                     {{ item.title }}
-                </v-btn>
+                </v-btn>                
                 <lang :locale="locale"></lang>
             </v-toolbar-items>
         </v-toolbar>
@@ -52,28 +53,47 @@
 
 <script>
     export default { 
-        mounted () { },    
+        mounted () {
+            
+        },    
         props: ['locale'],    
         data: () => ({
             drawer: false,
             menu: [
-                { icon: 'home', title: 'Link A', id: '#main' },
-                { icon: 'screen2', title: 'Link B', id: '#screen2' },
-                { icon: 'screen3', title: 'Link C', id: '#screen3' },
-                { icon: 'screen4', title: 'Link D', id: '#screen4' },
+                { title: 'Главная', href: '/' },
+                { title: 'Виллы', href: '/villas' },
+                { title: 'Апартаменты', href: '/apartments' },
+                { title: 'Отзывы', href: '/feedbacks' },
+                { title: 'Контакты', href: '/contact' },
             ],
-            scrollOptions: {
-                duration: 1000,
-                offset: 70,
-                easing: 'easeInOutCubic'
-            },
             toggle_exclusive: 2,
-        })         
+            active_class_name: 'v-btn--active yellow--text'
+        }),
+        methods: {
+            /**
+             * Подсветка нужной кнопки меню              
+             * @param {type} href
+             * @returns {default.methods.active_class_name|String}
+             */
+            activeClass(href) {
+                let location = window.location.pathname;               
+
+                if (href !== '/') {
+                    if (location.match(href)) {
+                        return this.active_class_name;
+                    } else return '';                   
+                }  
+                
+                if (location === '/') {
+                    return this.active_class_name;
+                }
+            }
+        },
     }
 </script>
 
 
-<style scoped lang="scss">
+<style scoped>
     .v-toolbar__title:not(:first-child) {
         margin-left: 5px;
     }

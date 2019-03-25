@@ -2,6 +2,5 @@
 
 return [
 	'lang'  => 'en',
-	'greet' => 'Hello'
-
+	'header_main' => 'Rent villas and apartments in Montenegro without intermediaries'
 ];

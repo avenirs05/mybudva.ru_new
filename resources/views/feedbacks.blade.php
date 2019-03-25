@@ -19,11 +19,15 @@
 		<script src="/js/language/{{ str_replace('_', '-', app()->getLocale()) }}.js"></script> 
 			
 	</head>
-    <body>		
+    <body>	
+		
 		<div id="app">
 			<app greet="@lang('text.greet')" locale="{{ app()->getLocale() }}"></app>
-        </div>	
-        
+        </div>
+		<p>Feedbacks</p>
+		
+		
 		<script src="{{ asset('js/app.js') }}"></script>
 	</body>
 </html>
+

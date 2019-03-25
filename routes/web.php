@@ -46,3 +46,19 @@ Route::get('/js/language/{locale}.js', function () {
 	echo('window.i18n = ' . json_encode($strings) . ';');
 	exit();
 })->name('assets.lang');
+
+Route::get('/villas', function() {
+	return view('villas');
+});
+
+Route::get('/apartments', function() {
+	return view('apartments');
+});
+
+Route::get('/feedbacks', function() {
+	return view('feedbacks');
+});
+
+Route::get('/contact', function() {
+	return view('contact');
+});
