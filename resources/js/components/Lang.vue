@@ -1,7 +1,7 @@
 <template>
     <v-menu offset-y left bottom class="language-menu" attach="#toolbar">
-        <v-btn flat slot="activator">
-            <v-img contain height="24px" :src="`/img/${locale}.png`"></v-img>
+        <v-btn flat slot="activator" class="flag-btn">
+            <v-img position="center right" contain height="24px" :src="`/img/${locale}.png`" ></v-img>
         </v-btn>
 
         <v-list>
@@ -44,4 +44,14 @@
         },        
     }
 </script>
+
+<style scoped>
+    .flag-btn::before {
+        color: transparent
+    }
+
+    .flag-btn:hover {
+        color: transparent;
+    }
+</style>
 

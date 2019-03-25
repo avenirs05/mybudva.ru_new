@@ -37,7 +37,7 @@ Vue.use(Vuetify);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('content-component', require('./components/ContentComponent.vue').default);
 Vue.component('footer-component', require('./components/FooterComponent.vue').default);
 Vue.component('lang', require('./components/Lang.vue').default);
@@ -58,7 +58,6 @@ Vue.prototype.trans = string => _.get(window.i18n, string);
 const routes = [];
 
 const router = new VueRouter({
-    mode: 'history',
     routes
 });
 

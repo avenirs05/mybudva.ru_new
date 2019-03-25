@@ -6,50 +6,15 @@
                 align-center
                 justify-center
                 class="white--text"
-                >
+            >
                 <h1 class="display-1 text-xs-center">
                     {{ trans('text.header_main') }}
                 </h1>
             </v-layout>
         </v-parallax>
         <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, suscipit, dolores quo architecto excepturi quos reiciendis autem deleniti iste veniam distinctio nemo ex odio labore nisi rem temporibus impedit libero?
+
         </div>
-        <form action="/test">
-            <input type="text" name="test">
-            <input type="submit">
-        </form>
     </v-content>
 </template>
 
