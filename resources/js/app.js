@@ -38,10 +38,19 @@ Vue.use(Vuetify);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('content-component', require('./components/ContentComponent.vue').default);
-Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+Vue.component('toolbar', require('./components/Toolbar.vue').default);
+Vue.component('drawer', require('./components/Drawer.vue').default);
 Vue.component('lang', require('./components/Lang.vue').default);
-Vue.component('app', require('./components/App.vue').default);
+
+Vue.component('content-main', require('./components/content/ContentMain.vue').default);
+Vue.component('content-villas', require('./components/content/ContentVillas.vue').default);
+Vue.component('content-apartments', require('./components/content/ContentApartments.vue').default);
+Vue.component('content-feedbacks', require('./components/content/ContentFeedbacks.vue').default);
+Vue.component('content-contact', require('./components/content/ContentContact.vue').default);
+
+Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+
+
 
 
 // Localization
@@ -58,6 +67,7 @@ Vue.prototype.trans = string => _.get(window.i18n, string);
 const routes = [];
 
 const router = new VueRouter({
+    mode: 'history',
     routes
 });
 
@@ -65,13 +75,8 @@ const app = new Vue({
     el: '#app',
     router,
     data: {
-        drawer: 'Default (no property)',
-        menu: [
-            { icon: 'home', title: 'Link A' },
-            { icon: 'info', title: 'Link B' },
-            { icon: 'warning', title: 'Link C' }
-        ]
-    }
+
+    },
 }).$mount('#app');
 
 

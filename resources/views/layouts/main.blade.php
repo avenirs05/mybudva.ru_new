@@ -10,6 +10,8 @@
 
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/img/fav.ico" type="image/png">
@@ -22,9 +24,9 @@
 	</head>
 
 	<body>		
-		<div id="app">
-			<app locale="{{ app()->getLocale() }}"></app>
-		</div>	
+		<div id="app">	
+			@yield('content')
+		</div>
 
 		<script src="{{ asset('js/app.js') }}"></script>
 	</body>

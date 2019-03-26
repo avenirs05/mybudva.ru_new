@@ -12,9 +12,6 @@
                 </h1>
             </v-layout>
         </v-parallax>
-        <div>
-
-        </div>
     </v-content>
 </template>
 

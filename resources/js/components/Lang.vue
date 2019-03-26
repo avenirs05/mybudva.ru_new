@@ -47,11 +47,16 @@
 
 <style scoped>
     .flag-btn::before {
-        color: transparent
+        color: transparent;
+        padding-right: 0;
     }
 
     .flag-btn:hover {
         color: transparent;
+    }
+    
+    .flag-btn {
+        padding-right: 0;
     }
 </style>
 
