@@ -9,15 +9,15 @@
 		<title>Laravel</title>
 
 		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/img/fav.ico" type="image/png">
 
 		<!-- Styles -->
-		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+		<link rel="preload" href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 		<!-- Localization -->
 		<script src="/js/language/{{ str_replace('_', '-', app()->getLocale()) }}.js"></script> 
