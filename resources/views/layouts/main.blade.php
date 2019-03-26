@@ -9,18 +9,18 @@
 		<title>Laravel</title>
 
 		<!-- Fonts -->
-		<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<!--		<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">-->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet preload" as="style">
 
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/img/fav.ico" type="image/png">
 
 		<!-- Styles -->
-		<link rel="preload" href="{{ asset('css/app.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/app.css') }}" rel="stylesheet preload" as="style">
 
 		<!-- Localization -->
-		<script src="/js/language/{{ str_replace('_', '-', app()->getLocale()) }}.js"></script> 
+		<script src="/js/language/{{ str_replace('_', '-', app()->getLocale()) }}.js" as="script"></script> 
 	</head>
 
 	<body>		
@@ -28,7 +28,7 @@
 			@yield('content')
 		</div>
 
-		<script src="{{ asset('js/app.js') }}"></script>
+		<script src="{{ asset('js/app-min.js') }}"></script>
 	</body>
 </html>
 
