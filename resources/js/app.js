@@ -80,6 +80,6 @@ const app = new Vue({
 }).$mount('#app');
 
 
-document.getElementById('parallax').style.height = '100vh';
+document.getElementById('main-img').style.height = '94vh';
 
 

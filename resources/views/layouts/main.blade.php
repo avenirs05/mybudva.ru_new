@@ -9,8 +9,8 @@
 		<title>Laravel</title>
 
 		<!-- Fonts -->
-<!--		<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">-->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet preload" as="style">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
 
 		<!-- Favicon -->
@@ -28,7 +28,7 @@
 			@yield('content')
 		</div>
 
-		<script src="{{ asset('js/app-min.js') }}"></script>
+		<script src="{{ asset('js/app.js') }}"></script>
 	</body>
 </html>
 
