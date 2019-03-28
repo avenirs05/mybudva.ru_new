@@ -79795,8 +79795,7 @@ var app = new Vue({
   el: '#app',
   router: router,
   data: {}
-}).$mount('#app');
-document.getElementById('main-img').style.height = '94vh';
+}).$mount('#app'); //document.getElementById('main-img').style.height = '94vh';
 
 /***/ }),
 
