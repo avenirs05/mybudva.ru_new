@@ -28,13 +28,11 @@
         mounted () {},    
         data: () => {
             return {
-                language: trans('landing.lang'),
                 items: [
                     {
                         name: 'ru',
-                        title: 'Russian'
+                        title: 'Русский'
                     },
-
                     {
                         name: 'en',
                         title: 'English'
@@ -50,7 +48,6 @@
         color: transparent;
         padding-right: 0;
     }
-
     .flag-btn:hover {
         color: transparent;
     }
@@ -59,4 +56,3 @@
         padding-right: 0;
     }
 </style>
-

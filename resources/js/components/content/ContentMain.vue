@@ -34,9 +34,7 @@
                     </v-flex>
                 </v-layout>
             </v-container>
-        </v-img>     
-        
-
+        </v-img> 
         <div>
             <p>test</p>
             <p>test</p>
@@ -76,8 +74,7 @@
 </script>
 
 <style scoped>
-/*    В файл app.js добавлен код:
-    document.getElementById('main-img').style.height = '100vh';*/
+/* В файл app.js добавлена функция vh() */
 
     .contacts-mob {
         display: flex;
@@ -87,7 +84,7 @@
 
     .contacts-mob .v-list__tile__title.tel-text {
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .contacts-mob .v-list__tile__avatar {

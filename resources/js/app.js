@@ -5,6 +5,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
 require('./bootstrap');
 
 /*
@@ -80,6 +81,16 @@ const app = new Vue({
 }).$mount('#app');
 
 
-//document.getElementById('main-img').style.height = '94vh';
+function vh() {
+    let el = document.getElementById('main-img');
+
+    if (screen.width >= 960 && el != null) {
+        document.getElementById('main-img').style.height = '94vh';
+    }  
+}
+
+vh();
+
+
 
 

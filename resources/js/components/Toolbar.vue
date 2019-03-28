@@ -34,7 +34,7 @@
                 :key="item.title"
                 flat                                      
                 :href="item.href"                       
-            >
+                >
                 {{ item.title }}
             </v-btn> 
             <lang :locale="locale"></lang>
@@ -46,16 +46,17 @@
 <script>
     export default {   
         mounted () {
+            console.log(trans('menu3'));
         },    
         props: ['locale'],    
         data: () => ({
             drawer: false,
             menu: [
-                { title: 'Главная', href: '/' },
-                { title: 'Виллы', href: '/villas' },
-                { title: 'Апартаменты', href: '/apartments' },
-                { title: 'Отзывы', href: '/feedbacks' },
-                { title: 'Контакты', href: '/contact' },
+                { title: trans('text.menu.home'), href: '/' },
+                { title: trans('text.menu.villas'), href: '/villas' },
+                { title: trans('text.menu.apartments'), href: '/apartments' },
+                { title: trans('text.menu.feedbacks'), href: '/feedbacks' },
+                { title: trans('text.menu.contact'), href: '/contact' },
             ],
             toggle_exclusive: 2,
             active_class_name: 'v-btn--active yellow--text'
@@ -99,9 +100,6 @@
 
 
 <style>
-/*    .v-toolbar__title:not(:first-child) {
-        margin-left: 5px;
-    }*/
     .v-btn.btn-menu-desktop {
         text-transform: none;
         font-family: 'Open Sans Condensed', sans-serif;
