@@ -1,7 +1,7 @@
 <template>
-    <v-toolbar app fixed clipped-left id="toolbar">
+    <v-toolbar app dark fixed clipped-left id="toolbar">
         <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="changeDrawer"></v-toolbar-side-icon>
-        <v-toolbar-side-icon class="logo">
+        <v-toolbar-side-icon class="logo" href="/">
             <img src="/img/logo.png" :height="logoHeight">
         </v-toolbar-side-icon> 
         
@@ -46,7 +46,7 @@
 <script>
     export default {   
         mounted () {
-            console.log(trans('menu3'));
+            
         },    
         props: ['locale'],    
         data: () => ({
@@ -108,6 +108,7 @@
     
     .v-btn--icon.logo {
         width: auto;
+        pointer-events: none;
     }
     
     .v-toolbar__content .v-btn--icon {

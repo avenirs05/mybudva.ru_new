@@ -4,7 +4,8 @@
         class="hidden-md-and-up"  
         v-model="drawer"
         clipped
-        fixed           
+        fixed  
+        dark
         >
         <v-list dense>
             <v-list-tile 
@@ -63,5 +64,7 @@
 
 
 <style scoped>
-
+    .v-list__tile__title {
+        font-size: 18px;
+    }
 </style>

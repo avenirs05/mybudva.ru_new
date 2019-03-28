@@ -1,5 +1,5 @@
 <template>
-    <v-footer>
-        <span>&copy; 2017</span>
+    <v-footer dark>
+        <span class="text-xs-center">&copy; 2015</span>
     </v-footer>
 </template>

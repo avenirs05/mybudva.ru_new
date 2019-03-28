@@ -11,14 +11,11 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+//Route::get('/test', "TestController");
 
-Route::get('/test', "TestController");
-
-Route::get('/', "SiteController");
-
+/**
+ * Определение языка и установка его в сессию
+ */
 Route::get('locale/{locale}', function($locale) {
 	Session::put('locale', $locale);
 	return redirect()->back();
@@ -47,18 +44,14 @@ Route::get('/js/language/{locale}.js', function () {
 	exit();
 })->name('assets.lang');
 
-Route::get('/villas', function() {
-	return view('villas');
-});
 
-Route::get('/apartments', function() {
-	return view('apartments');
-});
 
-Route::get('/feedbacks', function() {
-	return view('feedbacks');
-});
+Route::get('/', 'IndexController');
 
-Route::get('/contact', function() {
-	return view('contact');
-});
+Route::get('/villas', 'VillasController');
+
+Route::get('/apartments', 'ApartmentsController');
+
+Route::get('/feedbacks', 'FeedbacksController');
+
+Route::get('/contact', 'ContactController');
