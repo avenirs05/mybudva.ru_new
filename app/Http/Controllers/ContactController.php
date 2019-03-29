@@ -15,5 +15,4 @@ class ContactController extends Controller
 
 		return view('contact', $data);
 	}
-
 }

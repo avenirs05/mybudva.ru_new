@@ -48,9 +48,9 @@ Route::get('/js/language/{locale}.js', function () {
 
 Route::get('/', 'IndexController');
 
-Route::get('/villas', 'VillasController');
+Route::get('/villas', 'RealtiesController');
 
-Route::get('/apartments', 'ApartmentsController');
+Route::get('/apartments', 'RealtiesController');
 
 Route::get('/feedbacks', 'FeedbacksController');
 

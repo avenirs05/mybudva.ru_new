@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Lang;
+
 //use Illuminate\Http\Request;
 
-class VillasController extends Controller
+class RealtiesController extends Controller
 {
     public function __invoke() 
 	{
 		$data = [
-			'title' => Lang::get('text.title_tag.villas')
+			'title' => Lang::get('text.title_tag.apartments')
 		];
 
-		return view('villas', $data);
-	}	
+		return view('realties', $data);
+	}
 }

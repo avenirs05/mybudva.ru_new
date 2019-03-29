@@ -1,5 +1,5 @@
 <template>
-    <v-menu offset-y left bottom class="language-menu" attach="#toolbar">
+    <v-menu dark offset-y left bottom class="language-menu" attach="#toolbar">
         <v-btn flat slot="activator" class="flag-btn">
             <v-img position="center right" contain height="24px" :src="`/img/${locale}.png`" ></v-img>
         </v-btn>
@@ -24,8 +24,7 @@
 
 <script>
     export default {
-        props: ['locale'],
-        mounted () {},    
+        props: ['locale'],   
         data: () => {
             return {
                 items: [
@@ -36,12 +35,13 @@
                     {
                         name: 'en',
                         title: 'English'
-                    },
+                    }
                 ]
             }
-        },        
+        }        
     }
 </script>
+
 
 <style scoped>
     .flag-btn::before {
@@ -54,5 +54,6 @@
     
     .flag-btn {
         padding-right: 0;
-    }
+        outline: none;
+    }    
 </style>

@@ -23,9 +23,9 @@
     </v-navigation-drawer>
 </template>
 
+
 <script>
     export default {
-        props: ['locale'],
         data: () => ({
                 drawer: false,
                 menu: [
@@ -33,7 +33,7 @@
                     { title: trans('text.menu.villas'), href: '/villas' },
                     { title: trans('text.menu.apartments'), href: '/apartments' },
                     { title: trans('text.menu.feedbacks'), href: '/feedbacks' },
-                    { title: trans('text.menu.contact'), href: '/contact' },
+                    { title: trans('text.menu.contact'), href: '/contact' }
                 ],
                 toggle_exclusive: 2,
                 active_class_name: 'v-btn--active yellow--text'
@@ -58,7 +58,7 @@
                     return this.active_class_name;
                 }
             }
-        },
+        }
     }
 </script>
 

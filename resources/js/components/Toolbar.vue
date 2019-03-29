@@ -1,28 +1,13 @@
 <template>
     <v-toolbar app dark fixed clipped-left id="toolbar">
         <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="changeDrawer"></v-toolbar-side-icon>
+        
         <v-toolbar-side-icon class="logo" href="/">
             <img src="/img/logo.png" :height="logoHeight">
         </v-toolbar-side-icon> 
         
-        <v-list-tile class="contacts-desk hidden-sm-and-down grow">
-            <v-list-tile-avatar size="25" color="grey darken-3">
-                <v-img
-                    class="elevation-6"
-                    src="/img/whatsapp.svg"
-                    ></v-img>
-            </v-list-tile-avatar>
-            <v-list-tile-avatar size="25" color="grey darken-3">
-                <v-img
-                    class="elevation-6"
-                    src="/img/viber.png"
-                    ></v-img>
-            </v-list-tile-avatar>
-            <v-list-tile-content>
-                <v-list-tile-title class="tel-text">+382 68 089 888</v-list-tile-title>
-            </v-list-tile-content>
-        </v-list-tile>
-            
+        <connect-desk></connect-desk>
+        
         <v-spacer></v-spacer>            
 
         <v-toolbar-items>
@@ -43,11 +28,15 @@
     </v-toolbar>       
 </template>
 
+
 <script>
+    import ConnectDesk from './ConnectDesk.vue';
+    
     export default {   
-        mounted () {
-            
-        },    
+        mounted () {}, 
+        components: {
+            ConnectDesk
+        },
         props: ['locale'],    
         data: () => ({
             drawer: false,
@@ -117,24 +106,6 @@
     
     .logo:hover {
         background-color: black;
-    }
-    
-    .contacts-desk .v-list__tile {
-        padding-left: 24px;
-    }
-    
-    .contacts-desk .v-list__tile__title.tel-text {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 24px;
-    }
-    
-    .contacts-desk .v-list__tile__avatar {
-        min-width: 25px;
-    }
-    
-    .contacts-desk .v-list__tile__avatar .v-avatar {
-        margin-right: 8px;
-    }
-
+    } 
 </style>
 

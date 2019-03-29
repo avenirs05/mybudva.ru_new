@@ -25,7 +25,7 @@ import '@mdi/font/css/materialdesignicons.css'
 var Vuetify = require('vuetify');
 Vue.use(Vuetify);
 
-//import 'vuetify/dist/vuetify.min.css';
+import 'vuetify/dist/vuetify.min.css';
 
 /**
  * The following block of code may be used to automatically register your
@@ -44,8 +44,7 @@ Vue.component('drawer', require('./components/Drawer.vue').default);
 Vue.component('lang', require('./components/Lang.vue').default);
 
 Vue.component('content-main', require('./components/content/ContentMain.vue').default);
-Vue.component('content-villas', require('./components/content/ContentVillas.vue').default);
-Vue.component('content-apartments', require('./components/content/ContentApartments.vue').default);
+Vue.component('content-realties', require('./components/content/ContentRealties.vue').default);
 Vue.component('content-feedbacks', require('./components/content/ContentFeedbacks.vue').default);
 Vue.component('content-contact', require('./components/content/ContentContact.vue').default);
 
@@ -75,16 +74,14 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     router,
-    data: {
-
-    },
+    data: {}
 }).$mount('#app');
 
 
 function vh() {
     let el = document.getElementById('main-img');
 
-    if (screen.width >= 960 && el != null) {
+    if (screen.width >= 960 && el !== null) {
         document.getElementById('main-img').style.height = '94vh';
     }  
 }

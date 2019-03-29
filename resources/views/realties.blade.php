@@ -4,7 +4,7 @@
 	<v-app id="inspire">
 		<drawer></drawer>
 		<toolbar locale="{{ app()->getLocale() }}"></toolbar>
-		<content-villas></content-villas>
+		<content-realties></content-realties>
 		<footer-component></footer-component>
 	</v-app>
 @endsection
