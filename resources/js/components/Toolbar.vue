@@ -88,7 +88,7 @@
 </script>
 
 
-<style>
+<style scoped>
     .v-btn.btn-menu-desktop {
         text-transform: none;
         font-family: 'Open Sans Condensed', sans-serif;
