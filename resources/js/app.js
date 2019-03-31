@@ -15,7 +15,6 @@ import { vh } from "./script.js";
  */
 window.lightgallery = require('lightgallery');
 require('lg-thumbnail');
-require('lg-zoom');
 import 'lightgallery/dist/css/lightgallery.min.css';
 import 'lightgallery/dist/css/lg-transitions.min.css';
 
@@ -93,7 +92,10 @@ $(document).ready(function() {
     $('#lightgallery').lightGallery({
         thumbnail: true,
         animateThumb: true,
-        thumbMargin: 2
+        thumbMargin: 2,        
+        download: false,
+        enableTouch: true,
+        cssEasing: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)'
     }); 
     
 

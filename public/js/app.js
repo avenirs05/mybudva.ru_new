@@ -3771,6 +3771,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {},
   data: function data() {
@@ -3789,6 +3801,27 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13157,7 +13190,7 @@ exports.push([module.i, "\n.flag-btn[data-v-436361d9]::before {\n    color: tran
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n#lightgallery img[data-v-5354646f] {\n    width: 65px;\n    height: 43px;\n    margin-right: -2px;\n    margin-top: -5px;\n}\n.v-card[data-v-5354646f] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.table[data-v-5354646f] {\n    font-size: 16px;\n    width: 100%;\n    max-width: 100%;\n    border: 1px solid #ddd;\n    border-collapse: collapse;\n}\ntable tr[data-v-5354646f] {\n    border: 1px solid #ddd;\n    text-align: left;\n}\ntable td[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n    color: green;\n    font-weight: bold;\n}\ntable th[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n.price-in-max-card-desk[data-v-5354646f] {\n    list-style-type: none;\n    -webkit-padding-start: 0;\n            padding-inline-start: 0;\n}\n.description[data-v-5354646f] {\n    font-size: 16px;\n}\n", ""]);
+exports.push([module.i, "\n#lightgallery img[data-v-5354646f] {\n    width: 65px;\n    height: 43px;\n    margin-right: -2px;\n    margin-top: -5px;\n}\n.v-card[data-v-5354646f] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.table[data-v-5354646f] {\n    font-size: 16px;\n    width: 100%;\n    max-width: 100%;\n    border: 1px solid #ddd;\n    border-collapse: collapse;\n}\ntable tr[data-v-5354646f] {\n    border: 1px solid #ddd;\n    text-align: left;\n}\ntable td[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n    color: green;\n    font-weight: bold;\n}\ntable th[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n.price-in-max-card-desk[data-v-5354646f] {\n    list-style-type: none;\n    -webkit-padding-start: 0;\n            padding-inline-start: 0;\n}\n.description[data-v-5354646f] {\n    font-size: 16px;\n}\n\n", ""]);
 
 
 
@@ -13218,6 +13251,21 @@ exports.push([module.i, "\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
 exports.push([module.i, "\n.v-btn.btn-menu-desktop[data-v-43b87f60] {\n        text-transform: none;\n        font-family: 'Open Sans Condensed', sans-serif;\n        font-size: 24px;\n}\n.v-btn--icon.logo[data-v-43b87f60] {\n        width: auto;\n        pointer-events: none;\n}\n.v-toolbar__content .v-btn--icon[data-v-43b87f60] {\n        margin: 0px;\n}\n.logo[data-v-43b87f60]:hover {\n        background-color: black;\n} \n    \n/*    v-toolbar__side-icon.v-btn.v-btn--icon {\n        margin-left: 5px;\n    }*/\n    \n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "\n.contacts-wrapper[data-v-222e0b68] {\n    font-size: 18px;\n}\n", ""]);
 
 
 
@@ -24250,538 +24298,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! lg-thumbnail
     $.fn.lightGallery.modules.Thumbnail = Thumbnail;
 
 })();
-
-}));
-
-
-/***/ }),
-
-/***/ "./node_modules/lg-zoom/dist/lg-zoom.js":
-/*!**********************************************!*\
-  !*** ./node_modules/lg-zoom/dist/lg-zoom.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! lg-zoom - v1.1.0 - 2017-08-08
-* http://sachinchoolur.github.io/lightGallery
-* Copyright (c) 2017 Sachin N; Licensed GPLv3 */
-
-(function (root, factory) {
-  if (true) {
-    // AMD. Register as an anonymous module unless amdModuleId is set
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (a0) {
-      return (factory(a0));
-    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else {}
-}(this, function ($) {
-
-(function() {
-
-    'use strict';
-
-    var getUseLeft = function() {
-        var useLeft = false;
-        var isChrome = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
-        if (isChrome && parseInt(isChrome[2], 10) < 54) {
-            useLeft = true;
-        }
-
-        return useLeft;
-    };
-
-    var defaults = {
-        scale: 1,
-        zoom: true,
-        actualSize: true,
-        enableZoomAfter: 300,
-        useLeftForZoom: getUseLeft()
-    };
-
-    var Zoom = function(element) {
-
-        this.core = $(element).data('lightGallery');
-
-        this.core.s = $.extend({}, defaults, this.core.s);
-
-        if (this.core.s.zoom && this.core.doCss()) {
-            this.init();
-
-            // Store the zoomable timeout value just to clear it while closing
-            this.zoomabletimeout = false;
-
-            // Set the initial value center
-            this.pageX = $(window).width() / 2;
-            this.pageY = ($(window).height() / 2) + $(window).scrollTop();
-        }
-
-        return this;
-    };
-
-    Zoom.prototype.init = function() {
-
-        var _this = this;
-        var zoomIcons = '<span id="lg-zoom-in" class="lg-icon"></span><span id="lg-zoom-out" class="lg-icon"></span>';
-
-        if (_this.core.s.actualSize) {
-            zoomIcons += '<span id="lg-actual-size" class="lg-icon"></span>';
-        }
-
-        if (_this.core.s.useLeftForZoom) {
-            _this.core.$outer.addClass('lg-use-left-for-zoom');
-        } else {
-            _this.core.$outer.addClass('lg-use-transition-for-zoom');
-        }
-
-        this.core.$outer.find('.lg-toolbar').append(zoomIcons);
-
-        // Add zoomable class
-        _this.core.$el.on('onSlideItemLoad.lg.tm.zoom', function(event, index, delay) {
-
-            // delay will be 0 except first time
-            var _speed = _this.core.s.enableZoomAfter + delay;
-
-            // set _speed value 0 if gallery opened from direct url and if it is first slide
-            if ($('body').hasClass('lg-from-hash') && delay) {
-
-                // will execute only once
-                _speed = 0;
-            } else {
-
-                // Remove lg-from-hash to enable starting animation.
-                $('body').removeClass('lg-from-hash');
-            }
-
-            _this.zoomabletimeout = setTimeout(function() {
-                _this.core.$slide.eq(index).addClass('lg-zoomable');
-            }, _speed + 30);
-        });
-
-        var scale = 1;
-        /**
-         * @desc Image zoom
-         * Translate the wrap and scale the image to get better user experience
-         *
-         * @param {String} scaleVal - Zoom decrement/increment value
-         */
-        var zoom = function(scaleVal) {
-
-            var $image = _this.core.$outer.find('.lg-current .lg-image');
-            var _x;
-            var _y;
-
-            // Find offset manually to avoid issue after zoom
-            var offsetX = ($(window).width() - $image.prop('offsetWidth')) / 2;
-            var offsetY = (($(window).height() - $image.prop('offsetHeight')) / 2) + $(window).scrollTop();
-
-            _x = _this.pageX - offsetX;
-            _y = _this.pageY - offsetY;
-
-            var x = (scaleVal - 1) * (_x);
-            var y = (scaleVal - 1) * (_y);
-
-            $image.css('transform', 'scale3d(' + scaleVal + ', ' + scaleVal + ', 1)').attr('data-scale', scaleVal);
-
-            if (_this.core.s.useLeftForZoom) {
-                $image.parent().css({
-                    left: -x + 'px',
-                    top: -y + 'px'
-                }).attr('data-x', x).attr('data-y', y);
-            } else {
-                $image.parent().css('transform', 'translate3d(-' + x + 'px, -' + y + 'px, 0)').attr('data-x', x).attr('data-y', y);
-            }
-        };
-
-        var callScale = function() {
-            if (scale > 1) {
-                _this.core.$outer.addClass('lg-zoomed');
-            } else {
-                _this.resetZoom();
-            }
-
-            if (scale < 1) {
-                scale = 1;
-            }
-
-            zoom(scale);
-        };
-
-        var actualSize = function(event, $image, index, fromIcon) {
-            var w = $image.prop('offsetWidth');
-            var nw;
-            if (_this.core.s.dynamic) {
-                nw = _this.core.s.dynamicEl[index].width || $image[0].naturalWidth || w;
-            } else {
-                nw = _this.core.$items.eq(index).attr('data-width') || $image[0].naturalWidth || w;
-            }
-
-            var _scale;
-
-            if (_this.core.$outer.hasClass('lg-zoomed')) {
-                scale = 1;
-            } else {
-                if (nw > w) {
-                    _scale = nw / w;
-                    scale = _scale || 2;
-                }
-            }
-
-            if (fromIcon) {
-                _this.pageX = $(window).width() / 2;
-                _this.pageY = ($(window).height() / 2) + $(window).scrollTop();
-            } else {
-                _this.pageX = event.pageX || event.originalEvent.targetTouches[0].pageX;
-                _this.pageY = event.pageY || event.originalEvent.targetTouches[0].pageY;
-            }
-
-            callScale();
-            setTimeout(function() {
-                _this.core.$outer.removeClass('lg-grabbing').addClass('lg-grab');
-            }, 10);
-        };
-
-        var tapped = false;
-
-        // event triggered after appending slide content
-        _this.core.$el.on('onAferAppendSlide.lg.tm.zoom', function(event, index) {
-
-            // Get the current element
-            var $image = _this.core.$slide.eq(index).find('.lg-image');
-
-            $image.on('dblclick', function(event) {
-                actualSize(event, $image, index);
-            });
-
-            $image.on('touchstart', function(event) {
-                if (!tapped) {
-                    tapped = setTimeout(function() {
-                        tapped = null;
-                    }, 300);
-                } else {
-                    clearTimeout(tapped);
-                    tapped = null;
-                    actualSize(event, $image, index);
-                }
-
-                event.preventDefault();
-            });
-
-        });
-
-        // Update zoom on resize and orientationchange
-        $(window).on('resize.lg.zoom scroll.lg.zoom orientationchange.lg.zoom', function() {
-            _this.pageX = $(window).width() / 2;
-            _this.pageY = ($(window).height() / 2) + $(window).scrollTop();
-            zoom(scale);
-        });
-
-        $('#lg-zoom-out').on('click.lg', function() {
-            if (_this.core.$outer.find('.lg-current .lg-image').length) {
-                scale -= _this.core.s.scale;
-                callScale();
-            }
-        });
-
-        $('#lg-zoom-in').on('click.lg', function() {
-            if (_this.core.$outer.find('.lg-current .lg-image').length) {
-                scale += _this.core.s.scale;
-                callScale();
-            }
-        });
-
-        $('#lg-actual-size').on('click.lg', function(event) {
-            actualSize(event, _this.core.$slide.eq(_this.core.index).find('.lg-image'), _this.core.index, true);
-        });
-
-        // Reset zoom on slide change
-        _this.core.$el.on('onBeforeSlide.lg.tm', function() {
-            scale = 1;
-            _this.resetZoom();
-        });
-
-        // Drag option after zoom
-        _this.zoomDrag();
-
-        _this.zoomSwipe();
-
-    };
-
-    // Reset zoom effect
-    Zoom.prototype.resetZoom = function() {
-        this.core.$outer.removeClass('lg-zoomed');
-        this.core.$slide.find('.lg-img-wrap').removeAttr('style data-x data-y');
-        this.core.$slide.find('.lg-image').removeAttr('style data-scale');
-
-        // Reset pagx pagy values to center
-        this.pageX = $(window).width() / 2;
-        this.pageY = ($(window).height() / 2) + $(window).scrollTop();
-    };
-
-    Zoom.prototype.zoomSwipe = function() {
-        var _this = this;
-        var startCoords = {};
-        var endCoords = {};
-        var isMoved = false;
-
-        // Allow x direction drag
-        var allowX = false;
-
-        // Allow Y direction drag
-        var allowY = false;
-
-        _this.core.$slide.on('touchstart.lg', function(e) {
-
-            if (_this.core.$outer.hasClass('lg-zoomed')) {
-                var $image = _this.core.$slide.eq(_this.core.index).find('.lg-object');
-
-                allowY = $image.prop('offsetHeight') * $image.attr('data-scale') > _this.core.$outer.find('.lg').height();
-                allowX = $image.prop('offsetWidth') * $image.attr('data-scale') > _this.core.$outer.find('.lg').width();
-                if ((allowX || allowY)) {
-                    e.preventDefault();
-                    startCoords = {
-                        x: e.originalEvent.targetTouches[0].pageX,
-                        y: e.originalEvent.targetTouches[0].pageY
-                    };
-                }
-            }
-
-        });
-
-        _this.core.$slide.on('touchmove.lg', function(e) {
-
-            if (_this.core.$outer.hasClass('lg-zoomed')) {
-
-                var _$el = _this.core.$slide.eq(_this.core.index).find('.lg-img-wrap');
-                var distanceX;
-                var distanceY;
-
-                e.preventDefault();
-                isMoved = true;
-
-                endCoords = {
-                    x: e.originalEvent.targetTouches[0].pageX,
-                    y: e.originalEvent.targetTouches[0].pageY
-                };
-
-                // reset opacity and transition duration
-                _this.core.$outer.addClass('lg-zoom-dragging');
-
-                if (allowY) {
-                    distanceY = (-Math.abs(_$el.attr('data-y'))) + (endCoords.y - startCoords.y);
-                } else {
-                    distanceY = -Math.abs(_$el.attr('data-y'));
-                }
-
-                if (allowX) {
-                    distanceX = (-Math.abs(_$el.attr('data-x'))) + (endCoords.x - startCoords.x);
-                } else {
-                    distanceX = -Math.abs(_$el.attr('data-x'));
-                }
-
-                if ((Math.abs(endCoords.x - startCoords.x) > 15) || (Math.abs(endCoords.y - startCoords.y) > 15)) {
-
-                    if (_this.core.s.useLeftForZoom) {
-                        _$el.css({
-                            left: distanceX + 'px',
-                            top: distanceY + 'px'
-                        });
-                    } else {
-                        _$el.css('transform', 'translate3d(' + distanceX + 'px, ' + distanceY + 'px, 0)');
-                    }
-                }
-
-            }
-
-        });
-
-        _this.core.$slide.on('touchend.lg', function() {
-            if (_this.core.$outer.hasClass('lg-zoomed')) {
-                if (isMoved) {
-                    isMoved = false;
-                    _this.core.$outer.removeClass('lg-zoom-dragging');
-                    _this.touchendZoom(startCoords, endCoords, allowX, allowY);
-
-                }
-            }
-        });
-
-    };
-
-    Zoom.prototype.zoomDrag = function() {
-
-        var _this = this;
-        var startCoords = {};
-        var endCoords = {};
-        var isDraging = false;
-        var isMoved = false;
-
-        // Allow x direction drag
-        var allowX = false;
-
-        // Allow Y direction drag
-        var allowY = false;
-
-        _this.core.$slide.on('mousedown.lg.zoom', function(e) {
-
-            // execute only on .lg-object
-            var $image = _this.core.$slide.eq(_this.core.index).find('.lg-object');
-
-            allowY = $image.prop('offsetHeight') * $image.attr('data-scale') > _this.core.$outer.find('.lg').height();
-            allowX = $image.prop('offsetWidth') * $image.attr('data-scale') > _this.core.$outer.find('.lg').width();
-
-            if (_this.core.$outer.hasClass('lg-zoomed')) {
-                if ($(e.target).hasClass('lg-object') && (allowX || allowY)) {
-                    e.preventDefault();
-                    startCoords = {
-                        x: e.pageX,
-                        y: e.pageY
-                    };
-
-                    isDraging = true;
-
-                    // ** Fix for webkit cursor issue https://code.google.com/p/chromium/issues/detail?id=26723
-                    _this.core.$outer.scrollLeft += 1;
-                    _this.core.$outer.scrollLeft -= 1;
-
-                    _this.core.$outer.removeClass('lg-grab').addClass('lg-grabbing');
-                }
-            }
-        });
-
-        $(window).on('mousemove.lg.zoom', function(e) {
-            if (isDraging) {
-                var _$el = _this.core.$slide.eq(_this.core.index).find('.lg-img-wrap');
-                var distanceX;
-                var distanceY;
-
-                isMoved = true;
-                endCoords = {
-                    x: e.pageX,
-                    y: e.pageY
-                };
-
-                // reset opacity and transition duration
-                _this.core.$outer.addClass('lg-zoom-dragging');
-
-                if (allowY) {
-                    distanceY = (-Math.abs(_$el.attr('data-y'))) + (endCoords.y - startCoords.y);
-                } else {
-                    distanceY = -Math.abs(_$el.attr('data-y'));
-                }
-
-                if (allowX) {
-                    distanceX = (-Math.abs(_$el.attr('data-x'))) + (endCoords.x - startCoords.x);
-                } else {
-                    distanceX = -Math.abs(_$el.attr('data-x'));
-                }
-
-                if (_this.core.s.useLeftForZoom) {
-                    _$el.css({
-                        left: distanceX + 'px',
-                        top: distanceY + 'px'
-                    });
-                } else {
-                    _$el.css('transform', 'translate3d(' + distanceX + 'px, ' + distanceY + 'px, 0)');
-                }
-            }
-        });
-
-        $(window).on('mouseup.lg.zoom', function(e) {
-
-            if (isDraging) {
-                isDraging = false;
-                _this.core.$outer.removeClass('lg-zoom-dragging');
-
-                // Fix for chrome mouse move on click
-                if (isMoved && ((startCoords.x !== endCoords.x) || (startCoords.y !== endCoords.y))) {
-                    endCoords = {
-                        x: e.pageX,
-                        y: e.pageY
-                    };
-                    _this.touchendZoom(startCoords, endCoords, allowX, allowY);
-
-                }
-
-                isMoved = false;
-            }
-
-            _this.core.$outer.removeClass('lg-grabbing').addClass('lg-grab');
-
-        });
-    };
-
-    Zoom.prototype.touchendZoom = function(startCoords, endCoords, allowX, allowY) {
-
-        var _this = this;
-        var _$el = _this.core.$slide.eq(_this.core.index).find('.lg-img-wrap');
-        var $image = _this.core.$slide.eq(_this.core.index).find('.lg-object');
-        var distanceX = (-Math.abs(_$el.attr('data-x'))) + (endCoords.x - startCoords.x);
-        var distanceY = (-Math.abs(_$el.attr('data-y'))) + (endCoords.y - startCoords.y);
-        var minY = (_this.core.$outer.find('.lg').height() - $image.prop('offsetHeight')) / 2;
-        var maxY = Math.abs(($image.prop('offsetHeight') * Math.abs($image.attr('data-scale'))) - _this.core.$outer.find('.lg').height() + minY);
-        var minX = (_this.core.$outer.find('.lg').width() - $image.prop('offsetWidth')) / 2;
-        var maxX = Math.abs(($image.prop('offsetWidth') * Math.abs($image.attr('data-scale'))) - _this.core.$outer.find('.lg').width() + minX);
-
-        if ((Math.abs(endCoords.x - startCoords.x) > 15) || (Math.abs(endCoords.y - startCoords.y) > 15)) {
-            if (allowY) {
-                if (distanceY <= -maxY) {
-                    distanceY = -maxY;
-                } else if (distanceY >= -minY) {
-                    distanceY = -minY;
-                }
-            }
-
-            if (allowX) {
-                if (distanceX <= -maxX) {
-                    distanceX = -maxX;
-                } else if (distanceX >= -minX) {
-                    distanceX = -minX;
-                }
-            }
-
-            if (allowY) {
-                _$el.attr('data-y', Math.abs(distanceY));
-            } else {
-                distanceY = -Math.abs(_$el.attr('data-y'));
-            }
-
-            if (allowX) {
-                _$el.attr('data-x', Math.abs(distanceX));
-            } else {
-                distanceX = -Math.abs(_$el.attr('data-x'));
-            }
-
-            if (_this.core.s.useLeftForZoom) {
-                _$el.css({
-                    left: distanceX + 'px',
-                    top: distanceY + 'px'
-                });
-            } else {
-                _$el.css('transform', 'translate3d(' + distanceX + 'px, ' + distanceY + 'px, 0)');
-            }
-
-        }
-    };
-
-    Zoom.prototype.destroy = function() {
-
-        var _this = this;
-
-        // Unbind all events added by lightGallery zoom plugin
-        _this.core.$el.off('.lg.zoom');
-        $(window).off('.lg.zoom');
-        _this.core.$slide.off('.lg.zoom');
-        _this.core.$el.off('.lg.tm.zoom');
-        _this.resetZoom();
-        clearTimeout(_this.zoomabletimeout);
-        _this.zoomabletimeout = false;
-    };
-
-    $.fn.lightGallery.modules.zoom = Zoom;
-
-})();
-
 
 }));
 
@@ -44191,6 +43707,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentMain.vue?vue&type=style&index=0&id=31f6a5be&scoped=true&lang=css&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentMain.vue?vue&type=style&index=0&id=31f6a5be&scoped=true&lang=css& ***!
@@ -46396,11 +45942,51 @@ var render = function() {
     [
       _c(
         "v-container",
-        { attrs: { "grid-list-md": "", "text-xs-center": "" } },
         [
-          _c("v-layout", { attrs: { row: "", wrap: "" } }, [
-            _c("p", [_vm._v("Contact")])
-          ])
+          _c(
+            "v-layout",
+            { attrs: { row: "", wrap: "" } },
+            [
+              _c("v-flex", [
+                _c("h1", { staticClass: "display-1 mt-1 text-xs-center" }, [
+                  _vm._v("Контакты")
+                ])
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("hr", { staticClass: "grey lighten-5 mt-4 hidden-sm-and-down" }),
+          _vm._v(" "),
+          _c(
+            "v-layout",
+            [
+              _c("v-flex", { staticClass: "contacts-wrapper mt-4" }, [
+                _c("p", [_c("b", [_vm._v("Адрес:")]), _vm._v(" Budva 85310")]),
+                _vm._v(" "),
+                _c("p", [
+                  _c("b", [_vm._v("Тел.:")]),
+                  _vm._v(" +382 68 089 888")
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _c("b", [_vm._v("Viber:")]),
+                  _vm._v(" +382 68 089 888")
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _c("b", [_vm._v("WhatsApp:")]),
+                  _vm._v(" +382 68 089 888")
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _c("b", [_vm._v("E-mail:")]),
+                  _vm._v(" arenda@mybudva.ru")
+                ])
+              ])
+            ],
+            1
+          )
         ],
         1
       )
@@ -46435,11 +46021,92 @@ var render = function() {
     [
       _c(
         "v-container",
-        { attrs: { "grid-list-md": "", "text-xs-center": "" } },
         [
-          _c("v-layout", { attrs: { row: "", wrap: "" } }, [
-            _c("p", [_vm._v("Feedbacks")])
-          ])
+          _c(
+            "v-layout",
+            { attrs: { row: "", wrap: "" } },
+            [
+              _c("v-flex", [
+                _c("h1", { staticClass: "display-1 mt-1 text-xs-center" }, [
+                  _vm._v("Отзывы")
+                ])
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("hr", {
+            staticClass: "grey lighten-5 mt-4 mb-4 hidden-sm-and-down"
+          }),
+          _vm._v(" "),
+          _c(
+            "v-layout",
+            { attrs: { row: "" } },
+            [
+              _c("v-flex", [
+                _c("div", { staticClass: "feedback mb-3" }, [
+                  _c("h5", { staticClass: "mb-2" }, [
+                    _vm._v("Name, date, object")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "feedback mb-3" }, [
+                  _c("h5", { staticClass: "mb-2" }, [
+                    _vm._v("Name, date, object")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
+                    )
+                  ])
+                ])
+              ])
+            ],
+            1
+          )
         ],
         1
       )
@@ -46516,7 +46183,7 @@ var render = function() {
             { attrs: { row: "", "align-center": "" } },
             [
               _c("v-flex", [
-                _c("h1", { staticClass: "display-1 text-xs-center " }, [
+                _c("h1", { staticClass: "display-1 text-xs-center" }, [
                   _vm._v("Villas")
                 ])
               ])
@@ -87446,8 +87113,6 @@ window.lightgallery = __webpack_require__(/*! lightgallery */ "./node_modules/li
 
 __webpack_require__(/*! lg-thumbnail */ "./node_modules/lg-thumbnail/dist/lg-thumbnail.js");
 
-__webpack_require__(/*! lg-zoom */ "./node_modules/lg-zoom/dist/lg-zoom.js");
-
 
 
 /*
@@ -87519,7 +87184,10 @@ $(document).ready(function () {
   $('#lightgallery').lightGallery({
     thumbnail: true,
     animateThumb: true,
-    thumbMargin: 2
+    thumbMargin: 2,
+    download: false,
+    enableTouch: true,
+    cssEasing: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)'
   });
 });
 
@@ -88722,7 +88390,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ContentContact_vue_vue_type_template_id_222e0b68_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ContentContact.vue?vue&type=template&id=222e0b68&scoped=true& */ "./resources/js/components/content/ContentContact.vue?vue&type=template&id=222e0b68&scoped=true&");
 /* harmony import */ var _ContentContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContentContact.vue?vue&type=script&lang=js& */ "./resources/js/components/content/ContentContact.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _ContentContact_vue_vue_type_style_index_0_id_222e0b68_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css& */ "./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -88730,7 +88400,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _ContentContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ContentContact_vue_vue_type_template_id_222e0b68_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ContentContact_vue_vue_type_template_id_222e0b68_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -88759,6 +88429,22 @@ component.options.__file = "resources/js/components/content/ContentContact.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentContact.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentContact.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_style_index_0_id_222e0b68_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentContact.vue?vue&type=style&index=0&id=222e0b68&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_style_index_0_id_222e0b68_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_style_index_0_id_222e0b68_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_style_index_0_id_222e0b68_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_style_index_0_id_222e0b68_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentContact_vue_vue_type_style_index_0_id_222e0b68_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
