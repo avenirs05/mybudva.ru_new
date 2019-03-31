@@ -8,6 +8,17 @@
 
 require('./bootstrap');
 
+import { vh } from "./script.js";
+
+/**
+ * Lightgallery
+ */
+window.lightgallery = require('lightgallery');
+require('lg-thumbnail');
+require('lg-zoom');
+import 'lightgallery/dist/css/lightgallery.min.css';
+import 'lightgallery/dist/css/lg-transitions.min.css';
+
 /*
  * Vue and VueRouter
  */
@@ -24,8 +35,8 @@ import '@mdi/font/css/materialdesignicons.css'
 
 var Vuetify = require('vuetify');
 Vue.use(Vuetify);
-
 import 'vuetify/dist/vuetify.min.css';
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -42,14 +53,12 @@ import 'vuetify/dist/vuetify.min.css';
 Vue.component('toolbar', require('./components/Toolbar.vue').default);
 Vue.component('drawer', require('./components/Drawer.vue').default);
 Vue.component('lang', require('./components/Lang.vue').default);
-
 Vue.component('content-main', require('./components/content/ContentMain.vue').default);
 Vue.component('content-realties', require('./components/content/ContentRealties.vue').default);
 Vue.component('content-feedbacks', require('./components/content/ContentFeedbacks.vue').default);
 Vue.component('content-contact', require('./components/content/ContentContact.vue').default);
-
+Vue.component('content-realty', require('./components/content/ContentRealty.vue').default);
 Vue.component('footer-component', require('./components/FooterComponent.vue').default);
-
 
 
 
@@ -78,15 +87,17 @@ const app = new Vue({
 }).$mount('#app');
 
 
-function vh() {
-    let el = document.getElementById('main-img');
+$(document).ready(function() { 
+    vh();
+    
+    $('#lightgallery').lightGallery({
+        thumbnail: true,
+        animateThumb: true,
+        thumbMargin: 2
+    }); 
+    
 
-    if (screen.width >= 960 && el !== null) {
-        document.getElementById('main-img').style.height = '94vh';
-    }  
-}
-
-vh();
+});
 
 
 

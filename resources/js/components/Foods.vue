@@ -3,7 +3,7 @@
         <h3 class="text-xs-center blue--text mb-4">КАКИЕ ЦЕНЫ НА ПРОДУКТЫ В ЧЕРНОГОРИИ В 2019 ГОДУ?</h3>
 
         <v-layout row wrap>            
-            <table class="table table-bordered">
+            <table class="table">
                 <thead class="faq__table-heads">
                     <tr>
                         <th scope="col">Продукт</th>

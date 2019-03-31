@@ -27,8 +27,9 @@
 
 
 <style scoped>
-    .connect-desk .v-list__tile {
+    .connect-desk {
         padding-left: 24px;
+        margin-left: 25px;
     }
     
     .connect-desk .v-list__tile__title.tel-text {

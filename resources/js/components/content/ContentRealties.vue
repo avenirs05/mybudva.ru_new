@@ -11,10 +11,8 @@
    
         <realty-card-mini-desk></realty-card-mini-desk>
         
-        <realty-card-mini-mob></realty-card-mini-mob>
-        
-      
-     </v-content>
+        <realty-card-mini-mob></realty-card-mini-mob>       
+      </v-content>
 </template>
 
 <script>    
@@ -26,7 +24,7 @@
             RealtyCardMiniDesk,
             RealtyCardMiniMob
         },
-        data: () => ({ })        
+        data: () => ({ })
     }
 </script>
 

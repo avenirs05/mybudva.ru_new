@@ -55,3 +55,7 @@ Route::get('/apartments', 'RealtiesController');
 Route::get('/feedbacks', 'FeedbacksController');
 
 Route::get('/contact', 'ContactController');
+
+Route::get('/realty', function() {
+	return view('realty');
+});

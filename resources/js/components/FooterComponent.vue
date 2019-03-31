@@ -2,6 +2,7 @@
     <v-footer
         height="auto"
         color="grey darken-3"
+        dark
         >
         <v-layout
             justify-center

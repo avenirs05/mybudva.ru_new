@@ -6,7 +6,7 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<meta name="yandex-verification" content="30abed22f0fc9acb" />
 
-		<title>{{ $title }}</title>
+		<title>MyBudva</title>
 
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -18,7 +18,7 @@
 
 		<!-- Styles -->
 		<link href="{{ asset('css/app.css') }}" rel="stylesheet preload" as="style">
-
+		
 		<!-- Localization -->
 		<script src="/js/language/{{ str_replace('_', '-', app()->getLocale()) }}.js" as="script"></script> 
 	</head>
@@ -27,7 +27,7 @@
 		<div id="app">	
 			@yield('content')
 		</div>
-
+		
 		<script src="{{ asset('js/app.js') }}"></script>
 	</body>
 </html>

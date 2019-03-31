@@ -63,10 +63,12 @@
     #headline-wrap {
         text-decoration: none;
     }
+    
     #headline-wrap:hover {
         color: rgb(51, 122, 183);
         text-decoration: underline;
     }
+    
     .v-card {
         background-color: transparent;
         font-size: 18px;

@@ -1,6 +1,6 @@
 <template>
     <v-toolbar app dark fixed clipped-left id="toolbar">
-        <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="changeDrawer"></v-toolbar-side-icon>
+        <v-toolbar-side-icon class="hidden-md-and-up mr-3" @click.stop="changeDrawer"></v-toolbar-side-icon>
         
         <v-toolbar-side-icon class="logo" href="/">
             <img src="/img/logo.png" :height="logoHeight">
@@ -97,7 +97,7 @@
     
     .v-btn--icon.logo {
         width: auto;
-        pointer-events: none;
+        pointer-events: none;         
     }
     
     .v-toolbar__content .v-btn--icon {
@@ -107,5 +107,10 @@
     .logo:hover {
         background-color: black;
     } 
+    
+/*    v-toolbar__side-icon.v-btn.v-btn--icon {
+        margin-left: 5px;
+    }*/
+    
 </style>
 
