@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar app dark fixed clipped-left id="toolbar">
+    <v-toolbar app fixed dark fixed clipped-left id="toolbar">
         <v-toolbar-side-icon class="hidden-md-and-up mr-3" @click.stop="changeDrawer"></v-toolbar-side-icon>
         
         <v-toolbar-side-icon class="logo" href="/">

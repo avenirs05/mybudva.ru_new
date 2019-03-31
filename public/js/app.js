@@ -3171,8 +3171,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -36567,7 +36565,14 @@ var render = function() {
   return _c(
     "v-toolbar",
     {
-      attrs: { app: "", dark: "", fixed: "", "clipped-left": "", id: "toolbar" }
+      attrs: {
+        app: "",
+        fixed: "",
+        dark: "",
+        fixed: "",
+        "clipped-left": "",
+        id: "toolbar"
+      }
     },
     [
       _c("v-toolbar-side-icon", {
