@@ -23,9 +23,10 @@
 		<script src="/js/language/{{ str_replace('_', '-', app()->getLocale()) }}.js" as="script"></script> 
 	</head>
 
-	<body>		
+	<body>	
+		
 		<div id="app">	
-			@yield('content')
+			@yield('content')			
 		</div>
 		
 		<script src="{{ asset('js/app.js') }}"></script>

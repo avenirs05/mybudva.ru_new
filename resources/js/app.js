@@ -16,7 +16,7 @@ import { vh } from "./script.js";
 window.lightgallery = require('lightgallery');
 require('lg-thumbnail');
 import 'lightgallery/dist/css/lightgallery.min.css';
-import 'lightgallery/dist/css/lg-transitions.min.css';
+//import 'lightgallery/dist/css/lg-transitions.min.css';
 
 /*
  * Vue and VueRouter
@@ -28,9 +28,9 @@ Vue.use(VueRouter);
 /**
  * Vuetufy, fortawesome, materiial icons, material-design-icons
  */
-import '@fortawesome/fontawesome-free/css/all.css'
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
-import '@mdi/font/css/materialdesignicons.css'
+//import '@fortawesome/fontawesome-free/css/all.css'
+//import 'material-design-icons-iconfont/dist/material-design-icons.css'
+//import '@mdi/font/css/materialdesignicons.css'
 
 var Vuetify = require('vuetify');
 Vue.use(Vuetify);
@@ -95,7 +95,6 @@ $(document).ready(function() {
         thumbMargin: 2,        
         download: false,
         enableTouch: true,
-        cssEasing: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)'
     }); 
     
 

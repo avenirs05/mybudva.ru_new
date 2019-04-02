@@ -1,9 +1,22 @@
 <template>
     <v-content>    
         <main-screen></main-screen>
-        <areas></areas>        
-        <questions></questions>
-        <foods></foods>     
+        
+        <areas 
+            :areas="JSON.parse(areas)" 
+            :locale="locale"
+        ></areas>        
+        
+        <questions 
+            :questions="JSON.parse(questions)" 
+            :locale="locale"
+        ></questions>
+        
+        <products
+            :products="products"
+            :locale="locale"
+        ></products> 
+        
     </v-content>
 </template>
 
@@ -11,14 +24,21 @@
 <script>  
     import Areas from '../Areas.vue'; 
     import Questions from '../Questions.vue'; 
-    import Foods from '../Foods.vue'; 
+    import Products from '../Products.vue'; 
     import MainScreen from '../MainScreen.vue';
     
     export default { 
+        mounted() { console.log(this.products) },    
+        props: [
+            'locale', 
+            'areas', 
+            'questions',
+            'products'
+        ],     
         components: {
             Areas,
             Questions,
-            Foods,
+            Products,
             MainScreen
         },
         data: () => ({ })
