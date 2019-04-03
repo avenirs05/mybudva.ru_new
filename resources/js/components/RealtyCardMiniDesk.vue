@@ -2,7 +2,7 @@
     <v-container class="hidden-sm-and-down">
         <v-layout row wrap class="mb-5">
             <v-flex xs4>                    
-                <v-card dark href="/" hover class="text-xs-left">
+                <v-card dark href="/realty" hover class="text-xs-left">
                     <v-img
                         class="white--text"                            
                         src="/img/realties/astra1-02.jpg"  
@@ -13,7 +13,7 @@
             </v-flex>
             <v-flex xs4>
                 <v-card flat class="pl-3 card-mini-right-text-desk">
-                    <a href="" id="headline-wrap">
+                    <a href="/realty" id="headline-wrap">
                         <h3 class="headline">Villa Name</h3>
                     </a>
                     <h4 class="pt-3 mb-4">Subheader</h4>

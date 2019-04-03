@@ -44936,7 +44936,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "text-xs-left",
-                  attrs: { dark: "", href: "/", hover: "" }
+                  attrs: { dark: "", href: "/realty", hover: "" }
                 },
                 [
                   _c("v-img", {
@@ -44964,7 +44964,7 @@ var render = function() {
                   attrs: { flat: "" }
                 },
                 [
-                  _c("a", { attrs: { href: "", id: "headline-wrap" } }, [
+                  _c("a", { attrs: { href: "/realty", id: "headline-wrap" } }, [
                     _c("h3", { staticClass: "headline" }, [
                       _vm._v("Villa Name")
                     ])
@@ -45124,7 +45124,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "text-xs-left",
-                  attrs: { dark: "", href: "/", hover: "" }
+                  attrs: { dark: "", href: "/realty", hover: "" }
                 },
                 [
                   _c("v-img", {
@@ -45152,7 +45152,7 @@ var render = function() {
                   attrs: { flat: "" }
                 },
                 [
-                  _c("a", { attrs: { href: "", id: "headline-wrap" } }, [
+                  _c("a", { attrs: { href: "/realty", id: "headline-wrap" } }, [
                     _c("h4", [_vm._v("Villa Name")])
                   ]),
                   _vm._v(" "),
