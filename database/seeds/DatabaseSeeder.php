@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
 		
 		$this->call(CountriesTableSeeder::class);
 		$this->call(AreasTableSeeder::class);
+		$this->call(ContentsTableSeeder::class);
 //		$this->call(CitiesTableSeeder::class);
 //		$this->call(FeedbacksTableSeeder::class);
 //		$this->call(ImagesTableSeeder::class);

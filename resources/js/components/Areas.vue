@@ -1,7 +1,6 @@
 <template>     
-    <v-container grid-list-xl>
-        <h2 class="text-xs-center mt-4 font-weight-bold">Отдых в Черногории в 2019 году. Часто задаваемые вопросы.</h2>
-        <h3 class="text-xs-center mt-5 mb-3 blue--text">КУРОРТЫ И ГОРОДА В ЧЕРНОГОРИИ: КУДА ЛУЧШЕ ПОЕХАТЬ?</h3>
+    <v-container grid-list-xl>        
+        <h3 class="text-xs-center mt-2 mb-4 blue--text">{{ headerAreas }}</h3>
         <v-layout v-bind="columnOrRow">
             <v-flex v-for="area in areas" :key="area[`name_${locale}`]">    
                 <h4 class="mb-2">{{ area[`name_${locale}`] }}</h4>
@@ -14,7 +13,7 @@
 
 <script>
     export default {
-        props: ['locale', 'areas'],    
+        props: ['locale', 'areas', 'headerAreas'],    
         mounted() {
         },    
         data: () => ({ }),

@@ -7,13 +7,13 @@
         <v-container fill-height fluid grid-list-xl> 
             <v-layout row align-center class="hidden-sm-and-down">
                 <v-flex>                              
-                    <h1 class="display-1 text-xs-center pb-5">{{ trans('text.header_main') }}</h1>                                
+                    <h1 class="display-1 text-xs-center pb-5">{{ headerMainScreen }}</h1>                                
                 </v-flex>
             </v-layout>
             <v-layout row align-center class="hidden-md-and-up">
                 <v-flex>                                
-                    <connect-mob></connect-mob>
-                    <h1 class="display-1 text-xs-center pb-5">{{ trans('text.header_main') }}</h1>                                
+                    <connect-mob :phone-main="phoneMain"></connect-mob>
+                    <h1 class="display-1 text-xs-center pb-5">{{ headerMainScreen }}</h1>                                
                 </v-flex>
             </v-layout>
         </v-container>
@@ -24,6 +24,8 @@
     import ConnectMob from './ConnectMob.vue'; 
     
     export default {
+        mounted() { }, 
+        props: ['headerMainScreen', 'phoneMain'],
         components: {
             ConnectMob
         },

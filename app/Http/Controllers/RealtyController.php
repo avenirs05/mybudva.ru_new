@@ -2,24 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Lang;
 use App\Content;
 
-//use Illuminate\Http\Request;
-
-class RealtiesController extends Controller
+class RealtyController extends Controller
 {
-    public function __invoke() 
-	{
+	public function __invoke() {
 		$locale = app()->getLocale();
 		$title = Lang::get('text.title_tag.home');
-		$content = Content::where('lang', $locale)->get()->toArray()[0];
-
+		$content = Content::where('lang', $locale)->get()->toArray()[0];		
+		
 		$data = [
 			'title' => $title,
 			'phone_main' => $content['phone_main'],
 		];
 
-		return view('realties', $data);
+		return view('realty', $data);
 	}
+
 }

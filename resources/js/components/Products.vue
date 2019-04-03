@@ -5,7 +5,7 @@
 <script>
     export default {
         props: ['locale', 'products'],   
-        mounted() { console.log(this.products) }, 
+        mounted() { }, 
         data: () => ({  })
     }
 </script>

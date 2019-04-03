@@ -1,9 +1,17 @@
 <template>
     <v-content>    
-        <main-screen></main-screen>
+        <main-screen
+            :header-main-screen="headerMainScreen"  
+            :phone-main="phoneMain"
+        ></main-screen>
+        
+        <v-container>
+            <h2 class="text-xs-center mt-2 font-weight-bold">{{ headerMainContent }}</h2>
+        </v-container>
         
         <areas 
             :areas="JSON.parse(areas)" 
+            :header-areas="headerAreas"
             :locale="locale"
         ></areas>        
         
@@ -28,12 +36,16 @@
     import MainScreen from '../MainScreen.vue';
     
     export default { 
-        mounted() { console.log(this.products) },    
+//        mounted() { console.log(this.phoneMain)},   
         props: [
             'locale', 
             'areas', 
             'questions',
-            'products'
+            'products',
+            'headerMainScreen',
+            'headerMainContent',
+            'headerAreas',
+            'phoneMain'
         ],     
         components: {
             Areas,

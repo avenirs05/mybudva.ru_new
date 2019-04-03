@@ -3,10 +3,10 @@
         <v-container>
             <v-layout row wrap>  
                 <v-flex>
-                    <h1 class="display-1 mt-1 text-xs-center">Отзывы</h1>  
+                    <h1 class="display-1 mt-1 mb-3 text-xs-center">Отзывы</h1>  
                 </v-flex>
             </v-layout>
-            <hr class="grey lighten-5 mt-4 mb-4 hidden-sm-and-down">
+            <hr class="grey lighten-5 mb-4 hidden-sm-and-down">
             <v-layout row>
                 <v-flex>  
                     <div class="feedback mb-3">

@@ -29,7 +29,7 @@ Vue.use(VueRouter);
  * Vuetufy, fortawesome, materiial icons, material-design-icons
  */
 //import '@fortawesome/fontawesome-free/css/all.css'
-//import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 //import '@mdi/font/css/materialdesignicons.css'
 
 var Vuetify = require('vuetify');
@@ -81,7 +81,7 @@ const router = new VueRouter({
 
 const app = new Vue({
     el: '#app',
-    router,
+    //router,
     data: {}
 }).$mount('#app');
 

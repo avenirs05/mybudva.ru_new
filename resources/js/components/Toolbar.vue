@@ -6,7 +6,7 @@
             <img src="/img/logo.png" :height="logoHeight">
         </v-toolbar-side-icon> 
         
-        <connect-desk></connect-desk>
+        <connect-desk :phone-main="phoneMain"></connect-desk>
         
         <v-spacer></v-spacer>            
 
@@ -33,11 +33,11 @@
     import ConnectDesk from './ConnectDesk.vue';
     
     export default {   
-        mounted () {}, 
+        mounted () { }, 
         components: {
             ConnectDesk
         },
-        props: ['locale'],    
+        props: ['locale', 'phoneMain'],    
         data: () => ({
             drawer: false,
             menu: [

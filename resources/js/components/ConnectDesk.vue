@@ -13,7 +13,7 @@
             ></v-img>
         </v-list-tile-avatar>
         <v-list-tile-content>
-            <v-list-tile-title class="tel-text">+382 68 089 888</v-list-tile-title>
+            <v-list-tile-title class="tel-text">{{ phoneMain }}</v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
 </template>
@@ -21,6 +21,7 @@
 
 <script>
     export default {
+        props: ['phoneMain'],
         data: () => ({  })
     }
 </script>
