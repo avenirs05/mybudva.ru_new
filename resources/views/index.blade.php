@@ -12,11 +12,14 @@
 			header-main-screen="{{ $header_main_screen }}"
 			header-main-content="{{ $header_main_content }}"
 			areas="{{ $areas }}"
-			header-areas="{{ $header_areas }}"
 			questions="{{ $questions }}"
-			products="{{ $products }}"
 			phone-main="{{ $phone_main }}"			
-		></content-main>
+			>
+			<template slot="areas">{!! $areas !!}</template>
+			<template slot="questions">{!! $questions !!}</template>
+			<template slot="products">{!! $products !!}</template>
+		</content-main>
+		
 		<footer-component></footer-component>	
 	</v-app>
 @endsection

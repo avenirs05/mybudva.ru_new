@@ -1,4 +1,4 @@
-<?php
+text<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -20,7 +20,9 @@ class CreateContentsTable extends Migration
 			$table->string('header_main_screen');
 			$table->string('header_main_content');
 			$table->string('phone_main', 50);
-			$table->string('header_areas');
+			$table->text('areas');
+			$table->text('questions');
+			$table->text('products');
 			$table->text('contact_page');
 			$table->timestamps();
         });

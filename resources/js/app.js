@@ -82,7 +82,18 @@ const router = new VueRouter({
 const app = new Vue({
     el: '#app',
     //router,
-    data: {}
+    data: {},
+    computed: {
+        columnOrRow() {
+            const binding = {}
+
+            if (this.$vuetify.breakpoint.smAndDown) {
+                binding.column = true;
+            }
+
+            return binding;
+        }
+    }
 }).$mount('#app');
 
 

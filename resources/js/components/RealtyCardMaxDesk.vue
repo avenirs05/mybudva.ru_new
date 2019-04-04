@@ -63,7 +63,7 @@
         </v-layout>
         <v-layout row align-center class="hidden-sm-and-down">
             <v-flex>                              
-                <div id="lightgallery" ref="lightgallery" class="mb-3">
+                <div id="lightgallery" ref="lightgallery" class="">
                     <a href="img/realties/astra1-02.jpg">
                         <img src="img/realties/astra1-02.jpg" />
                     </a>
