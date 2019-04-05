@@ -3136,7 +3136,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    console.log(this.realties);
+  },
+  props: ['realties'],
   data: function data() {
     return {};
   }
@@ -3436,7 +3439,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   //        mounted() { console.log(this.phoneMain)},   
@@ -3479,15 +3481,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.getHeader();
+  },
+  props: ['realties'],
   components: {
     RealtyCardMiniDesk: _RealtyCardMiniDesk_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     RealtyCardMiniMob: _RealtyCardMiniMob_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    return {};
+    return {
+      header: ''
+    };
+  },
+  methods: {
+    getHeader: function getHeader() {
+      switch (window.location.pathname) {
+        case '/villas':
+          this.header = trans('text.menu.villas');
+          break;
+
+        case '/apartments':
+          this.header = trans('text.menu.apartments');
+          break;
+      }
+    }
   }
 });
 
@@ -12759,7 +12784,7 @@ exports.push([module.i, "\n.contacts-wrapper {\n    font-size: 18px;\n}\n", ""])
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* В файл app.js добавлена функция vh() */\n.v-content {\n        font-size: 18px;\n}\n.table-products-layout .table {\n        font-size: 16px;\n        width: 100%;\n        max-width: 100%;\n        border: 1px solid #ddd;\n        border-collapse: collapse;\n}\n.table-products-layout table tr {\n        border: 1px solid #ddd;\n        text-align: left;\n}\n.table-products-layout table td {\n        padding: 10px;\n}\n.table-products-layout table th {\n        background: white;\n        padding: 10px;\n        color: blue;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* В файл app.js добавлена функция vh() */\n.v-content {\n        font-size: 18px;\n}\n.table-products-layout .table {\n        font-size: 16px;\n        width: 100%;\n        max-width: 100%;\n        border: 1px solid #ddd;\n        border-collapse: collapse;\n}\n.table-products-layout table tr {\n        border: 1px solid #ddd;\n        text-align: left;\n}\n.table-products-layout table td {\n        padding: 10px;\n}\n.table-products-layout table th {\n        background: white;\n        padding: 10px;\n        color: blue;\n}\n", ""]);
 
 
 
@@ -45257,7 +45282,7 @@ var render = function() {
             [
               _c("v-flex", [
                 _c("h1", { staticClass: "display-1 text-xs-center" }, [
-                  _vm._v("Villas")
+                  _vm._v(_vm._s(_vm.header))
                 ])
               ])
             ],
@@ -45269,11 +45294,16 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("realty-card-mini-desk"),
+      _vm._l(JSON.parse(_vm.realties), function(realty) {
+        return _c("realty-card-mini-desk", {
+          key: realty.name,
+          attrs: { realties: JSON.parse(_vm.realties) }
+        })
+      }),
       _vm._v(" "),
       _c("realty-card-mini-mob")
     ],
-    1
+    2
   )
 }
 var staticRenderFns = []

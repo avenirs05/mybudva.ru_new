@@ -53,7 +53,8 @@
 
 <script>
     export default {   
-        mounted () {}, 
+        mounted () { console.log(this.realties) }, 
+        props: ['realties'],
         data: () => ({ }),    
     }
 </script>
