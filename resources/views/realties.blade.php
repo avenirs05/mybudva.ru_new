@@ -10,6 +10,7 @@
 		></toolbar>
 		
 		<content-realties 
+			locale="{{ app()->getLocale() }}"
 			realties="{{ $realty }}"
 		></content-realties>
 		

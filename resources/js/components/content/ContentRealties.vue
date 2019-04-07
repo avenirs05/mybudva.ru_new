@@ -12,11 +12,18 @@
         <realty-card-mini-desk 
             v-for="realty in JSON.parse(realties)" 
             :key="realty.name"
-            :realties="JSON.parse(realties)"
+            :realty="realty"
+            :locale="locale"
         ></realty-card-mini-desk>
         
-        <realty-card-mini-mob></realty-card-mini-mob>       
-      </v-content>
+        <realty-card-mini-mob
+            v-for="realty in JSON.parse(realties)" 
+            :key="realty.id"
+            :realty="realty"
+            :locale="locale"       
+        ></realty-card-mini-mob>   
+        
+    </v-content>
 </template>
 
 <script>    
@@ -28,7 +35,7 @@
             this.getHeader();
         },  
         
-        props: ['realties'],
+        props: ['realties', 'locale'],
         
         components: {
             RealtyCardMiniDesk,

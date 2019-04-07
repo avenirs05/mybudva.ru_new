@@ -1,7 +1,6 @@
 <?php
 
 return [
-	'lang'         => 'ru',
 	'header_main'  => 'Аренда вилл и апартаментов в Черногории без посредников',
     
 	'title_tag' => [
@@ -19,6 +18,18 @@ return [
 		'feedbacks' => 'Отзывы',
 		'contact' => 'Контакты'
 	],
+	
+	'realty' => [
+		'square'    => 'Площадь',
+		'dist_sea'  => 'До моря',
+		'bedrooms'  => 'Спальни',
+		'capacity'  => 'Человек',
+		'meters'	=> 'м',
+//		'persons'	=> 'человек'
+		
+	],
+	
+	'btn_more' => 'Подробнее'
 
 
 ];

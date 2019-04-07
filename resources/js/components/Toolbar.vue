@@ -106,11 +106,6 @@
     
     .logo:hover {
         background-color: black;
-    } 
-    
-/*    v-toolbar__side-icon.v-btn.v-btn--icon {
-        margin-left: 5px;
-    }*/
-    
+    }    
 </style>
 

@@ -3135,13 +3135,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log(this.realties);
+    this.realtyPage = route('realtyPage', this.realty.id);
   },
-  props: ['realties'],
+  props: ['realty', 'locale'],
   data: function data() {
-    return {};
+    return {
+      realtyPage: ''
+    };
   }
 });
 
@@ -3201,10 +3215,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    this.realtyPage = route('realtyPage', this.realty.id);
+  },
+  props: ['realty', 'locale'],
   data: function data() {
-    return {};
+    return {
+      realtyPage: ''
+    };
   }
 });
 
@@ -3485,13 +3516,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     this.getHeader();
   },
-  props: ['realties'],
+  props: ['realties', 'locale'],
   components: {
     RealtyCardMiniDesk: _RealtyCardMiniDesk_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     RealtyCardMiniMob: _RealtyCardMiniMob_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -12724,7 +12762,7 @@ exports.push([module.i, "\n.props-in-max-card-mob[data-v-53ef7bcc] {\n    list-s
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoration: none;\n}\n#headline-wrap[data-v-69a7032e]:hover {\n    color: rgb(51, 122, 183);\n    text-decoration: underline;\n}\n.v-card[data-v-69a7032e] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.v-card.card-mini-right-text-desk[data-v-69a7032e] {\n    margin-top: -5px;\n}\nh4[data-v-69a7032e] {\n    font-weight: normal;\n}\n.price-text-desk[data-v-69a7032e] {\n    font-size: 24px;\n}\n.price-text-through-desk[data-v-69a7032e] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 24px;\n}\n.btn-more-desk.v-btn.v-btn--large[data-v-69a7032e] {\n    margin-right: 0;  \n    padding: 10px 20px;\n    font-size: 20px;\n    border-radius: 3px;\n    background-color: rgb(51, 153, 51);\n    color: rgb(255, 255, 255);\n    border: medium none;\n    width: 100%;\n    letter-spacing: 1px;  \n    text-transform: none;\n    font-weight: 400;\n}\n.rating[data-v-69a7032e] {\n    position: absolute;\n    color: #fff;\n    left: 13px;\n    top: 11px;\n    font-size: 18px;\n    color: white;\n}\n", ""]);
+exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoration: none;\n}\n#headline-wrap[data-v-69a7032e]:hover {\n    color: rgb(51, 122, 183);\n    text-decoration: underline;\n}\n.v-card[data-v-69a7032e] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.v-card.card-mini-right-text-desk[data-v-69a7032e] {\n    margin-top: -5px;\n}\nh4[data-v-69a7032e] {\n    font-weight: normal;\n}\n.price-text-desk[data-v-69a7032e] {\n    font-size: 24px;\n}\n.price-text-through-desk[data-v-69a7032e] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 24px;\n}\n.btn-more-desk.v-btn.v-btn--large[data-v-69a7032e] {\n    margin-right: 0;  \n    padding: 10px 20px;\n    font-size: 20px;\n    border-radius: 3px;\n    background-color: rgb(51, 153, 51);\n    color: rgb(255, 255, 255);\n    border: medium none;\n    width: 100%;\n    letter-spacing: 1px;  \n    text-transform: none;\n    font-weight: 400;\n}\n.rating[data-v-69a7032e] {\n    position: absolute;\n    color: #fff;\n    left: 9px;\n    top: 11px;\n    font-size: 18px;\n    color: white;\n}\n", ""]);
 
 
 
@@ -12739,7 +12777,7 @@ exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoratio
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n    background-color: transparent;\n    font-size: 16px;\n    margin-top: -5px;\n}\n.card-mini-right-text-mob ul[data-v-31974f7b] {\n    list-style-type: none;\n    -webkit-padding-start: 0;\n            padding-inline-start: 0;\n}\n.bg-color-card-mini-mob[data-v-31974f7b] {\n    background: beige;\n    margin-bottom: 20px;\n}\n.price-text-through-mob[data-v-31974f7b] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 22px;\n}\n.price-text-mob[data-v-31974f7b] {\n    font-size: 22px;\n    color: green;\n}\n.btn-more-mob.v-btn.theme--light[data-v-31974f7b] {\n    letter-spacing: 1px;  \n    text-transform: none;\n    color: rgb(255, 255, 255);\n    background-color: rgb(51, 153, 51);\n    margin-left: 0;\n}\n", ""]);
+exports.push([module.i, "\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n    background-color: transparent;\n    font-size: 16px;\n    margin-top: -5px;\n}\n.card-mini-right-text-mob ul[data-v-31974f7b] {\n    list-style-type: none;\n    -webkit-padding-start: 0;\n            padding-inline-start: 0;\n}\n.bg-color-card-mini-mob[data-v-31974f7b] {\n    background: lavender;\n    margin-bottom: 1px;\n}\n.price-text-through-mob[data-v-31974f7b] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 22px;\n}\n.price-text-mob[data-v-31974f7b] {\n    font-size: 22px;\n    color: green;\n}\n.btn-more-mob.v-btn.theme--light[data-v-31974f7b] {\n    letter-spacing: 1px;  \n    text-transform: none;\n    color: rgb(255, 255, 255);\n    background-color: rgb(51, 153, 51);\n    margin-left: 0;\n}\n", ""]);
 
 
 
@@ -12754,7 +12792,7 @@ exports.push([module.i, "\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n.v-btn.btn-menu-desktop[data-v-43b87f60] {\n        text-transform: none;\n        font-family: 'Open Sans Condensed', sans-serif;\n        font-size: 24px;\n}\n.v-btn--icon.logo[data-v-43b87f60] {\n        width: auto;\n        pointer-events: none;\n}\n.v-toolbar__content .v-btn--icon[data-v-43b87f60] {\n        margin: 0px;\n}\n.logo[data-v-43b87f60]:hover {\n        background-color: black;\n} \n    \n/*    v-toolbar__side-icon.v-btn.v-btn--icon {\n        margin-left: 5px;\n    }*/\n    \n", ""]);
+exports.push([module.i, "\n.v-btn.btn-menu-desktop[data-v-43b87f60] {\n    text-transform: none;\n    font-family: 'Open Sans Condensed', sans-serif;\n    font-size: 24px;\n}\n.v-btn--icon.logo[data-v-43b87f60] {\n    width: auto;\n    pointer-events: none;\n}\n.v-toolbar__content .v-btn--icon[data-v-43b87f60] {\n    margin: 0px;\n}\n.logo[data-v-43b87f60]:hover {\n    background-color: black;\n}    \n", ""]);
 
 
 
@@ -44665,7 +44703,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "text-xs-left",
-                  attrs: { dark: "", href: "/realty", hover: "" }
+                  attrs: { dark: "", href: _vm.realtyPage, hover: "" }
                 },
                 [
                   _c("v-img", {
@@ -44693,33 +44731,67 @@ var render = function() {
                   attrs: { flat: "" }
                 },
                 [
-                  _c("a", { attrs: { href: "/realty", id: "headline-wrap" } }, [
-                    _c("h3", { staticClass: "headline" }, [
-                      _vm._v("Villa Name")
-                    ])
-                  ]),
+                  _c(
+                    "a",
+                    { attrs: { href: _vm.realtyPage, id: "headline-wrap" } },
+                    [
+                      _c("h3", { staticClass: "headline" }, [
+                        _vm._v(_vm._s(_vm.realty.name))
+                      ])
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("h4", { staticClass: "pt-3 mb-4" }, [_vm._v("Subheader")]),
+                  _c("h4", { staticClass: "pt-3 mb-4" }, [
+                    _vm._v(_vm._s(_vm.realty["subname_" + _vm.locale]))
+                  ]),
                   _vm._v(" "),
                   _c("ul", [
                     _c("li", [
-                      _c("b", [_vm._v("Площадь:")]),
-                      _vm._v(" 150 м2")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.square")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.square) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.meters"))
+                      ),
+                      _c("sup", [_c("small", [_vm._v("2")])])
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Расстояние до моря:")]),
-                      _vm._v(" 50 м")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.dist_sea")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.dist_sea) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.meters")) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Количество спален:")]),
-                      _vm._v(" 4")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.bedrooms")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.bedrooms) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Вместимость:")]),
-                      _vm._v(" 6 человек")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.capacity")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.capacity) +
+                          "\n                    "
+                      )
                     ])
                   ])
                 ]
@@ -44755,7 +44827,11 @@ var render = function() {
                             width: "50"
                           }
                         },
-                        [_c("span", { staticClass: "rating" }, [_vm._v("9.3")])]
+                        [
+                          _c("span", { staticClass: "rating" }, [
+                            _vm._v(_vm._s(_vm.realty.booking_mark))
+                          ])
+                        ]
                       )
                     ],
                     1
@@ -44779,20 +44855,29 @@ var render = function() {
                           _c(
                             "span",
                             { staticClass: "price-text-through-desk" },
-                            [_vm._v("от € 180")]
+                            [
+                              _vm._v(
+                                "от € " + _vm._s(_vm.realty.price_line_through)
+                              )
+                            ]
                           ),
                           _vm._v(" "),
                           _c("span", { staticClass: "price-text-desk" }, [
-                            _vm._v("€ 180")
+                            _vm._v("€ " + _vm._s(_vm.realty.price))
                           ]),
                           _vm._v(" "),
                           _c(
                             "v-btn",
                             {
                               staticClass: "btn-more-desk",
-                              attrs: { large: "", href: "/" }
+                              attrs: { large: "", href: _vm.realtyPage }
                             },
-                            [_vm._v("Подробнее\n                        ")]
+                            [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.btn_more")) +
+                                  "\n                        "
+                              )
+                            ]
                           )
                         ],
                         1
@@ -44853,7 +44938,7 @@ var render = function() {
                 "v-card",
                 {
                   staticClass: "text-xs-left",
-                  attrs: { dark: "", href: "/realty", hover: "" }
+                  attrs: { dark: "", href: _vm.realtyPage, hover: "" }
                 },
                 [
                   _c("v-img", {
@@ -44881,21 +44966,62 @@ var render = function() {
                   attrs: { flat: "" }
                 },
                 [
-                  _c("a", { attrs: { href: "/realty", id: "headline-wrap" } }, [
-                    _c("h4", [_vm._v("Villa Name")])
-                  ]),
+                  _c(
+                    "a",
+                    { attrs: { href: _vm.realtyPage, id: "headline-wrap" } },
+                    [_c("h4", [_vm._v(_vm._s(_vm.realty.name))])]
+                  ),
                   _vm._v(" "),
-                  _c("ul", {}, [
+                  _c("ul", [
                     _c("li", [
-                      _c("b", [_vm._v("Площадь:")]),
-                      _vm._v(" 150 м2")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.square")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.square) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.meters"))
+                      ),
+                      _c("sup", [_c("small", [_vm._v("2")])])
                     ]),
                     _vm._v(" "),
-                    _c("li", [_c("b", [_vm._v("До моря:")]), _vm._v(" 50 м")]),
+                    _c("li", [
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.dist_sea")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.dist_sea) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.meters")) +
+                          "\n                    "
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c("li", [_c("b", [_vm._v("Спален:")]), _vm._v(" 4")]),
+                    _c("li", [
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.bedrooms")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.bedrooms) +
+                          "\n                    "
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c("li", [_c("b", [_vm._v("Человек:")]), _vm._v(" 6")])
+                    _c("li", [
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.capacity")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.capacity) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.persons")) +
+                          "\n                    "
+                      )
+                    ])
                   ])
                 ]
               )
@@ -44917,8 +45043,16 @@ var render = function() {
                     [
                       _c(
                         "v-btn",
-                        { staticClass: "btn-more-mob", attrs: { href: "/" } },
-                        [_vm._v("Подробнее\n                    ")]
+                        {
+                          staticClass: "btn-more-mob",
+                          attrs: { href: _vm.realtyPage }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(_vm.trans("text.btn_more")) +
+                              "\n                    "
+                          )
+                        ]
                       )
                     ],
                     1
@@ -44926,11 +45060,11 @@ var render = function() {
                   _vm._v(" "),
                   _c("v-flex", { attrs: { xs6: "", "text-xs-right": "" } }, [
                     _c("span", { staticClass: "price-text-through-mob" }, [
-                      _vm._v("от €180")
+                      _vm._v("от € " + _vm._s(_vm.realty.price_line_through))
                     ]),
                     _vm._v("    \n                    "),
                     _c("span", { staticClass: "price-text-mob" }, [
-                      _vm._v("€180")
+                      _vm._v("€ " + _vm._s(_vm.realty.price))
                     ])
                   ])
                 ],
@@ -45297,11 +45431,16 @@ var render = function() {
       _vm._l(JSON.parse(_vm.realties), function(realty) {
         return _c("realty-card-mini-desk", {
           key: realty.name,
-          attrs: { realties: JSON.parse(_vm.realties) }
+          attrs: { realty: realty, locale: _vm.locale }
         })
       }),
       _vm._v(" "),
-      _c("realty-card-mini-mob")
+      _vm._l(JSON.parse(_vm.realties), function(realty) {
+        return _c("realty-card-mini-mob", {
+          key: realty.id,
+          attrs: { realty: realty, locale: _vm.locale }
+        })
+      })
     ],
     2
   )

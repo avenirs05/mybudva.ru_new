@@ -2,7 +2,7 @@
     <v-container class="hidden-sm-and-down">
         <v-layout row wrap class="mb-5">
             <v-flex xs4>                    
-                <v-card dark href="/realty" hover class="text-xs-left">
+                <v-card dark :href="realtyPage" hover class="text-xs-left">
                     <v-img
                         class="white--text"                            
                         src="/img/realties/astra1-02.jpg"  
@@ -13,15 +13,27 @@
             </v-flex>
             <v-flex xs4>
                 <v-card flat class="pl-3 card-mini-right-text-desk">
-                    <a href="/realty" id="headline-wrap">
-                        <h3 class="headline">Villa Name</h3>
+                    <a :href="realtyPage" id="headline-wrap">
+                        <h3 class="headline">{{ realty.name }}</h3>
                     </a>
-                    <h4 class="pt-3 mb-4">Subheader</h4>
+                    <h4 class="pt-3 mb-4">{{ realty[`subname_${locale}`] }}</h4>
                     <ul>
-                        <li><b>Площадь:</b> 150 м2</li>
-                        <li><b>Расстояние до моря:</b> 50 м</li>
-                        <li><b>Количество спален:</b> 4</li>
-                        <li><b>Вместимость:</b> 6 человек</li>
+                        <li>
+                            <b>{{ trans('text.realty.square') }}:</b> 
+                            {{ realty.square }} {{ trans('text.realty.meters') }}<sup><small>2</small></sup>
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.dist_sea') }}:</b> 
+                            {{ realty.dist_sea }} {{ trans('text.realty.meters') }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.bedrooms') }}:</b> 
+                            {{ realty.bedrooms }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.capacity') }}:</b> 
+                            {{ realty.capacity }}
+                        </li>
                     </ul>
                 </v-card>
             </v-flex>
@@ -29,17 +41,17 @@
                 <v-layout column align-end justify-space-between fill-height>
                     <v-flex>                            
                         <v-img src="/img/booking-logo.jpg" height="50" width="50">
-                            <span class="rating">9.3</span>
+                            <span class="rating">{{ realty.booking_mark }}</span>
                         </v-img>                            
                     </v-flex> 
                     <v-flex d-flex> 
                         <v-layout column align-end justify-space-between fill-height>
-                            <span class="price-text-through-desk">от € 180</span>  
-                            <span class="price-text-desk">€ 180</span> 
+                            <span class="price-text-through-desk">от € {{ realty.price_line_through }}</span>  
+                            <span class="price-text-desk">€ {{ realty.price }}</span> 
                             <v-btn class="btn-more-desk"
                                    large
-                                   href="/"
-                                   >Подробнее
+                                   :href="realtyPage"
+                                   >{{ trans('text.btn_more') }}
                             </v-btn>
                         </v-layout>
                     </v-flex>               
@@ -53,9 +65,16 @@
 
 <script>
     export default {   
-        mounted () { console.log(this.realties) }, 
-        props: ['realties'],
-        data: () => ({ }),    
+        mounted () { 
+            this.realtyPage = route('realtyPage', this.realty.id);
+        }, 
+        props: [
+            'realty', 
+            'locale'
+        ],
+        data: () => ({ 
+            realtyPage: ''
+        })
     }
 </script>
 
@@ -110,7 +129,7 @@
     .rating {
         position: absolute;
         color: #fff;
-        left: 13px;
+        left: 9px;
         top: 11px;
         font-size: 18px;
         color: white;

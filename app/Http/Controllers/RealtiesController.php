@@ -13,13 +13,13 @@ class RealtiesController extends Controller
     public function __invoke(Request $request) 
 	{
 		$locale = app()->getLocale();
+		
 		$title = Lang::get('text.title_tag.home');
 		$content = Content::select('phone_main')->where('lang', $locale)->get()->toArray()[0];
-		
 		$realty_type = self::realtyType($request);
-		//$header = ucfirst($realty_type) . 's';	
 
 		$realty = Realty::select(
+							"id",
 							"name", 
 							"subname_$locale", 
 							"square", 
@@ -31,10 +31,7 @@ class RealtiesController extends Controller
 							"price_line_through")
 						 ->where('type', $realty_type)
 						 ->get();
-		
 
-		//dd($realty);
-		
 		$data = [
 			'title' => $title,
 			'phone_main' => $content['phone_main'],
@@ -47,9 +44,7 @@ class RealtiesController extends Controller
 	
 	protected static function realtyType(Request $request) 
 	{
-		$path = $request->path();
-		
-		switch ($path) {
+		switch ($request->path()) {
 			case 'villas':
 				return 'villa';
 				break;

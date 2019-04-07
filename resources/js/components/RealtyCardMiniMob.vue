@@ -2,7 +2,7 @@
     <v-container class="hidden-md-and-up bg-color-card-mini-mob">
         <v-layout row wrap class="">
             <v-flex xs6>                    
-                <v-card dark href="/realty" hover class="text-xs-left">
+                <v-card dark :href="realtyPage" hover class="text-xs-left">
                     <v-img
                         class="white--text"                            
                         src="/img/realties/astra1-02.jpg"  
@@ -13,14 +13,26 @@
             </v-flex>
             <v-flex xs6>
                 <v-card flat class="pl-3 card-mini-right-text-mob">
-                    <a href="/realty" id="headline-wrap">
-                        <h4>Villa Name</h4>
+                    <a :href="realtyPage" id="headline-wrap">
+                        <h4>{{ realty.name }}</h4>
                     </a>                        
-                    <ul class="">
-                        <li><b>Площадь:</b> 150 м2</li>
-                        <li><b>До моря:</b> 50 м</li>
-                        <li><b>Спален:</b> 4</li>
-                        <li><b>Человек:</b> 6</li>                         
+                    <ul>
+                        <li>
+                            <b>{{ trans('text.realty.square') }}:</b> 
+                            {{ realty.square }} {{ trans('text.realty.meters') }}<sup><small>2</small></sup>
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.dist_sea') }}:</b> 
+                            {{ realty.dist_sea }} {{ trans('text.realty.meters') }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.bedrooms') }}:</b> 
+                            {{ realty.bedrooms }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.capacity') }}:</b> 
+                            {{ realty.capacity }} {{ trans('text.realty.persons') }}
+                        </li>
                     </ul>
                 </v-card>
             </v-flex>
@@ -28,13 +40,13 @@
                 <v-layout row wrap align-end>
                     <v-flex xs6>   
                         <v-btn class="btn-more-mob"                                   
-                               href="/"
-                               >Подробнее
+                               :href="realtyPage"
+                               >{{ trans('text.btn_more') }}
                         </v-btn>
                     </v-flex> 
                     <v-flex xs6 text-xs-right>                                                        
-                        <span class="price-text-through-mob">от €180</span>&nbsp; &nbsp; 
-                        <span class="price-text-mob">€180</span>                           
+                        <span class="price-text-through-mob">от € {{ realty.price_line_through }}</span>&nbsp; &nbsp; 
+                        <span class="price-text-mob">€ {{ realty.price }}</span>                           
                     </v-flex> 
                 </v-layout>                     
             </v-flex>
@@ -45,8 +57,16 @@
 
 <script>
     export default {   
-        mounted () {}, 
-        data: () => ({ })    
+        mounted () { 
+            this.realtyPage = route('realtyPage', this.realty.id);
+        }, 
+        props: [
+            'realty', 
+            'locale'
+        ],  
+        data: () => ({ 
+            realtyPage: ''
+        })    
     }
 </script>
 
@@ -64,8 +84,8 @@
     }
 
     .bg-color-card-mini-mob {
-        background: beige;
-        margin-bottom: 20px;
+        background: lavender;
+        margin-bottom: 1px;
     }
 
     .price-text-through-mob {

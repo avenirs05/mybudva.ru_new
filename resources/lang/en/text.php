@@ -1,7 +1,6 @@
 <?php
 
 return [
-	'lang'        => 'en',	
 	'header_main' => 'Rent villas and apartments in Montenegro without intermediaries',
 	
 	'title_tag'	  => [
@@ -9,7 +8,7 @@ return [
 		'villas' => 'Villas',
 		'apartments' => 'Apartments',
 		'feedbacks' => 'Feedback',
-		'contact' => 'Contact'
+		'contact' => 'Contacts'
 	],
 	
 	'menu' => [
@@ -17,7 +16,17 @@ return [
 		'villas'      => 'Villas',
 		'apartments'  => 'Apartments',
 		'feedbacks'   => 'Feedback',
-		'contact'     => 'Contact'		
+		'contact'     => 'Contacts'		
 	],
-
+	
+	'realty' => [
+		'square'	=> 'Square',
+		'dist_sea'  => 'To sea',
+		'bedrooms'  => 'Bedrooms',
+		'capacity'  => 'Persons',
+		'meters'	=> 'm',
+//		'persons'	=> 'persons'
+	],
+	
+	'btn_more' => 'Learn More'
 ];
