@@ -12,7 +12,7 @@ class FeedbacksController extends Controller
     public function __invoke() 
     {
 		$locale = app()->getLocale();
-		$title = Lang::get('text.title_tag.home');
+		$title = Lang::get('text.menu.feedbacks');
 		$content = Content::where('lang', $locale)->get()->toArray()[0];
 
 		$data = [

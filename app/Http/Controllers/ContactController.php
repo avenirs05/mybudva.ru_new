@@ -11,7 +11,7 @@ class ContactController extends Controller
     public function __invoke() 
 	{
 		$locale = app()->getLocale();
-		$title = Lang::get('text.title_tag.home');	
+		$title = Lang::get('text.menu.contact');	
 		$content = Content::where('lang', $locale)->get()->toArray()[0];
 	
 		$data = [

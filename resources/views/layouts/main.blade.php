@@ -6,7 +6,7 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<meta name="yandex-verification" content="30abed22f0fc9acb" />
 
-		<title>MyBudva</title>
+		<title>{{ $title }}</title>
 
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">

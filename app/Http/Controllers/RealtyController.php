@@ -2,36 +2,58 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Lang;
+//use Illuminate\Http\Request;
 use App\Content;
+use App\Realty;
 
 class RealtyController extends Controller
 {
 	public function __invoke($id) 
 	{
-		dd('test');
 		$locale = app()->getLocale();
-
-		$title = Lang::get('text.title_tag.home');
-		$content = Content::select('phone_main')->where('lang', $locale)->get()->toArray()[0];
-
 		
-		
+		$content = Content::select('phone_main')
+					->where('lang', $locale)
+					->get()
+					->toArray()[0];
 		
 		$realty = Realty::select(
-						"id", "name", "subname_$locale", "square", "dist_sea", "bedrooms", "capacity", "booking_mark", "price", "price_line_through")
-				->where('type', $realty_type)
-				->get();
-
+					'id', 
+					'name', 
+					"type_$locale",
+					'square', 
+					"view_$locale",	
+					'bedrooms', 
+					'capacity', 
+					'dist_sea', 
+					'dist_tivat', 
+					'dist_podg', 				
+					"transfer_$locale", 
+					"internet_$locale", 
+					"parking_$locale",
+					"description_$locale",
+					'map_html',
+					'price_may',
+					'price_jun',
+					'price_jul',
+					'price_aug',
+					'price_sep',
+					'price_oct_apr')
+				->where('id', $id)
+				->first();
+		
+		/**
+		 * Установка title страницы
+		 */		
+		$type = "type_$locale";	
+		$title = $realty->name . ' ' . $realty->$type;
 		
 		$data = [
-			'title' => $title,
+			'title'      => $title,
 			'phone_main' => $content['phone_main'],
-			'realty' => $realty,
+			'realty'     => $realty->toJson(),
 		];
-
+		
 		return view('realty', $data);
 	}
-
 }

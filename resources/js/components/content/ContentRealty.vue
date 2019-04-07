@@ -3,23 +3,27 @@
         <v-container>
             <v-layout row align-center>
                 <v-flex>                              
-                    <h1 class="display-1 text-xs-center text-md-left mt-1 mb-2">Villa Lilia</h1>                     
+                    <h1 class="display-1 text-xs-center text-md-left mt-1 mb-2">
+                        {{ JSON.parse(realty).name }}
+                    </h1>                     
                 </v-flex>               
             </v-layout> 
-            <realty-card-max-desk></realty-card-max-desk>
+            <realty-card-max-desk 
+                :realty="JSON.parse(realty)"
+                :locale="locale"
+            ></realty-card-max-desk>
         </v-container>  
         
-        <realty-card-max-mob></realty-card-max-mob>       
+        <realty-card-max-mob 
+            :realty="JSON.parse(realty)"
+            :locale="locale"
+        ></realty-card-max-mob>       
         
         <v-container>    
             <v-layout row>
                 <v-flex>                              
                     <div class="description mb-4">
-                        <p>Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой.</p>
-                        <p>Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой.</p>
-                        <p>Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой.</p>
-                        <p>Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой.</p>
-                        <p>Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой.</p>
+                        {{ JSON.parse(realty)[`description_${locale}`] }}
                     </div>
                 </v-flex>               
             </v-layout> 
@@ -45,27 +49,32 @@
             </v-layout>         
         </v-container> 
         
-        <v-layout>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.333259612959!2d18.845591315101185!3d42.29275394734261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDE3JzMzLjkiTiAxOMKwNTAnNTIuMCJF!5e0!3m2!1sru!2sru!4v1508014846100" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </v-layout>
+        <v-layout v-html="JSON.parse(realty).map_html"></v-layout>
+        
     </v-content>
 </template>
+
 
 <script>
     import RealtyCardMaxDesk from '../RealtyCardMaxDesk.vue'
     import RealtyCardMaxMob from '../RealtyCardMaxMob.vue'
     
-    export default {    
+    export default {
+//        mounted() { console.log(this.realty.name) },   
+        props: [
+            'realty', 
+            'locale'
+        ],
         components: { 
             RealtyCardMaxDesk,
             RealtyCardMaxMob
         },
         data () {
             return { }
-        },
-        methods: { }
+        }
     }
 </script>
+
 
 <style scoped>    
 

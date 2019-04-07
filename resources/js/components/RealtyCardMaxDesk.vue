@@ -14,48 +14,78 @@
             <v-flex xs4>
                 <v-card flat class="pl-3 card-mini-right-text-desk">
                     <ul>
-                        <li><b>Площадь:</b> 150 м2</li>
-                        <li><b>Расстояние до моря:</b> 50 м</li>
-                        <li><b>Количество спален:</b> 4</li>
-                        <li><b>Вместимость:</b> 6 человек</li>
-                        <li><b>Площадь:</b> 150 м2</li>
-                        <li><b>Расстояние до моря:</b> 50 м</li>
-                        <li><b>Количество спален:</b> 4</li>
-                        <li><b>Вместимость:</b> 6 человек</li>
-                        <li><b>Количество спален:</b> 4</li>
-                        <li><b>Вместимость:</b> 6 человек</li>
+                        <li>
+                            <b>{{ trans('text.realty.square') }}:</b> 
+                            {{ realty.square }} {{ trans('text.realty.meters') }}<sup><small>2</small></sup>
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.view') }}:</b> 
+                            {{ realty[`view_${locale}`] }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.bedrooms') }}:</b> 
+                            {{ realty.bedrooms }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.capacity') }}:</b> 
+                            {{ realty.capacity }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.dist_sea') }}:</b> 
+                            {{ realty.dist_sea }} {{ trans('text.realty.meters') }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.dist_tivat') }}:</b> 
+                            {{ realty.dist_tivat }} {{ trans('text.realty.km') }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.dist_podg') }}:</b> 
+                            {{ realty.dist_podg }} {{ trans('text.realty.km') }} 
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.transfer') }}:</b> 
+                            {{ realty[`transfer_${locale}`] }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.internet') }}:</b> 
+                            {{ realty[`internet_${locale}`] }}
+                        </li>
+                        <li>
+                            <b>{{ trans('text.realty.parking') }}:</b> 
+                            {{ realty[`parking_${locale}`] }}
+                        </li>
                     </ul>
                 </v-card>
             </v-flex>
             <v-flex xs3>
                 <v-card flat class="pl-3">
                     <h2 class="subheading indigo--text font-weight-bold mb-3">
-                        Цена в сутки <span class="caption red--text darken-4">(без учета скидок)</span>
+                        {{ trans('text.realty.price_per_day') }} <span class="caption red--text darken-4">({{ trans('text.realty.without_discounts') }})</span>
                     </h2> 
                     <table class="table">
                         <tr>
-                            <th>май</th>
-                            <td>100€</td>
+                            <th>{{ trans('text.may') }}</th>
+                            <td>{{ realty.price_may }}</td>
                         </tr>
                         <tr>
-                            <th>июнь</th>
-                            <td>100€</td>
+                            <th>{{ trans('text.jun') }}</th>
+                            <td>{{ realty.price_jun }}</td>
                         </tr>
                         <tr>
-                            <th>июль</th>
-                            <td>100€</td>
+                            <th>{{ trans('text.jul') }}</th>
+                            <td>{{ realty.price_jul }}</td>
                         </tr>
                         <tr>
-                            <th>август</th>
-                            <td>100€</td>
+                            <th>{{ trans('text.aug') }}</th>
+                            <td>{{ realty.price_aug }}</td>
                         </tr>
                         <tr>
-                            <th>сентябрь</th>
-                            <td>100€</td>
+                            <th>{{ trans('text.sep') }}</th>
+                            <td>{{ realty.price_sep }}</td>
                         </tr>
                         <tr>
-                            <th>октябрь-апрель</th>
-                            <td>100€</td>
+                            <th>{{ trans('text.oct-apr') }}</th>
+                            <td>{{ realty.price_oct_apr }}</td>
                         </tr>
                     </table>
                 </v-card>
@@ -63,30 +93,30 @@
         </v-layout>
         <v-layout row align-center class="hidden-sm-and-down">
             <v-flex>                              
-                <div id="lightgallery" ref="lightgallery" class="">
-                    <a href="img/realties/astra1-02.jpg">
-                        <img src="img/realties/astra1-02.jpg" />
+                <div id="lightgallery" ref="lightgallery">
+                    <a href="/img/realties/astra1-02.jpg">
+                        <img src="/img/realties/astra1-02.jpg" />
                     </a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
-                    <a href="img/realties/astra1-02.jpg"><img src="img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
                 </div>
             </v-flex>               
         </v-layout> 
@@ -95,8 +125,10 @@
 
 
 <script>
-    export default {    
-        data: () => ({}),
+    export default {   
+//        mounted() { console.log(this.locale) },    
+        props: ['realty', 'locale'],    
+        data: () => ({ }),
         methods: {
             /**
              * Т.к. основная картинка лежит вне lightgallery,
@@ -105,9 +137,7 @@
              * @returns {undefined}
              */
             openLg() {
-                $('.realty-card-desk').click(function () {
-                    $('#lightgallery a').first().trigger("click");
-                });
+                $('#lightgallery a').first().trigger("click");
             }
         }
     }

@@ -39,9 +39,11 @@
             <v-flex d-flex class="pt-3" xs-12>                    
                 <v-layout row wrap align-end>
                     <v-flex xs6>   
-                        <v-btn class="btn-more-mob"                                   
-                               :href="realtyPage"
-                               >{{ trans('text.btn_more') }}
+                        <v-btn 
+                            class="btn-more-mob"                                   
+                            :href="realtyPage"
+                            :style="{ marginBottom: 0 }"
+                            >{{ trans('text.btn_more') }}
                         </v-btn>
                     </v-flex> 
                     <v-flex xs6 text-xs-right>                                                        
@@ -61,17 +63,20 @@
             this.realtyPage = route('realtyPage', this.realty.id);
         }, 
         props: [
-            'realty', 
-            'locale'
+            'locale',
+            'realty'
         ],  
         data: () => ({ 
-            realtyPage: ''
+            realtyPage: '',
         })    
     }
 </script>
 
 
 <style scoped>
+    .container {
+        border-top: 1px solid #CCCCCC;
+    }
     .v-card.card-mini-right-text-mob {
         background-color: transparent;
         font-size: 16px;
@@ -84,8 +89,8 @@
     }
 
     .bg-color-card-mini-mob {
-        background: lavender;
-        margin-bottom: 1px;
+/*        background: lavender;*/
+        margin-bottom: 0px;
     }
 
     .price-text-through-mob {
@@ -104,7 +109,8 @@
         text-transform: none;
         color: rgb(255, 255, 255);
         background-color: rgb(51, 153, 51);
-        margin-left: 0;    
+        margin-left: 0; 
+        marfin-bottom: 0;
     }
 </style>
 

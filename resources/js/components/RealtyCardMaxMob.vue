@@ -1,58 +1,87 @@
 <template>
     <v-card class="mb-3 hidden-md-and-up">
         <v-carousel hide-delimiters :height="carouselHeight" :cycle="cycle">
-                    <v-carousel-item
+            <v-carousel-item
                 v-for="(item,i) in items"
                 :key="i"
                 :src="item.src"
-
-                ></v-carousel-item>
+            ></v-carousel-item>
         </v-carousel>
 
         <v-card-title primary-title>
             <ul class="props-in-max-card-mob">
-                <li><b>Площадь:</b> 150 м2</li>
-                <li><b>Расстояние до моря:</b> 50 м</li>
-                <li><b>Количество спален:</b> 4</li>
-                <li><b>Вместимость:</b> 6 человек</li>
-                <li><b>Площадь:</b> 150 м2</li>
-                <li><b>Расстояние до моря:</b> 50 м</li>
-                <li><b>Количество спален:</b> 4</li>
-                <li><b>Вместимость:</b> 6 человек</li>
-                <li><b>Количество спален:</b> 4</li>
-                <li><b>Вместимость:</b> 6 человек</li>                    
+                <li>
+                    <b>{{ trans('text.realty.square') }}:</b> 
+                    {{ realty.square }} {{ trans('text.realty.meters') }}<sup><small>2</small></sup>
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.view') }}:</b> 
+                    {{ realty[`view_${locale}`] }}
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.bedrooms') }}:</b> 
+                    {{ realty.bedrooms }}
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.capacity') }}:</b> 
+                    {{ realty.capacity }}
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.dist_sea') }}:</b> 
+                    {{ realty.dist_sea }} {{ trans('text.realty.meters') }}
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.dist_tivat') }}:</b> 
+                    {{ realty.dist_tivat }} {{ trans('text.realty.km') }}
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.dist_podg') }}:</b> 
+                    {{ realty.dist_podg }} {{ trans('text.realty.km') }} 
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.transfer') }}:</b> 
+                    {{ realty[`transfer_${locale}`] }}
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.internet') }}:</b> 
+                    {{ realty[`internet_${locale}`] }}
+                </li>
+                <li>
+                    <b>{{ trans('text.realty.parking') }}:</b> 
+                    {{ realty[`parking_${locale}`] }}
+                </li>                    
             </ul>                
             
             <v-container>
                 <h3 class="subheading indigo--text font-weight-bold text-xs-center mt-2">
-                    Цена в сутки <span class="caption red--text darken-4">(без учета скидок)</span>
+                    {{ trans('text.realty.price_per_day') }} <span class="caption red--text darken-4">({{ trans('text.realty.without_discounts') }})</span>
                 </h3> 
             </v-container>    
             
             <table class="table">
                 <tr>
-                    <th>май</th>
-                    <td>100€</td>
+                    <th>{{ trans('text.may') }}</th>
+                    <td>{{ realty.price_may }}</td>
                 </tr>
                 <tr>
-                    <th>июнь</th>
-                    <td>100€</td>
+                    <th>{{ trans('text.jun') }}</th>
+                    <td>{{ realty.price_jun }}</td>
                 </tr>
                 <tr>
-                    <th>июль</th>
-                    <td>100€</td>
+                    <th>{{ trans('text.jul') }}</th>
+                    <td>{{ realty.price_jul }}</td>
                 </tr>
                 <tr>
-                    <th>август</th>
-                    <td>100€</td>
+                    <th>{{ trans('text.aug') }}</th>
+                    <td>{{ realty.price_aug }}</td>
                 </tr>
                 <tr>
-                    <th>сентябрь</th>
-                    <td>100€</td>
+                    <th>{{ trans('text.sep') }}</th>
+                    <td>{{ realty.price_sep }}</td>
                 </tr>
                 <tr>
-                    <th>октябрь-апрель</th>
-                    <td>100€</td>
+                    <th>{{ trans('text.oct-apr') }}</th>
+                    <td>{{ realty.price_oct_apr }}</td>
                 </tr>
             </table>
         </v-card-title>
@@ -61,13 +90,15 @@
 
 
 <script>
-    export default {    
+    export default {  
+//        mounted() { console.log(this.realty) },
+        props: ['realty', 'locale'],
         data () {
            return {
                cycle: false,  
                items: [
                    {
-                      src: 'img/realties/astra1-02.jpg'
+                      src: '/img/realties/astra1-02.jpg'
                    },
                    {
                       src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'

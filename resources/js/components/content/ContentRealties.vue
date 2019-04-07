@@ -21,8 +21,7 @@
             :key="realty.id"
             :realty="realty"
             :locale="locale"       
-        ></realty-card-mini-mob>   
-        
+        ></realty-card-mini-mob> 
     </v-content>
 </template>
 

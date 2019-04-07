@@ -2950,7 +2950,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  //        mounted() { console.log(this.locale) },    
+  props: ['realty', 'locale'],
   data: function data() {
     return {};
   },
@@ -2962,9 +2994,7 @@ __webpack_require__.r(__webpack_exports__);
      * @returns {undefined}
      */
     openLg: function openLg() {
-      $('.realty-card-desk').click(function () {
-        $('#lightgallery a').first().trigger("click");
-      });
+      $('#lightgallery a').first().trigger("click");
     }
   }
 });
@@ -3042,12 +3072,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  //        mounted() { console.log(this.realty) },
+  props: ['realty', 'locale'],
   data: function data() {
     return {
       cycle: false,
       items: [{
-        src: 'img/realties/astra1-02.jpg'
+        src: '/img/realties/astra1-02.jpg'
       }, {
         src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
       }, {
@@ -3227,11 +3288,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     this.realtyPage = route('realtyPage', this.realty.id);
   },
-  props: ['realty', 'locale'],
+  props: ['locale', 'realty'],
   data: function data() {
     return {
       realtyPage: ''
@@ -3522,7 +3585,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3620,17 +3682,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  //        mounted() { console.log(this.realty.name) },   
+  props: ['realty', 'locale'],
   components: {
     RealtyCardMaxDesk: _RealtyCardMaxDesk_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     RealtyCardMaxMob: _RealtyCardMaxMob_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {};
-  },
-  methods: {}
+  }
 });
 
 /***/ }),
@@ -12777,7 +12844,7 @@ exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoratio
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n    background-color: transparent;\n    font-size: 16px;\n    margin-top: -5px;\n}\n.card-mini-right-text-mob ul[data-v-31974f7b] {\n    list-style-type: none;\n    -webkit-padding-start: 0;\n            padding-inline-start: 0;\n}\n.bg-color-card-mini-mob[data-v-31974f7b] {\n    background: lavender;\n    margin-bottom: 1px;\n}\n.price-text-through-mob[data-v-31974f7b] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 22px;\n}\n.price-text-mob[data-v-31974f7b] {\n    font-size: 22px;\n    color: green;\n}\n.btn-more-mob.v-btn.theme--light[data-v-31974f7b] {\n    letter-spacing: 1px;  \n    text-transform: none;\n    color: rgb(255, 255, 255);\n    background-color: rgb(51, 153, 51);\n    margin-left: 0;\n}\n", ""]);
+exports.push([module.i, "\n.container[data-v-31974f7b] {\n        border-top: 1px solid #CCCCCC;\n}\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n        background-color: transparent;\n        font-size: 16px;\n        margin-top: -5px;\n}\n.card-mini-right-text-mob ul[data-v-31974f7b] {\n        list-style-type: none;\n        -webkit-padding-start: 0;\n                padding-inline-start: 0;\n}\n.bg-color-card-mini-mob[data-v-31974f7b] {\n/*        background: lavender;*/\n        margin-bottom: 0px;\n}\n.price-text-through-mob[data-v-31974f7b] {\n        text-decoration: line-through;\n        -webkit-text-decoration-color: red;\n                text-decoration-color: red;\n        font-size: 22px;\n}\n.price-text-mob[data-v-31974f7b] {\n        font-size: 22px;\n        color: green;\n}\n.btn-more-mob.v-btn.theme--light[data-v-31974f7b] {\n        letter-spacing: 1px;  \n        text-transform: none;\n        color: rgb(255, 255, 255);\n        background-color: rgb(51, 153, 51);\n        margin-left: 0; \n        marfin-bottom: 0;\n}\n", ""]);
 
 
 
@@ -44313,53 +44380,123 @@ var render = function() {
                 [
                   _c("ul", [
                     _c("li", [
-                      _c("b", [_vm._v("Площадь:")]),
-                      _vm._v(" 150 м2")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.square")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.square) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.meters"))
+                      ),
+                      _c("sup", [_c("small", [_vm._v("2")])])
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Расстояние до моря:")]),
-                      _vm._v(" 50 м")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.view")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty["view_" + _vm.locale]) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Количество спален:")]),
-                      _vm._v(" 4")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.bedrooms")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.bedrooms) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Вместимость:")]),
-                      _vm._v(" 6 человек")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.capacity")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.capacity) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Площадь:")]),
-                      _vm._v(" 150 м2")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.dist_sea")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.dist_sea) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.meters")) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Расстояние до моря:")]),
-                      _vm._v(" 50 м")
+                      _c("b", [
+                        _vm._v(
+                          _vm._s(_vm.trans("text.realty.dist_tivat")) + ":"
+                        )
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.dist_tivat) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.km")) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Количество спален:")]),
-                      _vm._v(" 4")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.dist_podg")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty.dist_podg) +
+                          " " +
+                          _vm._s(_vm.trans("text.realty.km")) +
+                          " \n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Вместимость:")]),
-                      _vm._v(" 6 человек")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.transfer")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty["transfer_" + _vm.locale]) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Количество спален:")]),
-                      _vm._v(" 4")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.internet")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty["internet_" + _vm.locale]) +
+                          "\n                    "
+                      )
                     ]),
                     _vm._v(" "),
                     _c("li", [
-                      _c("b", [_vm._v("Вместимость:")]),
-                      _vm._v(" 6 человек")
+                      _c("b", [
+                        _vm._v(_vm._s(_vm.trans("text.realty.parking")) + ":")
+                      ]),
+                      _vm._v(
+                        " \n                        " +
+                          _vm._s(_vm.realty["parking_" + _vm.locale]) +
+                          "\n                    "
+                      )
                     ])
                   ])
                 ]
@@ -44379,48 +44516,56 @@ var render = function() {
                     staticClass: "subheading indigo--text font-weight-bold mb-3"
                   },
                   [
-                    _vm._v("\n                    Цена в сутки "),
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(_vm.trans("text.realty.price_per_day")) +
+                        " "
+                    ),
                     _c("span", { staticClass: "caption red--text darken-4" }, [
-                      _vm._v("(без учета скидок)")
+                      _vm._v(
+                        "(" +
+                          _vm._s(_vm.trans("text.realty.without_discounts")) +
+                          ")"
+                      )
                     ])
                   ]
                 ),
                 _vm._v(" "),
                 _c("table", { staticClass: "table" }, [
                   _c("tr", [
-                    _c("th", [_vm._v("май")]),
+                    _c("th", [_vm._v(_vm._s(_vm.trans("text.may")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("100€")])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_may))])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
-                    _c("th", [_vm._v("июнь")]),
+                    _c("th", [_vm._v(_vm._s(_vm.trans("text.jun")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("100€")])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_jun))])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
-                    _c("th", [_vm._v("июль")]),
+                    _c("th", [_vm._v(_vm._s(_vm.trans("text.jul")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("100€")])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_jul))])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
-                    _c("th", [_vm._v("август")]),
+                    _c("th", [_vm._v(_vm._s(_vm.trans("text.aug")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("100€")])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_aug))])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
-                    _c("th", [_vm._v("сентябрь")]),
+                    _c("th", [_vm._v(_vm._s(_vm.trans("text.sep")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("100€")])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_sep))])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
-                    _c("th", [_vm._v("октябрь-апрель")]),
+                    _c("th", [_vm._v(_vm._s(_vm.trans("text.oct-apr")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("100€")])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr))])
                   ])
                 ])
               ])
@@ -44440,88 +44585,88 @@ var render = function() {
         [
           _c("v-flex", [
             _c("div", { ref: "lightgallery", attrs: { id: "lightgallery" } }, [
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "img/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "img/realties/astra1-02.jpg" } })
+              _c("a", { attrs: { href: "/img/realties/astra1-02.jpg" } }, [
+                _c("img", { attrs: { src: "/img/realties/astra1-02.jpg" } })
               ])
             ])
           ])
@@ -44578,31 +44723,117 @@ var render = function() {
         { attrs: { "primary-title": "" } },
         [
           _c("ul", { staticClass: "props-in-max-card-mob" }, [
-            _c("li", [_c("b", [_vm._v("Площадь:")]), _vm._v(" 150 м2")]),
-            _vm._v(" "),
             _c("li", [
-              _c("b", [_vm._v("Расстояние до моря:")]),
-              _vm._v(" 50 м")
+              _c("b", [_vm._v(_vm._s(_vm.trans("text.realty.square")) + ":")]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty.square) +
+                  " " +
+                  _vm._s(_vm.trans("text.realty.meters"))
+              ),
+              _c("sup", [_c("small", [_vm._v("2")])])
             ]),
             _vm._v(" "),
-            _c("li", [_c("b", [_vm._v("Количество спален:")]), _vm._v(" 4")]),
-            _vm._v(" "),
-            _c("li", [_c("b", [_vm._v("Вместимость:")]), _vm._v(" 6 человек")]),
-            _vm._v(" "),
-            _c("li", [_c("b", [_vm._v("Площадь:")]), _vm._v(" 150 м2")]),
-            _vm._v(" "),
             _c("li", [
-              _c("b", [_vm._v("Расстояние до моря:")]),
-              _vm._v(" 50 м")
+              _c("b", [_vm._v(_vm._s(_vm.trans("text.realty.view")) + ":")]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty["view_" + _vm.locale]) +
+                  "\n            "
+              )
             ]),
             _vm._v(" "),
-            _c("li", [_c("b", [_vm._v("Количество спален:")]), _vm._v(" 4")]),
+            _c("li", [
+              _c("b", [
+                _vm._v(_vm._s(_vm.trans("text.realty.bedrooms")) + ":")
+              ]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty.bedrooms) +
+                  "\n            "
+              )
+            ]),
             _vm._v(" "),
-            _c("li", [_c("b", [_vm._v("Вместимость:")]), _vm._v(" 6 человек")]),
+            _c("li", [
+              _c("b", [
+                _vm._v(_vm._s(_vm.trans("text.realty.capacity")) + ":")
+              ]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty.capacity) +
+                  "\n            "
+              )
+            ]),
             _vm._v(" "),
-            _c("li", [_c("b", [_vm._v("Количество спален:")]), _vm._v(" 4")]),
+            _c("li", [
+              _c("b", [
+                _vm._v(_vm._s(_vm.trans("text.realty.dist_sea")) + ":")
+              ]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty.dist_sea) +
+                  " " +
+                  _vm._s(_vm.trans("text.realty.meters")) +
+                  "\n            "
+              )
+            ]),
             _vm._v(" "),
-            _c("li", [_c("b", [_vm._v("Вместимость:")]), _vm._v(" 6 человек")])
+            _c("li", [
+              _c("b", [
+                _vm._v(_vm._s(_vm.trans("text.realty.dist_tivat")) + ":")
+              ]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty.dist_tivat) +
+                  " " +
+                  _vm._s(_vm.trans("text.realty.km")) +
+                  "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("b", [
+                _vm._v(_vm._s(_vm.trans("text.realty.dist_podg")) + ":")
+              ]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty.dist_podg) +
+                  " " +
+                  _vm._s(_vm.trans("text.realty.km")) +
+                  " \n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("b", [
+                _vm._v(_vm._s(_vm.trans("text.realty.transfer")) + ":")
+              ]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty["transfer_" + _vm.locale]) +
+                  "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("b", [
+                _vm._v(_vm._s(_vm.trans("text.realty.internet")) + ":")
+              ]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty["internet_" + _vm.locale]) +
+                  "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("b", [_vm._v(_vm._s(_vm.trans("text.realty.parking")) + ":")]),
+              _vm._v(
+                " \n                " +
+                  _vm._s(_vm.realty["parking_" + _vm.locale]) +
+                  "\n            "
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("v-container", [
@@ -44613,9 +44844,17 @@ var render = function() {
                   "subheading indigo--text font-weight-bold text-xs-center mt-2"
               },
               [
-                _vm._v("\n                Цена в сутки "),
+                _vm._v(
+                  "\n                " +
+                    _vm._s(_vm.trans("text.realty.price_per_day")) +
+                    " "
+                ),
                 _c("span", { staticClass: "caption red--text darken-4" }, [
-                  _vm._v("(без учета скидок)")
+                  _vm._v(
+                    "(" +
+                      _vm._s(_vm.trans("text.realty.without_discounts")) +
+                      ")"
+                  )
                 ])
               ]
             )
@@ -44623,39 +44862,39 @@ var render = function() {
           _vm._v(" "),
           _c("table", { staticClass: "table" }, [
             _c("tr", [
-              _c("th", [_vm._v("май")]),
+              _c("th", [_vm._v(_vm._s(_vm.trans("text.may")))]),
               _vm._v(" "),
-              _c("td", [_vm._v("100€")])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_may))])
             ]),
             _vm._v(" "),
             _c("tr", [
-              _c("th", [_vm._v("июнь")]),
+              _c("th", [_vm._v(_vm._s(_vm.trans("text.jun")))]),
               _vm._v(" "),
-              _c("td", [_vm._v("100€")])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_jun))])
             ]),
             _vm._v(" "),
             _c("tr", [
-              _c("th", [_vm._v("июль")]),
+              _c("th", [_vm._v(_vm._s(_vm.trans("text.jul")))]),
               _vm._v(" "),
-              _c("td", [_vm._v("100€")])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_jul))])
             ]),
             _vm._v(" "),
             _c("tr", [
-              _c("th", [_vm._v("август")]),
+              _c("th", [_vm._v(_vm._s(_vm.trans("text.aug")))]),
               _vm._v(" "),
-              _c("td", [_vm._v("100€")])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_aug))])
             ]),
             _vm._v(" "),
             _c("tr", [
-              _c("th", [_vm._v("сентябрь")]),
+              _c("th", [_vm._v(_vm._s(_vm.trans("text.sep")))]),
               _vm._v(" "),
-              _c("td", [_vm._v("100€")])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_sep))])
             ]),
             _vm._v(" "),
             _c("tr", [
-              _c("th", [_vm._v("октябрь-апрель")]),
+              _c("th", [_vm._v(_vm._s(_vm.trans("text.oct-apr")))]),
               _vm._v(" "),
-              _c("td", [_vm._v("100€")])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr))])
             ])
           ])
         ],
@@ -45045,6 +45284,7 @@ var render = function() {
                         "v-btn",
                         {
                           staticClass: "btn-more-mob",
+                          style: { marginBottom: 0 },
                           attrs: { href: _vm.realtyPage }
                         },
                         [
@@ -45484,19 +45724,29 @@ var render = function() {
                     staticClass:
                       "display-1 text-xs-center text-md-left mt-1 mb-2"
                   },
-                  [_vm._v("Villa Lilia")]
+                  [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(JSON.parse(_vm.realty).name) +
+                        "\n                "
+                    )
+                  ]
                 )
               ])
             ],
             1
           ),
           _vm._v(" "),
-          _c("realty-card-max-desk")
+          _c("realty-card-max-desk", {
+            attrs: { realty: JSON.parse(_vm.realty), locale: _vm.locale }
+          })
         ],
         1
       ),
       _vm._v(" "),
-      _c("realty-card-max-mob"),
+      _c("realty-card-max-mob", {
+        attrs: { realty: JSON.parse(_vm.realty), locale: _vm.locale }
+      }),
       _vm._v(" "),
       _c(
         "v-container",
@@ -45507,35 +45757,13 @@ var render = function() {
             [
               _c("v-flex", [
                 _c("div", { staticClass: "description mb-4" }, [
-                  _c("p", [
-                    _vm._v(
-                      "Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ])
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(
+                        JSON.parse(_vm.realty)["description_" + _vm.locale]
+                      ) +
+                      "\n                "
+                  )
                 ])
               ])
             ],
@@ -45614,19 +45842,9 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("v-layout", [
-        _c("iframe", {
-          staticStyle: { border: "0" },
-          attrs: {
-            src:
-              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.333259612959!2d18.845591315101185!3d42.29275394734261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDE3JzMzLjkiTiAxOMKwNTAnNTIuMCJF!5e0!3m2!1sru!2sru!4v1508014846100",
-            width: "100%",
-            height: "400",
-            frameborder: "0",
-            allowfullscreen: ""
-          }
-        })
-      ])
+      _c("v-layout", {
+        domProps: { innerHTML: _vm._s(JSON.parse(_vm.realty).map_html) }
+      })
     ],
     1
   )

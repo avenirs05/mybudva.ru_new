@@ -13,12 +13,12 @@ class RealtiesController extends Controller
     public function __invoke(Request $request) 
 	{
 		$locale = app()->getLocale();
-		
-		$title = Lang::get('text.title_tag.home');
 		$content = Content::select('phone_main')->where('lang', $locale)->get()->toArray()[0];
-		$realty_type = self::realtyType($request);
+		
+		$realty_type = self::realtyType($request);		
+		$title = Lang::get("text.menu." . $request->path());
 
-		$realty = Realty::select(
+		$realties = Realty::select(
 							"id",
 							"name", 
 							"subname_$locale", 
@@ -35,7 +35,7 @@ class RealtiesController extends Controller
 		$data = [
 			'title' => $title,
 			'phone_main' => $content['phone_main'],
-			'realty' => $realty,			
+			'realties' => $realties,			
 		];
 
 		return view('realties', $data);
