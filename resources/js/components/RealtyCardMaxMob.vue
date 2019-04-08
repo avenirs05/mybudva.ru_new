@@ -61,27 +61,27 @@
             <table class="table">
                 <tr>
                     <th>{{ trans('text.may') }}</th>
-                    <td>{{ realty.price_may }}</td>
+                    <td>{{ realty.price_may }} €</td>
                 </tr>
                 <tr>
                     <th>{{ trans('text.jun') }}</th>
-                    <td>{{ realty.price_jun }}</td>
+                    <td>{{ realty.price_jun }} €</td>
                 </tr>
                 <tr>
                     <th>{{ trans('text.jul') }}</th>
-                    <td>{{ realty.price_jul }}</td>
+                    <td>{{ realty.price_jul }} €</td>
                 </tr>
                 <tr>
                     <th>{{ trans('text.aug') }}</th>
-                    <td>{{ realty.price_aug }}</td>
+                    <td>{{ realty.price_aug }} €</td>
                 </tr>
                 <tr>
                     <th>{{ trans('text.sep') }}</th>
-                    <td>{{ realty.price_sep }}</td>
+                    <td>{{ realty.price_sep }} €</td>
                 </tr>
                 <tr>
                     <th>{{ trans('text.oct-apr') }}</th>
-                    <td>{{ realty.price_oct_apr }}</td>
+                    <td>{{ realty.price_oct_apr }} €</td>
                 </tr>
             </table>
         </v-card-title>

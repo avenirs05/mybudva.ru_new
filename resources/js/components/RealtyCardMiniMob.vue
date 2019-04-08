@@ -5,7 +5,7 @@
                 <v-card dark :href="realtyPage" hover class="text-xs-left">
                     <v-img
                         class="white--text"                            
-                        src="/images/realties/astra1-02.jpg"  
+                        :src="realty.images[0].path"  
                         aspect-ratio="1.5"
                     ></v-img>
                 </v-card>

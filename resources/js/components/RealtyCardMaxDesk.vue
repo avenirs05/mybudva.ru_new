@@ -5,7 +5,7 @@
                 <v-card dark hover class="text-xs-left" @click="openLg">
                     <v-img
                         class="realty-card-desk white--text"                            
-                        src="/images/realties/astra1-02.jpg"  
+                        :src="primaryImgPath"  
                         aspect-ratio="1.5"
                         >
                     </v-img>
@@ -65,27 +65,27 @@
                     <table class="table">
                         <tr>
                             <th>{{ trans('text.may') }}</th>
-                            <td>{{ realty.price_may }}</td>
+                            <td>{{ realty.price_may }} €</td>
                         </tr>
                         <tr>
                             <th>{{ trans('text.jun') }}</th>
-                            <td>{{ realty.price_jun }}</td>
+                            <td>{{ realty.price_jun }} €</td>
                         </tr>
                         <tr>
                             <th>{{ trans('text.jul') }}</th>
-                            <td>{{ realty.price_jul }}</td>
+                            <td>{{ realty.price_jul }} €</td>
                         </tr>
                         <tr>
                             <th>{{ trans('text.aug') }}</th>
-                            <td>{{ realty.price_aug }}</td>
+                            <td>{{ realty.price_aug }} €</td>
                         </tr>
                         <tr>
                             <th>{{ trans('text.sep') }}</th>
-                            <td>{{ realty.price_sep }}</td>
+                            <td>{{ realty.price_sep }} €</td>
                         </tr>
                         <tr>
                             <th>{{ trans('text.oct-apr') }}</th>
-                            <td>{{ realty.price_oct_apr }}</td>
+                            <td>{{ realty.price_oct_apr }} €</td>
                         </tr>
                     </table>
                 </v-card>
@@ -94,29 +94,7 @@
         <v-layout row align-center class="hidden-sm-and-down">
             <v-flex>                              
                 <div id="lightgallery" ref="lightgallery">
-                    <a href="/images/realties/astra1-02.jpg">
-                        <img src="/images/realties/astra1-02.jpg" />
-                    </a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
-                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a v-for="image in realty.images" :key="image.id" :href="image.path"><img :src="image.path" /></a>
                 </div>
             </v-flex>               
         </v-layout> 
@@ -126,9 +104,15 @@
 
 <script>
     export default {   
-//        mounted() { console.log(this.locale) },    
+        mounted() { 
+            console.log(this.realty.images)
+            this.getPrimaryImg() 
+        },    
         props: ['realty', 'locale'],    
-        data: () => ({ }),
+        data: () => ({ 
+            primaryImgPath: '',
+            test: [1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,]
+        }),
         methods: {
             /**
              * Т.к. основная картинка лежит вне lightgallery,
@@ -138,6 +122,16 @@
              */
             openLg() {
                 $('#lightgallery a').first().trigger("click");
+            },
+            getPrimaryImg() {
+                let images = this.realty.images;                
+                
+                for (let i = 0; i < images.length; i++) {
+                     if (images[i].type === 'primary') {
+                         this.primaryImgPath = images[i].path;
+                         break;
+                     }
+                }
             }
         }
     }
@@ -148,7 +142,7 @@
     #lightgallery img {
         width: 65px;
         height: 43px;
-        margin-right: -2px;
+        margin-right: 2px;
         margin-top: -5px;
     }
 

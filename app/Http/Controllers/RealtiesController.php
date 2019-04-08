@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Lang;
 use App\Content;
 use App\Realty;
-
 use Illuminate\Http\Request;
+
 
 class RealtiesController extends Controller
 {
@@ -16,30 +16,21 @@ class RealtiesController extends Controller
 		$content = Content::select('phone_main')->where('lang', $locale)->get()->toArray()[0];
 		
 		$realty_type = self::realtyType($request);		
-		$title = Lang::get("text.menu." . $request->path());
-
-		$realties = Realty::select(
-							"id",
-							"name", 
-							"subname_$locale", 
-							"square", 
-							"dist_sea",
-							"bedrooms",
-							"capacity",	
-							"booking_mark",
-							"price",
-							"price_line_through")
-						 ->where('type', $realty_type)
-						 ->get();		
-
+		$title = Lang::get("text.menu." . $request->path());		
+	
+		$realties = Realty::with(array(
+						'images' => function($query) {
+							$query->where('type', 'primary');
+						}))
+						->where('type', $realty_type)
+						->get();	
+		
 		$data = [
 			'title' => $title,
 			'phone_main' => $content['phone_main'],
 			'realties' => $realties,			
 		];
 		
-		//dd($realties->images());
-
 		return view('realties', $data);
 	}
 	

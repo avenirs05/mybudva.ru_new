@@ -18,31 +18,33 @@ class RealtyController extends Controller
 					->get()
 					->toArray()[0];
 		
-		$realty = Realty::select(
-					'id', 
-					'name', 
-					"type_$locale",
-					'square', 
-					"view_$locale",	
-					'bedrooms', 
-					'capacity', 
-					'dist_sea', 
-					'dist_tivat', 
-					'dist_podg', 				
-					"transfer_$locale", 
-					"internet_$locale", 
-					"parking_$locale",
-					"description_$locale",
-					'map_html',
-					'price_may',
-					'price_jun',
-					'price_jul',
-					'price_aug',
-					'price_sep',
-					'price_oct_apr')
-				->where('id', $id)
-				->first();
+//		$realty = Realty::select(
+//					'id', 
+//					'name', 
+//					"type_$locale",
+//					'square', 
+//					"view_$locale",	
+//					'bedrooms', 
+//					'capacity', 
+//					'dist_sea', 
+//					'dist_tivat', 
+//					'dist_podg', 				
+//					"transfer_$locale", 
+//					"internet_$locale", 
+//					"parking_$locale",
+//					"description_$locale",
+//					'map_html',
+//					'price_may',
+//					'price_jun',
+//					'price_jul',
+//					'price_aug',
+//					'price_sep',
+//					'price_oct_apr')
+//				->where('id', $id)
+//				->first();
 		
+		$realty = Realty::with('images')->where('id', $id)->first();					
+
 		/**
 		 * Установка title страницы
 		 */		

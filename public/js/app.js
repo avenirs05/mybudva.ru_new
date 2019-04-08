@@ -2958,33 +2958,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  //        mounted() { console.log(this.locale) },    
+  mounted: function mounted() {
+    console.log(this.realty.images);
+    this.getPrimaryImg();
+  },
   props: ['realty', 'locale'],
   data: function data() {
-    return {};
+    return {
+      primaryImgPath: '',
+      test: [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+    };
   },
   methods: {
     /**
@@ -2995,6 +2979,16 @@ __webpack_require__.r(__webpack_exports__);
      */
     openLg: function openLg() {
       $('#lightgallery a').first().trigger("click");
+    },
+    getPrimaryImg: function getPrimaryImg() {
+      var images = this.realty.images;
+
+      for (var i = 0; i < images.length; i++) {
+        if (images[i].type === 'primary') {
+          this.primaryImgPath = images[i].path;
+          break;
+        }
+      }
     }
   }
 });
@@ -3143,9 +3137,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-//
 //
 //
 //
@@ -3212,8 +3203,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log(this.realty.booking_mark);
-    console.log(_typeof(this.realty.booking_mark));
+    //console.log(this.realty);
     this.realtyPage = route('realtyPage', this.realty.id);
     this.getBookingMark();
   },
@@ -12836,7 +12826,7 @@ exports.push([module.i, "\n.flag-btn[data-v-436361d9]::before {\n    color: tran
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n#lightgallery img[data-v-5354646f] {\n    width: 65px;\n    height: 43px;\n    margin-right: -2px;\n    margin-top: -5px;\n}\n.v-card[data-v-5354646f] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.table[data-v-5354646f] {\n    font-size: 16px;\n    width: 100%;\n    max-width: 100%;\n    border: 1px solid #ddd;\n    border-collapse: collapse;\n}\ntable tr[data-v-5354646f] {\n    border: 1px solid #ddd;\n    text-align: left;\n}\ntable td[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n    color: green;\n    font-weight: bold;\n}\ntable th[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n.price-in-max-card-desk[data-v-5354646f] {\n    list-style-type: none;\n    -webkit-padding-start: 0;\n            padding-inline-start: 0;\n}\n.description[data-v-5354646f] {\n    font-size: 16px;\n}\n\n", ""]);
+exports.push([module.i, "\n#lightgallery img[data-v-5354646f] {\n    width: 65px;\n    height: 43px;\n    margin-right: 2px;\n    margin-top: -5px;\n}\n.v-card[data-v-5354646f] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.table[data-v-5354646f] {\n    font-size: 16px;\n    width: 100%;\n    max-width: 100%;\n    border: 1px solid #ddd;\n    border-collapse: collapse;\n}\ntable tr[data-v-5354646f] {\n    border: 1px solid #ddd;\n    text-align: left;\n}\ntable td[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n    color: green;\n    font-weight: bold;\n}\ntable th[data-v-5354646f] {\n    padding: 8px;\n    border: 1px solid #ddd;\n}\n.price-in-max-card-desk[data-v-5354646f] {\n    list-style-type: none;\n    -webkit-padding-start: 0;\n            padding-inline-start: 0;\n}\n.description[data-v-5354646f] {\n    font-size: 16px;\n}\n\n", ""]);
 
 
 
@@ -44437,10 +44427,7 @@ var render = function() {
                 [
                   _c("v-img", {
                     staticClass: "realty-card-desk white--text",
-                    attrs: {
-                      src: "/images/realties/astra1-02.jpg",
-                      "aspect-ratio": "1.5"
-                    }
+                    attrs: { src: _vm.primaryImgPath, "aspect-ratio": "1.5" }
                   })
                 ],
                 1
@@ -44617,37 +44604,37 @@ var render = function() {
                   _c("tr", [
                     _c("th", [_vm._v(_vm._s(_vm.trans("text.may")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.realty.price_may))])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_may) + " €")])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
                     _c("th", [_vm._v(_vm._s(_vm.trans("text.jun")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.realty.price_jun))])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_jun) + " €")])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
                     _c("th", [_vm._v(_vm._s(_vm.trans("text.jul")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.realty.price_jul))])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_jul) + " €")])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
                     _c("th", [_vm._v(_vm._s(_vm.trans("text.aug")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.realty.price_aug))])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_aug) + " €")])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
                     _c("th", [_vm._v(_vm._s(_vm.trans("text.sep")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.realty.price_sep))])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_sep) + " €")])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
                     _c("th", [_vm._v(_vm._s(_vm.trans("text.oct-apr")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr))])
+                    _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr) + " €")])
                   ])
                 ])
               ])
@@ -44666,91 +44653,16 @@ var render = function() {
         },
         [
           _c("v-flex", [
-            _c("div", { ref: "lightgallery", attrs: { id: "lightgallery" } }, [
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "/images/realties/astra1-02.jpg" } }, [
-                _c("img", { attrs: { src: "/images/realties/astra1-02.jpg" } })
-              ])
-            ])
+            _c(
+              "div",
+              { ref: "lightgallery", attrs: { id: "lightgallery" } },
+              _vm._l(_vm.realty.images, function(image) {
+                return _c("a", { key: image.id, attrs: { href: image.path } }, [
+                  _c("img", { attrs: { src: image.path } })
+                ])
+              }),
+              0
+            )
           ])
         ],
         1
@@ -44946,37 +44858,37 @@ var render = function() {
             _c("tr", [
               _c("th", [_vm._v(_vm._s(_vm.trans("text.may")))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.realty.price_may))])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_may) + " €")])
             ]),
             _vm._v(" "),
             _c("tr", [
               _c("th", [_vm._v(_vm._s(_vm.trans("text.jun")))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.realty.price_jun))])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_jun) + " €")])
             ]),
             _vm._v(" "),
             _c("tr", [
               _c("th", [_vm._v(_vm._s(_vm.trans("text.jul")))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.realty.price_jul))])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_jul) + " €")])
             ]),
             _vm._v(" "),
             _c("tr", [
               _c("th", [_vm._v(_vm._s(_vm.trans("text.aug")))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.realty.price_aug))])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_aug) + " €")])
             ]),
             _vm._v(" "),
             _c("tr", [
               _c("th", [_vm._v(_vm._s(_vm.trans("text.sep")))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.realty.price_sep))])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_sep) + " €")])
             ]),
             _vm._v(" "),
             _c("tr", [
               _c("th", [_vm._v(_vm._s(_vm.trans("text.oct-apr")))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr))])
+              _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr) + " €")])
             ])
           ])
         ],
@@ -45030,7 +44942,7 @@ var render = function() {
                   _c("v-img", {
                     staticClass: "white--text",
                     attrs: {
-                      src: "/images/realties/astra1-02.jpg",
+                      src: _vm.realty.images[0].path,
                       "aspect-ratio": "1.5"
                     }
                   })
@@ -45267,7 +45179,7 @@ var render = function() {
                   _c("v-img", {
                     staticClass: "white--text",
                     attrs: {
-                      src: "/images/realties/astra1-02.jpg",
+                      src: _vm.realty.images[0].path,
                       "aspect-ratio": "1.5"
                     }
                   })

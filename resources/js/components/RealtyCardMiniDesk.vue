@@ -5,10 +5,9 @@
                 <v-card dark :href="realtyPage" hover class="text-xs-left">
                     <v-img
                         class="white--text"                            
-                        src="/images/realties/astra1-02.jpg"  
+                        :src="realty.images[0].path"  
                         aspect-ratio="1.5"
-                        >
-                    </v-img>
+                    ></v-img>
                 </v-card>
             </v-flex>
             <v-flex xs4>
@@ -66,8 +65,7 @@
 <script>
     export default {   
         mounted () { 
-            console.log(this.realty.booking_mark);
-            console.log(typeof this.realty.booking_mark);
+            //console.log(this.realty);
             this.realtyPage = route('realtyPage', this.realty.id);
             this.getBookingMark();
         }, 
