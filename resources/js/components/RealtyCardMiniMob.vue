@@ -5,10 +5,9 @@
                 <v-card dark :href="realtyPage" hover class="text-xs-left">
                     <v-img
                         class="white--text"                            
-                        src="/img/realties/astra1-02.jpg"  
+                        src="/images/realties/astra1-02.jpg"  
                         aspect-ratio="1.5"
-                        >
-                    </v-img>
+                    ></v-img>
                 </v-card>
             </v-flex>
             <v-flex xs6>
@@ -47,7 +46,7 @@
                         </v-btn>
                     </v-flex> 
                     <v-flex xs6 text-xs-right>                                                        
-                        <span class="price-text-through-mob">от € {{ realty.price_line_through }}</span>&nbsp; &nbsp; 
+                        <span class="price-text-through-mob">{{ trans('text.from') }} € {{ realty.price_line_through }}</span>&nbsp; &nbsp; 
                         <span class="price-text-mob">€ {{ realty.price }}</span>                           
                     </v-flex> 
                 </v-layout>                     
@@ -67,7 +66,7 @@
             'realty'
         ],  
         data: () => ({ 
-            realtyPage: '',
+            realtyPage: ''
         })    
     }
 </script>

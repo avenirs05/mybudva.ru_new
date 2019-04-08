@@ -27,8 +27,8 @@ class CreateRealtiesTable extends Migration
 			
 			$table->integer('square');
 			
-			$table->enum('view_ru', ['на море', 'на море и горы', 'на горы'])->default('на море');
-			$table->enum('view_en', ['sea', 'sea and mountains', 'mountains'])->default('sea');
+			$table->enum('view_ru', ['на море', 'на море и горы', 'на горы', 'на окрестности и горы'])->default('на море');
+			$table->enum('view_en', ['sea', 'sea and mountains', 'mountains', 'surroundings and mountains'])->default('sea');
 			
 			$table->tinyInteger('bedrooms');
 			$table->tinyInteger('capacity');
@@ -45,7 +45,7 @@ class CreateRealtiesTable extends Migration
 			$table->enum('parking_ru', ['платный', 'платный (частный)', 'платный (общественный)'])->default('платный');
 			$table->enum('parking_en', ['paid', 'paid (private)', 'paid (public)'])->default('paid');
 			
-			$table->float('booking_mark', 3, 2)->default(0);
+			$table->double('booking_mark', 2, 1)->default(0.0);
 			
 			$table->text('description_ru');
 			$table->text('description_en');
@@ -70,10 +70,11 @@ class CreateRealtiesTable extends Migration
 			
 			$table->text('map_html');
 
-			$table->integer('price');
-			$table->integer('price_oct_apr');
+			$table->integer('price');			
 			$table->integer('price_jan');
 			$table->integer('price_feb');
+			$table->integer('price_mar');
+			$table->integer('price_apr');
 			$table->integer('price_may');
 			$table->integer('price_jun');
 			$table->integer('price_jul');
@@ -82,6 +83,7 @@ class CreateRealtiesTable extends Migration
 			$table->integer('price_oct');
 			$table->integer('price_nov');
 			$table->integer('price_dec');
+			$table->integer('price_oct_apr');
 			
 			
 			$table->integer('price_line_through');

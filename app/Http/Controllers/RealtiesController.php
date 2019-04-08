@@ -30,13 +30,15 @@ class RealtiesController extends Controller
 							"price",
 							"price_line_through")
 						 ->where('type', $realty_type)
-						 ->get();
+						 ->get();		
 
 		$data = [
 			'title' => $title,
 			'phone_main' => $content['phone_main'],
 			'realties' => $realties,			
 		];
+		
+		//dd($realties->images());
 
 		return view('realties', $data);
 	}

@@ -1,6 +1,6 @@
 <template>
     <v-content>          
-        <v-container>
+        <v-container class="container-realty-card-max-desk">
             <v-layout row align-center>
                 <v-flex>                              
                     <h1 class="display-1 text-xs-center text-md-left mt-1 mb-2">
@@ -22,7 +22,7 @@
         <v-container>    
             <v-layout row>
                 <v-flex>                              
-                    <div class="description mb-4">
+                    <div class="mb-4" :style="{ marginTop: marginTop }">
                         {{ JSON.parse(realty)[`description_${locale}`] }}
                     </div>
                 </v-flex>               
@@ -70,12 +70,27 @@
             RealtyCardMaxMob
         },
         data () {
-            return { }
-        }
+            return { 
+                descriptionClass: {
+                    marginTop: '-25px'
+                }
+            }
+        },
+        computed: {
+            marginTop() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'md': return '-25px'
+                    case 'lg': return '-25px'
+                    case 'xl': return '-25px'
+                }
+            }
+        }  
     }
 </script>
 
 
 <style scoped>    
-
+/*    .description {
+        margin-top: -25px;
+    }*/
 </style>

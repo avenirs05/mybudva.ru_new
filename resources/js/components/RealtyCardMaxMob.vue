@@ -98,7 +98,7 @@
                cycle: false,  
                items: [
                    {
-                      src: '/img/realties/astra1-02.jpg'
+                      src: '/images/realties/astra1-02.jpg'
                    },
                    {
                       src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'

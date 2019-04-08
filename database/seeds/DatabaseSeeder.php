@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
 		
 		$this->call(ContentsTableSeeder::class);
 //		$this->call(FeedbacksTableSeeder::class);
-//		$this->call(ImagesTableSeeder::class);
-		$this->call(RealtiesTableSeeder::class);	
+		$this->call(RealtiesTableSeeder::class);
+		$this->call(ImagesTableSeeder::class);
+	
 	}
 }

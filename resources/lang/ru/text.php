@@ -29,7 +29,7 @@ return [
 		'internet'           => 'Интернет',
 		'parking'            => 'Паркинг',
 		'price_per_day'		 => 'Цена в сутки',
-		'without_discounts'  => 'без учёта скидок'
+		'without_discounts'  => 'без учёта скидок',
 	],
 	
 	'jan'      => 'Январь',
@@ -46,5 +46,6 @@ return [
 	'dec'	   => 'Декабрь',
 	'oct-apr'  => 'Октябрь-Апрель',
 	
-	'btn_more' => 'Подробнее'
+	'btn_more' => 'Подробнее',
+	'from'	   => 'от'
 ];

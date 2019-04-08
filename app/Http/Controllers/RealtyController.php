@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Content;
 use App\Realty;
 
+
 class RealtyController extends Controller
 {
 	public function __invoke($id) 
@@ -52,7 +53,8 @@ class RealtyController extends Controller
 			'title'      => $title,
 			'phone_main' => $content['phone_main'],
 			'realty'     => $realty->toJson(),
-		];
+		];	
+		
 		
 		return view('realty', $data);
 	}

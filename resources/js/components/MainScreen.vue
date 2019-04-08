@@ -1,7 +1,7 @@
 <template>     
     <v-img
         class="white--text"                
-        src="/img/main.jpg"
+        src="/images/main.jpg"
         id="main-img"
         >
         <v-container fill-height fluid grid-list-xl> 

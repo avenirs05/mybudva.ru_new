@@ -3,7 +3,7 @@
         <v-toolbar-side-icon class="hidden-md-and-up mr-3" @click.stop="changeDrawer"></v-toolbar-side-icon>
         
         <v-toolbar-side-icon class="logo" href="/">
-            <img src="/img/logo.png" :height="logoHeight">
+            <img src="/images/logo.png" :height="logoHeight">
         </v-toolbar-side-icon> 
         
         <connect-desk :phone-main="phoneMain"></connect-desk>

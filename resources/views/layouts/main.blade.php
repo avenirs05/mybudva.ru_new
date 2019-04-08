@@ -14,7 +14,7 @@
 
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="/img/fav.ico" type="image/png">
+		<link rel="shortcut icon" href="/images/fav.ico" type="image/png">
 
 		<!-- Styles -->
 		<link href="{{ asset('css/app.css') }}" rel="stylesheet preload" as="style">

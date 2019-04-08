@@ -5,7 +5,7 @@
                 <v-card dark :href="realtyPage" hover class="text-xs-left">
                     <v-img
                         class="white--text"                            
-                        src="/img/realties/astra1-02.jpg"  
+                        src="/images/realties/astra1-02.jpg"  
                         aspect-ratio="1.5"
                         >
                     </v-img>
@@ -40,13 +40,13 @@
             <v-flex d-flex xs4>
                 <v-layout column align-end justify-space-between fill-height>
                     <v-flex>                            
-                        <v-img src="/img/booking-logo.jpg" height="50" width="50">
-                            <span class="rating">{{ realty.booking_mark }}</span>
+                        <v-img src="/images/booking-logo.jpg" height="50" width="50">
+                            <span class="rating">{{ bookingMark }}</span>
                         </v-img>                            
                     </v-flex> 
                     <v-flex d-flex> 
                         <v-layout column align-end justify-space-between fill-height>
-                            <span class="price-text-through-desk">от € {{ realty.price_line_through }}</span>  
+                            <span class="price-text-through-desk">{{ trans('text.from') }} € {{ realty.price_line_through }}</span>  
                             <span class="price-text-desk">€ {{ realty.price }}</span> 
                             <v-btn class="btn-more-desk"
                                    large
@@ -66,15 +66,33 @@
 <script>
     export default {   
         mounted () { 
+            console.log(this.realty.booking_mark);
+            console.log(typeof this.realty.booking_mark);
             this.realtyPage = route('realtyPage', this.realty.id);
+            this.getBookingMark();
         }, 
         props: [
             'realty', 
             'locale'
         ],
         data: () => ({ 
-            realtyPage: ''
-        })
+            realtyPage: '',
+            bookingMark: 0.0
+        }),
+        methods: {
+            /**
+             * Если оценка 9.0 или 8.0, то по умолчанию js обрезает до 8 или 9
+             * Эта функция проверяет после точки и если 0, то добавляет знак 
+             * после точки
+             * @returns {undefined}
+             */
+            getBookingMark () {
+                let mark = this.realty.booking_mark;                
+                mark = String(mark);
+                if (mark[2] === undefined) mark += '.0';                
+                this.bookingMark = mark;           
+            }
+        }
     }
 </script>
 
@@ -129,7 +147,7 @@
     .rating {
         position: absolute;
         color: #fff;
-        left: 9px;
+        left: 13px;
         top: 11px;
         font-size: 18px;
         color: white;

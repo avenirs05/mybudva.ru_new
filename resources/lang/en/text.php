@@ -29,7 +29,7 @@ return [
 		'internet'		     => 'Internet',
 		'parking'		     => 'Parking',
 		'price_per_day'      => 'Price per day',
-		'without_discounts'  => 'without discounts'
+		'without_discounts'  => 'without discounts'		
 	],
 	
 	'jan'      => 'January',
@@ -46,5 +46,6 @@ return [
 	'dec'      => 'December',
 	'oct-apr'  => 'October-April',
 	
-	'btn_more' => 'Learn More'
+	'btn_more' => 'Learn More',
+	'from'	   => 'from'
 ];

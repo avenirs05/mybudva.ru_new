@@ -19,8 +19,7 @@ class CreateImagesTable extends Migration
 			$table->integer('realty_id')->unsigned()->index();
             $table->foreign('realty_id')->references('id')->on('realties');
 			
-			$table->string('type');
-			$table->string('name');
+			$table->enum('type', ['primary', 'secondary']);
 			$table->string('path');		
 			
 			$table->timestamps();

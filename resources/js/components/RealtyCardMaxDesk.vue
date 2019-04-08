@@ -5,7 +5,7 @@
                 <v-card dark hover class="text-xs-left" @click="openLg">
                     <v-img
                         class="realty-card-desk white--text"                            
-                        src="/img/realties/astra1-02.jpg"  
+                        src="/images/realties/astra1-02.jpg"  
                         aspect-ratio="1.5"
                         >
                     </v-img>
@@ -94,29 +94,29 @@
         <v-layout row align-center class="hidden-sm-and-down">
             <v-flex>                              
                 <div id="lightgallery" ref="lightgallery">
-                    <a href="/img/realties/astra1-02.jpg">
-                        <img src="/img/realties/astra1-02.jpg" />
+                    <a href="/images/realties/astra1-02.jpg">
+                        <img src="/images/realties/astra1-02.jpg" />
                     </a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
-                    <a href="/img/realties/astra1-02.jpg"><img src="/img/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
+                    <a href="/images/realties/astra1-02.jpg"><img src="/images/realties/astra1-02.jpg" /></a>
                 </div>
             </v-flex>               
         </v-layout> 

@@ -3,13 +3,13 @@
         <v-list-tile-avatar size="25" color="grey darken-3">
             <v-img
                 class="elevation-6"
-                src="/img/whatsapp.svg"
+                src="/images/whatsapp.svg"
             ></v-img>
         </v-list-tile-avatar>
         <v-list-tile-avatar size="25" color="grey darken-3">
             <v-img
                 class="elevation-6"
-                src="/img/viber.png"
+                src="/images/viber.png"
             ></v-img>
         </v-list-tile-avatar>
         <v-list-tile-content>
