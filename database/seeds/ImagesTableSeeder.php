@@ -60,21 +60,21 @@ class ImagesTableSeeder extends Seeder
 		[
 			'realty_id' => 3,
 			'type' => 'primary',
-			'path' => '/images/upload/realties/Heart_of_Budva/01.jpg',
+			'path' => '/images/upload/realties/Heart_Of_Budva/01.jpg',
 		]);
 
 		Image::create(
 		[
 			'realty_id' => 3,
 			'type' => 'secondary',
-			'path' => '/images/upload/realties/Heart_of_Budva/02.jpg',
+			'path' => '/images/upload/realties/Heart_Of_Budva/02.jpg',
 		]);
 
 		Image::create(
 		[
 			'realty_id' => 3,
 			'type' => 'secondary',
-			'path' => '/images/upload/realties/Heart_of_Budva/03.jpg',
+			'path' => '/images/upload/realties/Heart_Of_Budva/03.jpg',
 		]);
 		
 		Image::create(
