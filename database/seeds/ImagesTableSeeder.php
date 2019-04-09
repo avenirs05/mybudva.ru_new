@@ -17,21 +17,21 @@ class ImagesTableSeeder extends Seeder
 		[
 			'realty_id' => 1,
 			'type' => 'primary',
-			'path' => '/images/upload/realties/Astra_I/01.jpg',
+			'path' => '/images/upload/realties/Anthurium_I/01.jpg',
 		]);
 		
 		Image::create(
 		[
 			'realty_id' => 1,
 			'type' => 'secondary',
-			'path' => '/images/upload/realties/Astra_I/02.jpg',
+			'path' => '/images/upload/realties/Anthurium_I/02.jpg',
 		]);
 		
 		Image::create(
 		[
 			'realty_id' => 1,
 			'type' => 'secondary',
-			'path' => '/images/upload/realties/Astra_I/03.jpg',
+			'path' => '/images/upload/realties/Anthurium_I/03.jpg',
 		]);
 		
 		
@@ -81,21 +81,21 @@ class ImagesTableSeeder extends Seeder
 		[
 			'realty_id' => 4,
 			'type' => 'primary',
-			'path' => '/images/upload/realties/Olive/01.jpg',
+			'path' => '/images/upload/realties/Astra_I/01.jpg',
 		]);
 
 		Image::create(
 		[
 			'realty_id' => 4,
 			'type' => 'secondary',
-			'path' => '/images/upload/realties/Olive/02.jpg',
+			'path' => '/images/upload/realties/Astra_I/02.jpg',
 		]);
 
 		Image::create(
 		[
 			'realty_id' => 4,
 			'type' => 'secondary',
-			'path' => '/images/upload/realties/Olive/03.jpg',
+			'path' => '/images/upload/realties/Astra_I/03.jpg',
 		]);
 	}
 }

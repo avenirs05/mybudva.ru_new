@@ -83,8 +83,7 @@ class RealtiesTableSeeder extends Seeder
 		
 		Realty::create(
 				[
-			'name' => 'Begonia',
-					
+			'name' => 'Begonia',					
 			'type' => 'apartment',		
 			'type_ru' => 'апартамент',
 			'type_en' => 'apartment',
@@ -137,8 +136,7 @@ class RealtiesTableSeeder extends Seeder
 		
 		Realty::create(
 		[
-			'name' => 'Heart of Budva',
-			
+			'name' => 'Heart of Budva',			
 			'type' => 'villa',
 			'type_ru' => 'вилла',
 			'type_en' => 'villa',
@@ -192,8 +190,7 @@ class RealtiesTableSeeder extends Seeder
 
 		Realty::create(
 		[
-			'name' => 'Astra 1',
-			
+			'name' => 'Astra 1',			
 			'type' => 'villa',
 			'type_ru' => 'вилла',
 			'type_en' => 'villa',
