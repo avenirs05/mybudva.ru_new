@@ -12,5 +12,10 @@ class Realty extends Model
 	{
 		return $this->hasMany('App\Image');
 	}
+	
+	public function feedbacks() 
+	{
+		return $this->hasMany('App\Feedback');
+	}
 
 }

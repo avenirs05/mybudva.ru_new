@@ -2960,14 +2960,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log(this.realty.images);
     this.getPrimaryImg();
   },
   props: ['realty', 'locale'],
   data: function data() {
     return {
-      primaryImgPath: '',
-      test: [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+      primaryImgPath: ''
     };
   },
   methods: {
@@ -3096,23 +3094,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  //        mounted() { console.log(this.realty) },
+  mounted: function mounted() {
+    this.getPrimaryImg();
+  },
   props: ['realty', 'locale'],
   data: function data() {
     return {
       cycle: false,
-      items: [{
-        src: '/images/realties/astra1-02.jpg'
-      }, {
-        src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-      }, {
-        src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-      }, {
-        src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-      }]
+      primaryImgPath: ''
     };
   },
-  methods: {},
+  methods: {
+    getPrimaryImg: function getPrimaryImg() {
+      var images = this.realty.images;
+
+      for (var i = 0; i < images.length; i++) {
+        if (images[i].type === 'primary') {
+          this.primaryImgPath = images[i].path;
+          break;
+        }
+      }
+    }
+  },
   computed: {
     carouselHeight: function carouselHeight() {
       switch (this.$vuetify.breakpoint.name) {
@@ -3223,8 +3226,19 @@ __webpack_require__.r(__webpack_exports__);
      */
     getBookingMark: function getBookingMark() {
       var mark = this.realty.booking_mark;
+
+      if (mark === 0) {
+        this.bookingMark = 'n/a';
+        return;
+      }
+
+      ;
       mark = String(mark);
-      if (mark[2] === undefined) mark += '.0';
+
+      if (mark[2] === undefined) {
+        mark += '.0';
+      }
+
       this.bookingMark = mark;
     }
   }
@@ -3502,10 +3516,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {},
+  props: ['feedbacks'],
   data: function data() {
     return {};
   }
@@ -3686,20 +3699,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  //        mounted() { console.log(this.realty.name) },   
-  props: ['realty', 'locale'],
+  //        mounted() { console.log(JSON.parse(this.feedbacks).length) },   
+  props: ['locale', 'realty', 'feedbacks'],
   components: {
     RealtyCardMaxDesk: _RealtyCardMaxDesk_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     RealtyCardMaxMob: _RealtyCardMaxMob_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -12856,7 +12860,7 @@ exports.push([module.i, "\n.props-in-max-card-mob[data-v-53ef7bcc] {\n    list-s
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoration: none;\n}\n#headline-wrap[data-v-69a7032e]:hover {\n    color: rgb(51, 122, 183);\n    text-decoration: underline;\n}\n.v-card[data-v-69a7032e] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.v-card.card-mini-right-text-desk[data-v-69a7032e] {\n    margin-top: -5px;\n}\nh4[data-v-69a7032e] {\n    font-weight: normal;\n}\n.price-text-desk[data-v-69a7032e] {\n    font-size: 24px;\n}\n.price-text-through-desk[data-v-69a7032e] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 24px;\n}\n.btn-more-desk.v-btn.v-btn--large[data-v-69a7032e] {\n    margin-right: 0;  \n    padding: 10px 20px;\n    font-size: 20px;\n    border-radius: 3px;\n    background-color: rgb(51, 153, 51);\n    color: rgb(255, 255, 255);\n    border: medium none;\n    width: 100%;\n    letter-spacing: 1px;  \n    text-transform: none;\n    font-weight: 400;\n}\n.rating[data-v-69a7032e] {\n    position: absolute;\n    color: #fff;\n    left: 13px;\n    top: 11px;\n    font-size: 18px;\n    color: white;\n}\n", ""]);
+exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoration: none;\n}\n#headline-wrap[data-v-69a7032e]:hover {\n    color: rgb(51, 122, 183);\n    text-decoration: underline;\n}\n.v-card[data-v-69a7032e] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.v-card.card-mini-right-text-desk[data-v-69a7032e] {\n    margin-top: -5px;\n}\nh4[data-v-69a7032e] {\n    font-weight: normal;\n}\n.price-text-desk[data-v-69a7032e] {\n    font-size: 24px;\n}\n.price-text-through-desk[data-v-69a7032e] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 24px;\n}\n.btn-more-desk.v-btn.v-btn--large[data-v-69a7032e] {\n    margin-right: 0;  \n    padding: 10px 20px;\n    font-size: 20px;\n    border-radius: 3px;\n    background-color: rgb(51, 153, 51);\n    color: rgb(255, 255, 255);\n    border: medium none;\n    width: 100%;\n    letter-spacing: 1px;  \n    text-transform: none;\n    font-weight: 400;\n}\n.booking-mark[data-v-69a7032e] {\n    position: absolute;\n    color: #fff;\n    left: 13px;\n    top: 11px;\n    font-size: 18px;\n    color: white;\n}\n", ""]);
 
 
 
@@ -12907,6 +12911,21 @@ exports.push([module.i, "\n.contacts-wrapper {\n    font-size: 18px;\n}\n", ""])
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "\na.realty-link[data-v-1454cc54]:hover {\n    color: blue;\n}\n", ""]);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentMain.vue?vue&type=style&index=0&lang=css&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentMain.vue?vue&type=style&index=0&lang=css& ***!
@@ -12931,7 +12950,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n/*    .description {\n        margin-top: -25px;\n    }*/\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n/*    .description {\n        margin-top: -25px;\n    }*/\n", ""]);
 
 
 
@@ -43328,6 +43347,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentMain.vue?vue&type=style&index=0&lang=css&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentMain.vue?vue&type=style&index=0&lang=css& ***!
@@ -44634,7 +44683,9 @@ var render = function() {
                   _c("tr", [
                     _c("th", [_vm._v(_vm._s(_vm.trans("text.oct-apr")))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr) + " €")])
+                    _c("td", [
+                      _vm._v(_vm._s(_vm.realty["price_oct_apr_" + _vm.locale]))
+                    ])
                   ])
                 ])
               ])
@@ -44706,8 +44757,8 @@ var render = function() {
             cycle: _vm.cycle
           }
         },
-        _vm._l(_vm.items, function(item, i) {
-          return _c("v-carousel-item", { key: i, attrs: { src: item.src } })
+        _vm._l(_vm.realty.images, function(image, i) {
+          return _c("v-carousel-item", { key: i, attrs: { src: image.path } })
         }),
         1
       ),
@@ -44888,7 +44939,9 @@ var render = function() {
             _c("tr", [
               _c("th", [_vm._v(_vm._s(_vm.trans("text.oct-apr")))]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.realty.price_oct_apr) + " €")])
+              _c("td", [
+                _vm._v(_vm._s(_vm.realty["price_oct_apr_" + _vm.locale]) + " €")
+              ])
             ])
           ])
         ],
@@ -45061,7 +45114,7 @@ var render = function() {
                           }
                         },
                         [
-                          _c("span", { staticClass: "rating" }, [
+                          _c("span", { staticClass: "booking-mark" }, [
                             _vm._v(_vm._s(_vm.bookingMark))
                           ])
                         ]
@@ -45493,7 +45546,7 @@ var render = function() {
                 _c(
                   "h1",
                   { staticClass: "display-1 mt-1 mb-3 text-xs-center" },
-                  [_vm._v("Отзывы")]
+                  [_vm._v(_vm._s(_vm.trans("text.menu.feedbacks")))]
                 )
               ])
             ],
@@ -45506,67 +45559,42 @@ var render = function() {
             "v-layout",
             { attrs: { row: "" } },
             [
-              _c("v-flex", [
-                _c("div", { staticClass: "feedback mb-3" }, [
-                  _c("h5", { staticClass: "mb-2" }, [
-                    _vm._v("Name, date, object")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "feedback mb-3" }, [
-                  _c("h5", { staticClass: "mb-2" }, [
-                    _vm._v("Name, date, object")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ])
-                ])
-              ])
+              _c(
+                "v-flex",
+                _vm._l(JSON.parse(_vm.feedbacks), function(feedback) {
+                  return _c(
+                    "div",
+                    { key: feedback.id, staticClass: "feedback mb-5" },
+                    [
+                      _c("h5", { staticClass: "mb-2" }, [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(feedback.header) +
+                            ",\n                        "
+                        ),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "realty-link",
+                            attrs: { href: "/realty/" + feedback.realty.id }
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(feedback.realty.name) +
+                                " " +
+                                _vm._s(feedback.realty.type) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [_vm._v(_vm._s(feedback.text))])
+                    ]
+                  )
+                }),
+                0
+              )
             ],
             1
           )
@@ -45761,7 +45789,7 @@ var render = function() {
               _c("v-flex", [
                 _c(
                   "div",
-                  { staticClass: "mb-4", style: { marginTop: _vm.marginTop } },
+                  { staticClass: "mb-5", style: { marginTop: _vm.marginTop } },
                   [
                     _vm._v(
                       "\n                    " +
@@ -45777,74 +45805,36 @@ var render = function() {
             1
           ),
           _vm._v(" "),
-          _c(
-            "v-layout",
-            { attrs: { row: "" } },
-            [
-              _c("v-flex", [
-                _c("h2", [_vm._v("Отзывы")]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "mb-3" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "feedback mb-3" }, [
-                  _c("h5", { staticClass: "mb-2" }, [_vm._v("Name")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв1. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "feedback mb-3" }, [
-                  _c("h5", { staticClass: "mb-2" }, [_vm._v("Name")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Отзыв2. Апартаменты находятся в районе Биела (Черногория), в 400 метрах от моря и пляжа. В пешей доступности магазины первой необходимости, палатки со свежими фруктами, пекарни со свежей выпечкой."
-                    )
-                  ])
-                ])
-              ])
-            ],
-            1
-          )
+          JSON.parse(this.feedbacks).length > 0
+            ? _c(
+                "v-layout",
+                { attrs: { row: "" } },
+                [
+                  _c(
+                    "v-flex",
+                    [
+                      _c("h2", [
+                        _vm._v(_vm._s(_vm.trans("text.menu.feedbacks")))
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "mb-3" }),
+                      _vm._v(" "),
+                      _vm._l(JSON.parse(_vm.feedbacks), function(feedback) {
+                        return _c("div", { staticClass: "feedback mb-5" }, [
+                          _c("h5", { staticClass: "mb-2" }, [
+                            _vm._v(_vm._s(feedback.header))
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [_vm._v(_vm._s(feedback.text))])
+                        ])
+                      })
+                    ],
+                    2
+                  )
+                ],
+                1
+              )
+            : _vm._e()
         ],
         1
       ),
@@ -87738,7 +87728,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ContentFeedbacks_vue_vue_type_template_id_1454cc54_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ContentFeedbacks.vue?vue&type=template&id=1454cc54&scoped=true& */ "./resources/js/components/content/ContentFeedbacks.vue?vue&type=template&id=1454cc54&scoped=true&");
 /* harmony import */ var _ContentFeedbacks_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContentFeedbacks.vue?vue&type=script&lang=js& */ "./resources/js/components/content/ContentFeedbacks.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _ContentFeedbacks_vue_vue_type_style_index_0_id_1454cc54_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css& */ "./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -87746,7 +87738,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _ContentFeedbacks_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ContentFeedbacks_vue_vue_type_template_id_1454cc54_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ContentFeedbacks_vue_vue_type_template_id_1454cc54_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -87775,6 +87767,22 @@ component.options.__file = "resources/js/components/content/ContentFeedbacks.vue
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentFeedbacks.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentFeedbacks.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_style_index_0_id_1454cc54_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentFeedbacks.vue?vue&type=style&index=0&id=1454cc54&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_style_index_0_id_1454cc54_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_style_index_0_id_1454cc54_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_style_index_0_id_1454cc54_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_style_index_0_id_1454cc54_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentFeedbacks_vue_vue_type_style_index_0_id_1454cc54_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

@@ -85,7 +85,7 @@
                         </tr>
                         <tr>
                             <th>{{ trans('text.oct-apr') }}</th>
-                            <td>{{ realty.price_oct_apr }} €</td>
+                            <td>{{ realty[`price_oct_apr_${locale}`] }}</td>
                         </tr>
                     </table>
                 </v-card>
@@ -105,13 +105,11 @@
 <script>
     export default {   
         mounted() { 
-            console.log(this.realty.images)
             this.getPrimaryImg() 
         },    
         props: ['realty', 'locale'],    
         data: () => ({ 
-            primaryImgPath: '',
-            test: [1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,]
+            primaryImgPath: ''            
         }),
         methods: {
             /**

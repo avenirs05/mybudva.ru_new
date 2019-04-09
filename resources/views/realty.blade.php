@@ -8,8 +8,9 @@
 			phone-main="{{ $phone_main }}"
 		></toolbar>
 		<content-realty 
-			realty="{{ $realty }}"
 			locale="{{ app()->getLocale() }}"
+			realty="{{ $realty }}"
+			feedbacks="{{ $feedbacks }}"
 		></content-realty>
 		<footer-component></footer-component>
 	</v-app>

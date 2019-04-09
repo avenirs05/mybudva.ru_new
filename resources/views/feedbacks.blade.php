@@ -7,7 +7,10 @@
 			locale="{{ app()->getLocale() }}" 
 			phone-main="{{ $phone_main }}"
 		></toolbar>
-		<content-feedbacks></content-feedbacks>
+		<content-feedbacks
+			locale="{{ app()->getLocale() }}"
+			feedbacks="{{ $feedbacks }}"
+		></content-feedbacks>
 		<footer-component></footer-component>
 	</v-app>
 @endsection

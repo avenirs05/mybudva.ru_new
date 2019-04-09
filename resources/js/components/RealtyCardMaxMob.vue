@@ -2,9 +2,9 @@
     <v-card class="mb-3 hidden-md-and-up">
         <v-carousel hide-delimiters :height="carouselHeight" :cycle="cycle">
             <v-carousel-item
-                v-for="(item,i) in items"
+                v-for="(image,i) in realty.images"
                 :key="i"
-                :src="item.src"
+                :src="image.path"
             ></v-carousel-item>
         </v-carousel>
 
@@ -81,7 +81,7 @@
                 </tr>
                 <tr>
                     <th>{{ trans('text.oct-apr') }}</th>
-                    <td>{{ realty.price_oct_apr }} €</td>
+                    <td>{{ realty[`price_oct_apr_${locale}`] }} €</td>
                 </tr>
             </table>
         </v-card-title>
@@ -91,28 +91,28 @@
 
 <script>
     export default {  
-//        mounted() { console.log(this.realty) },
+        mounted() { 
+            this.getPrimaryImg() 
+        },
         props: ['realty', 'locale'],
         data () {
            return {
                cycle: false,  
-               items: [
-                   {
-                      src: '/images/realties/astra1-02.jpg'
-                   },
-                   {
-                      src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
-                   },
-                   {
-                      src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
-                   },
-                   {
-                      src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
-                   }
-               ]
+               primaryImgPath: '', 
             }
         },
-        methods: { },
+        methods: { 
+            getPrimaryImg() {
+                let images = this.realty.images;                
+                
+                for (let i = 0; i < images.length; i++) {
+                     if (images[i].type === 'primary') {
+                         this.primaryImgPath = images[i].path;
+                         break;
+                     }
+                }
+            }
+        },
         computed: {
             carouselHeight() {                            
                 switch (this.$vuetify.breakpoint.name) {

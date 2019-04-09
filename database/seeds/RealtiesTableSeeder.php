@@ -44,7 +44,7 @@ class RealtiesTableSeeder extends Seeder
 //			'parking_ru' => '',
 //			'parking_en' => '',
 			
-			'booking_mark' => 9.0,
+//			'booking_mark' => 9.0,
 			
 			'description_ru' => 'descr_ru',
 			'description_en' => 'descr_en',
@@ -74,7 +74,8 @@ class RealtiesTableSeeder extends Seeder
 			'price_oct' => 91,
 			'price_nov' => 90,
 			'price_dec' => 89,
-			'price_oct_apr' => 88,			
+			'price_oct_apr_ru' => 'по запросу',			
+			'price_oct_apr_en' => 'on demand',			
 			
 //			'discount' => '',
 		]);
@@ -129,7 +130,8 @@ class RealtiesTableSeeder extends Seeder
 			'price_oct' => 91,
 			'price_nov' => 90,
 			'price_dec' => 89,
-			'price_oct_apr' => 88,	
+			'price_oct_apr_ru' => 'по запросу',
+			'price_oct_apr_en' => 'on demand',
 //			'discount' => '',
 		]);
 		
@@ -182,7 +184,8 @@ class RealtiesTableSeeder extends Seeder
 			'price_oct' => 91,
 			'price_nov' => 90,
 			'price_dec' => 89,
-			'price_oct_apr' => 88,	
+			'price_oct_apr_ru' => 'по запросу',
+			'price_oct_apr_en' => 'on demand',
 //			'discount' => '',
 		]);
 
@@ -236,7 +239,8 @@ class RealtiesTableSeeder extends Seeder
 			'price_oct' => 91,
 			'price_nov' => 90,
 			'price_dec' => 89,
-			'price_oct_apr' => 88,		
+			'price_oct_apr_ru' => '80 €',
+			'price_oct_apr_en' => '80 €' ,
 //			'discount' => '',
 		]);
 	}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 //use Illuminate\Http\Request;
 use App\Content;
 use App\Realty;
+use App\Feedback;
 
 
 class RealtyController extends Controller
@@ -16,35 +17,12 @@ class RealtyController extends Controller
 		$content = Content::select('phone_main')
 					->where('lang', $locale)
 					->get()
-					->toArray()[0];
-		
-//		$realty = Realty::select(
-//					'id', 
-//					'name', 
-//					"type_$locale",
-//					'square', 
-//					"view_$locale",	
-//					'bedrooms', 
-//					'capacity', 
-//					'dist_sea', 
-//					'dist_tivat', 
-//					'dist_podg', 				
-//					"transfer_$locale", 
-//					"internet_$locale", 
-//					"parking_$locale",
-//					"description_$locale",
-//					'map_html',
-//					'price_may',
-//					'price_jun',
-//					'price_jul',
-//					'price_aug',
-//					'price_sep',
-//					'price_oct_apr')
-//				->where('id', $id)
-//				->first();
-		
+					->toArray()[0];		
+	
 		$realty = Realty::with('images')->where('id', $id)->first();					
 
+		$feedbacks = Feedback::where('realty_id', $id)->get();
+		
 		/**
 		 * Установка title страницы
 		 */		
@@ -55,7 +33,8 @@ class RealtyController extends Controller
 			'title'      => $title,
 			'phone_main' => $content['phone_main'],
 			'realty'     => $realty->toJson(),
-		];	
+			'feedbacks'  => $feedbacks->toJson()
+		];			
 		
 		
 		return view('realty', $data);

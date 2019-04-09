@@ -40,7 +40,7 @@
                 <v-layout column align-end justify-space-between fill-height>
                     <v-flex>                            
                         <v-img src="/images/booking-logo.jpg" height="50" width="50">
-                            <span class="rating">{{ bookingMark }}</span>
+                            <span class="booking-mark">{{ bookingMark }}</span>
                         </v-img>                            
                     </v-flex> 
                     <v-flex d-flex> 
@@ -85,9 +85,19 @@
              * @returns {undefined}
              */
             getBookingMark () {
-                let mark = this.realty.booking_mark;                
+                let mark = this.realty.booking_mark; 
+                
+                if (mark === 0) {
+                    this.bookingMark = 'n/a';
+                    return;
+                };
+                
                 mark = String(mark);
-                if (mark[2] === undefined) mark += '.0';                
+                
+                if (mark[2] === undefined) {
+                    mark += '.0'; 
+                }
+                
                 this.bookingMark = mark;           
             }
         }
@@ -142,7 +152,7 @@
         font-weight: 400;
     }
 
-    .rating {
+    .booking-mark {
         position: absolute;
         color: #fff;
         left: 13px;

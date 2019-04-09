@@ -10,12 +10,10 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-		
+    {		
 		$this->call(ContentsTableSeeder::class);
-//		$this->call(FeedbacksTableSeeder::class);
 		$this->call(RealtiesTableSeeder::class);
-		$this->call(ImagesTableSeeder::class);
-	
+		$this->call(FeedbacksTableSeeder::class);
+		$this->call(ImagesTableSeeder::class);	
 	}
 }

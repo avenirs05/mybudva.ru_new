@@ -45,7 +45,7 @@ class CreateRealtiesTable extends Migration
 			$table->enum('parking_ru', ['платный', 'платный (частный)', 'платный (общественный)'])->default('платный');
 			$table->enum('parking_en', ['paid', 'paid (private)', 'paid (public)'])->default('paid');
 			
-			$table->double('booking_mark', 2, 1)->default(0.0);
+			$table->float('booking_mark', 2, 1)->default(0.0);
 			
 			$table->text('description_ru');
 			$table->text('description_en');
@@ -83,7 +83,8 @@ class CreateRealtiesTable extends Migration
 			$table->integer('price_oct');
 			$table->integer('price_nov');
 			$table->integer('price_dec');
-			$table->integer('price_oct_apr');
+			$table->string('price_oct_apr_ru');
+			$table->string('price_oct_apr_en');
 			
 			
 			$table->integer('price_line_through');
