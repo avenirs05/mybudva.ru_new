@@ -95,11 +95,11 @@
     .price-text-through-mob {
         text-decoration: line-through;
         text-decoration-color: red;
-        font-size: 22px;        
+        font-size: 18px;        
     }
 
     .price-text-mob {
-        font-size: 22px;
+        font-size: 18px;
         color: green;
     }
 

@@ -81,7 +81,7 @@
                 </tr>
                 <tr>
                     <th>{{ trans('text.oct-apr') }}</th>
-                    <td>{{ realty[`price_oct_apr_${locale}`] }} €</td>
+                    <td>{{ realty[`price_oct_apr_${locale}`] }}</td>
                 </tr>
             </table>
         </v-card-title>

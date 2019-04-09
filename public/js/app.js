@@ -12875,7 +12875,7 @@ exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoratio
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n.container[data-v-31974f7b] {\n        border-top: 1px solid #CCCCCC;\n}\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n        background-color: transparent;\n        font-size: 16px;\n        margin-top: -5px;\n}\n.card-mini-right-text-mob ul[data-v-31974f7b] {\n        list-style-type: none;\n        -webkit-padding-start: 0;\n                padding-inline-start: 0;\n}\n.bg-color-card-mini-mob[data-v-31974f7b] {\n/*        background: lavender;*/\n        margin-bottom: 0px;\n}\n.price-text-through-mob[data-v-31974f7b] {\n        text-decoration: line-through;\n        -webkit-text-decoration-color: red;\n                text-decoration-color: red;\n        font-size: 22px;\n}\n.price-text-mob[data-v-31974f7b] {\n        font-size: 22px;\n        color: green;\n}\n.btn-more-mob.v-btn.theme--light[data-v-31974f7b] {\n        letter-spacing: 1px;  \n        text-transform: none;\n        color: rgb(255, 255, 255);\n        background-color: rgb(51, 153, 51);\n        margin-left: 0; \n        marfin-bottom: 0;\n}\n", ""]);
+exports.push([module.i, "\n.container[data-v-31974f7b] {\n        border-top: 1px solid #CCCCCC;\n}\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n        background-color: transparent;\n        font-size: 16px;\n        margin-top: -5px;\n}\n.card-mini-right-text-mob ul[data-v-31974f7b] {\n        list-style-type: none;\n        -webkit-padding-start: 0;\n                padding-inline-start: 0;\n}\n.bg-color-card-mini-mob[data-v-31974f7b] {\n/*        background: lavender;*/\n        margin-bottom: 0px;\n}\n.price-text-through-mob[data-v-31974f7b] {\n        text-decoration: line-through;\n        -webkit-text-decoration-color: red;\n                text-decoration-color: red;\n        font-size: 18px;\n}\n.price-text-mob[data-v-31974f7b] {\n        font-size: 18px;\n        color: green;\n}\n.btn-more-mob.v-btn.theme--light[data-v-31974f7b] {\n        letter-spacing: 1px;  \n        text-transform: none;\n        color: rgb(255, 255, 255);\n        background-color: rgb(51, 153, 51);\n        margin-left: 0; \n        marfin-bottom: 0;\n}\n", ""]);
 
 
 
@@ -44940,7 +44940,7 @@ var render = function() {
               _c("th", [_vm._v(_vm._s(_vm.trans("text.oct-apr")))]),
               _vm._v(" "),
               _c("td", [
-                _vm._v(_vm._s(_vm.realty["price_oct_apr_" + _vm.locale]) + " €")
+                _vm._v(_vm._s(_vm.realty["price_oct_apr_" + _vm.locale]))
               ])
             ])
           ])

@@ -16,4 +16,5 @@
 		
 		<footer-component></footer-component>
 	</v-app>
+	
 @endsection

@@ -25,6 +25,8 @@ class RealtiesController extends Controller
 						->where('type', $realty_type)
 						->get();	
 		
+		//dd($realties);				
+						
 		$data = [
 			'title' => $title,
 			'phone_main' => $content['phone_main'],
