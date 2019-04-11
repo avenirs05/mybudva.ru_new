@@ -15,22 +15,21 @@ class RealtiesController extends Controller
 		$locale = app()->getLocale();
 		$content = Content::select('phone_main')->where('lang', $locale)->get()->toArray()[0];
 		
-		$realty_type = self::realtyType($request);		
+		$realty_type = self::realtyType($request);
+		
 		$title = Lang::get("text.menu." . $request->path());		
 	
 		$realties = Realty::with(array(
 						'images' => function($query) {
 							$query->where('type', 'primary');
 						}))
-						->where('type', $realty_type)
-						->get();	
+						->where('type', $realty_type)						
+						->paginate(2);	
 		
-		//dd($realties);				
-						
 		$data = [
 			'title' => $title,
 			'phone_main' => $content['phone_main'],
-			'realties' => $realties,			
+			'realties' => $realties->toJson(),
 		];
 		
 		return view('realties', $data);

@@ -3131,202 +3131,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    //console.log(this.realty);
-    this.realtyPage = route('realtyPage', this.realty.id);
-    this.getBookingMark();
-  },
-  props: ['realty', 'locale'],
-  data: function data() {
-    return {
-      realtyPage: '',
-      bookingMark: 0.0
-    };
-  },
-  methods: {
-    /**
-     * Если оценка 9.0 или 8.0, то по умолчанию js обрезает до 8 или 9
-     * Эта функция проверяет после точки и если 0, то добавляет знак 
-     * после точки
-     * @returns {undefined}
-     */
-    getBookingMark: function getBookingMark() {
-      var mark = this.realty.booking_mark;
-
-      if (mark === 0) {
-        this.bookingMark = 'n/a';
-        return;
-      }
-
-      ;
-      mark = String(mark);
-
-      if (mark[2] === undefined) {
-        mark += '.0';
-      }
-
-      this.bookingMark = mark;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniMob.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    this.realtyPage = route('realtyPage', this.realty.id);
-  },
-  props: ['locale', 'realty'],
-  data: function data() {
-    return {
-      realtyPage: ''
-    };
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Toolbar.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=script&lang=js& ***!
@@ -3578,8 +3382,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _RealtyCardMiniDesk_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../RealtyCardMiniDesk.vue */ "./resources/js/components/RealtyCardMiniDesk.vue");
-/* harmony import */ var _RealtyCardMiniMob_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../RealtyCardMiniMob.vue */ "./resources/js/components/RealtyCardMiniMob.vue");
 //
 //
 //
@@ -3607,33 +3409,194 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
+    this.getTypeOfRealty();
     this.getHeader();
+    this.realties = JSON.parse(this.realtiesJson).data;
+    this.total = JSON.parse(this.realtiesJson).total;
   },
-  props: ['realties', 'locale'],
-  components: {
-    RealtyCardMiniDesk: _RealtyCardMiniDesk_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    RealtyCardMiniMob: _RealtyCardMiniMob_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  },
+  props: ['locale', 'realtiesJson'],
   data: function data() {
     return {
-      header: ''
+      header: '',
+      realties: [],
+      total: 1,
+      page: 1,
+      perPage: 2,
+      typeOfRealty: '',
+      realtyPage: ''
     };
   },
+  watch: {
+    page: function page() {
+      this.getRealties();
+    }
+  },
   methods: {
-    getHeader: function getHeader() {
+    getTypeOfRealty: function getTypeOfRealty() {
       switch (window.location.pathname) {
         case '/villas':
-          this.header = trans('text.menu.villas');
+          this.typeOfRealty = 'villa';
           break;
 
         case '/apartments':
+          this.typeOfRealty = 'apartment';
+          break;
+      }
+    },
+    getHeader: function getHeader() {
+      switch (this.typeOfRealty) {
+        case 'villa':
+          this.header = trans('text.menu.villas');
+          break;
+
+        case 'apartment':
           this.header = trans('text.menu.apartments');
           break;
       }
+    },
+    getRealties: function getRealties() {
+      var _this = this;
+
+      axios.get('/realties-data', {
+        params: {
+          page: this.page,
+          type_of_realty: this.typeOfRealty,
+          per_page: this.perPage
+        }
+      }).then(function (response) {
+        _this.realties = response.data.data;
+        _this.total = response.data.total;
+      });
+    },
+
+    /**
+    * Если оценка 9.0 или 8.0, то по умолчанию js обрезает до 8 или 9
+    * Эта функция проверяет после точки и если 0, то добавляет знак 
+    * после точки
+    * @returns {undefined}
+    */
+    getBookingMark: function getBookingMark(realty) {
+      var mark = realty.booking_mark;
+      if (mark === 0) return this.bookingMark = 'n/a';
+      mark = String(mark);
+      if (mark[2] === undefined) mark += '.0';
+      return mark;
     }
   }
 });
@@ -12851,36 +12814,6 @@ exports.push([module.i, "\n.props-in-max-card-mob[data-v-53ef7bcc] {\n    list-s
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "\n#headline-wrap[data-v-69a7032e] {\n    text-decoration: none;\n}\n#headline-wrap[data-v-69a7032e]:hover {\n    color: rgb(51, 122, 183);\n    text-decoration: underline;\n}\n.v-card[data-v-69a7032e] {\n    background-color: transparent;\n    font-size: 18px;\n}\n.v-card.card-mini-right-text-desk[data-v-69a7032e] {\n    margin-top: -5px;\n}\nh4[data-v-69a7032e] {\n    font-weight: normal;\n}\n.price-text-desk[data-v-69a7032e] {\n    font-size: 24px;\n}\n.price-text-through-desk[data-v-69a7032e] {\n    text-decoration: line-through;\n    -webkit-text-decoration-color: red;\n            text-decoration-color: red;\n    font-size: 24px;\n}\n.btn-more-desk.v-btn.v-btn--large[data-v-69a7032e] {\n    margin-right: 0;  \n    padding: 10px 20px;\n    font-size: 20px;\n    border-radius: 3px;\n    background-color: rgb(51, 153, 51);\n    color: rgb(255, 255, 255);\n    border: medium none;\n    width: 100%;\n    letter-spacing: 1px;  \n    text-transform: none;\n    font-weight: 400;\n}\n.booking-mark[data-v-69a7032e] {\n    position: absolute;\n    color: #fff;\n    left: 13px;\n    top: 11px;\n    font-size: 18px;\n    color: white;\n}\n", ""]);
-
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css&":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "\n.container[data-v-31974f7b] {\n        border-top: 1px solid #CCCCCC;\n}\n.v-card.card-mini-right-text-mob[data-v-31974f7b] {\n        background-color: transparent;\n        font-size: 16px;\n        margin-top: -5px;\n}\n.card-mini-right-text-mob ul[data-v-31974f7b] {\n        list-style-type: none;\n        -webkit-padding-start: 0;\n                padding-inline-start: 0;\n}\n.bg-color-card-mini-mob[data-v-31974f7b] {\n/*        background: lavender;*/\n        margin-bottom: 0px;\n}\n.price-text-through-mob[data-v-31974f7b] {\n        text-decoration: line-through;\n        -webkit-text-decoration-color: red;\n                text-decoration-color: red;\n        font-size: 18px;\n}\n.price-text-mob[data-v-31974f7b] {\n        font-size: 18px;\n        color: green;\n}\n.btn-more-mob.v-btn.theme--light[data-v-31974f7b] {\n        letter-spacing: 1px;  \n        text-transform: none;\n        color: rgb(255, 255, 255);\n        background-color: rgb(51, 153, 51);\n        margin-left: 0; \n        marfin-bottom: 0;\n}\n", ""]);
-
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& ***!
@@ -12936,6 +12869,21 @@ exports.push([module.i, "\na.realty-link[data-v-1454cc54]:hover {\n    color: bl
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
 exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* В файл app.js добавлена функция vh() */\n.v-content {\n        font-size: 18px;\n}\n.table-products-layout .table {\n        font-size: 16px;\n        width: 100%;\n        max-width: 100%;\n        border: 1px solid #ddd;\n        border-collapse: collapse;\n}\n.table-products-layout table tr {\n        border: 1px solid #ddd;\n        text-align: left;\n}\n.table-products-layout table td {\n        padding: 10px;\n}\n.table-products-layout table th {\n        background: white;\n        padding: 10px;\n        color: blue;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n/* Десктоп-версия*/\n.realties-desk-wrap #headline-wrap-desk[data-v-cd44f02e] {\n        text-decoration: none;\n}\n.realties-desk-wrap #headline-wrap-desk[data-v-cd44f02e]:hover {\n        color: rgb(51, 122, 183);\n        text-decoration: underline;\n}\n.realties-desk-wrap .v-card[data-v-cd44f02e] {\n        background-color: transparent;\n        font-size: 18px;\n}\n.realties-desk-wrap .v-card.card-mini-right-text-desk[data-v-cd44f02e] {\n        margin-top: -5px;\n}\n.realties-desk-wrap h4[data-v-cd44f02e] {\n        font-weight: normal;\n}\n.realties-desk-wrap .price-text-desk[data-v-cd44f02e] {\n        font-size: 24px;\n}\n.realties-desk-wrap .price-text-through-desk[data-v-cd44f02e] {\n        text-decoration: line-through;\n        -webkit-text-decoration-color: red;\n                text-decoration-color: red;\n        font-size: 24px;\n}\n.realties-desk-wrap .btn-more-desk.v-btn.v-btn--large[data-v-cd44f02e] {\n        margin-right: 0;  \n        padding: 10px 20px;\n        font-size: 20px;\n        border-radius: 3px;\n        background-color: rgb(51, 153, 51);\n        color: rgb(255, 255, 255);\n        border: medium none;\n        width: 100%;\n        letter-spacing: 1px;  \n        text-transform: none;\n        font-weight: 400;\n}\n.realties-desk-wrap .booking-mark[data-v-cd44f02e] {\n        position: absolute;\n        color: #fff;\n        left: 13px;\n        top: 11px;\n        font-size: 18px;\n        color: white;\n}\n/* End Десктоп-версия*/    \n\n\n/*Мобильная версия*/\n.realties-mob-wrap.container[data-v-cd44f02e] {\n        border-top: 1px solid #CCCCCC;\n}\n.realties-mob-wrap .v-card.card-mini-right-text-mob[data-v-cd44f02e] {\n        background-color: transparent;\n        font-size: 16px;\n        margin-top: -5px;\n}\n.realties-mob-wrap .card-mini-right-text-mob ul[data-v-cd44f02e] {\n        list-style-type: none;\n        -webkit-padding-start: 0;\n                padding-inline-start: 0;\n}\n.realties-mob-wrap.bg-color-card-mini-mob[data-v-cd44f02e] {\n        /*        background: lavender;*/\n        margin-bottom: 0px;\n}\n.realties-mob-wrap .price-text-through-mob[data-v-cd44f02e] {\n        text-decoration: line-through;\n        -webkit-text-decoration-color: red;\n                text-decoration-color: red;\n        font-size: 18px;\n}\n.realties-mob-wrap .price-text-mob[data-v-cd44f02e] {\n        font-size: 18px;\n        color: green;\n}\n.realties-mob-wrap .btn-more-mob.v-btn.theme--light[data-v-cd44f02e] {\n        letter-spacing: 1px;  \n        text-transform: none;\n        color: rgb(255, 255, 255);\n        background-color: rgb(51, 153, 51);\n        margin-left: 0; \n        marfin-bottom: 0;\n}\n/*End Мобильная версия*/\n", ""]);
 
 
 
@@ -43227,66 +43175,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css&":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& ***!
@@ -43386,6 +43274,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentMain.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentMain.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -44958,428 +44876,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true&":
-/*!*********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-container",
-    { staticClass: "hidden-sm-and-down" },
-    [
-      _c(
-        "v-layout",
-        { staticClass: "mb-5", attrs: { row: "", wrap: "" } },
-        [
-          _c(
-            "v-flex",
-            { attrs: { xs4: "" } },
-            [
-              _c(
-                "v-card",
-                {
-                  staticClass: "text-xs-left",
-                  attrs: { dark: "", href: _vm.realtyPage, hover: "" }
-                },
-                [
-                  _c("v-img", {
-                    staticClass: "white--text",
-                    attrs: {
-                      src: _vm.realty.images[0].path,
-                      "aspect-ratio": "1.5"
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-flex",
-            { attrs: { xs4: "" } },
-            [
-              _c(
-                "v-card",
-                {
-                  staticClass: "pl-3 card-mini-right-text-desk",
-                  attrs: { flat: "" }
-                },
-                [
-                  _c(
-                    "a",
-                    { attrs: { href: _vm.realtyPage, id: "headline-wrap" } },
-                    [
-                      _c("h3", { staticClass: "headline" }, [
-                        _vm._v(_vm._s(_vm.realty.name))
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "pt-3 mb-4" }, [
-                    _vm._v(_vm._s(_vm.realty["subname_" + _vm.locale]))
-                  ]),
-                  _vm._v(" "),
-                  _c("ul", [
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.square")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.square) +
-                          " " +
-                          _vm._s(_vm.trans("text.realty.meters"))
-                      ),
-                      _c("sup", [_c("small", [_vm._v("2")])])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.dist_sea")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.dist_sea) +
-                          " " +
-                          _vm._s(_vm.trans("text.realty.meters")) +
-                          "\n                    "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.bedrooms")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.bedrooms) +
-                          "\n                    "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.capacity")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.capacity) +
-                          "\n                    "
-                      )
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-flex",
-            { attrs: { "d-flex": "", xs4: "" } },
-            [
-              _c(
-                "v-layout",
-                {
-                  attrs: {
-                    column: "",
-                    "align-end": "",
-                    "justify-space-between": "",
-                    "fill-height": ""
-                  }
-                },
-                [
-                  _c(
-                    "v-flex",
-                    [
-                      _c(
-                        "v-img",
-                        {
-                          attrs: {
-                            src: "/images/booking-logo.jpg",
-                            height: "50",
-                            width: "50"
-                          }
-                        },
-                        [
-                          _c("span", { staticClass: "booking-mark" }, [
-                            _vm._v(_vm._s(_vm.bookingMark))
-                          ])
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-flex",
-                    { attrs: { "d-flex": "" } },
-                    [
-                      _c(
-                        "v-layout",
-                        {
-                          attrs: {
-                            column: "",
-                            "align-end": "",
-                            "justify-space-between": "",
-                            "fill-height": ""
-                          }
-                        },
-                        [
-                          _c(
-                            "span",
-                            { staticClass: "price-text-through-desk" },
-                            [
-                              _vm._v(
-                                _vm._s(_vm.trans("text.from")) +
-                                  " € " +
-                                  _vm._s(_vm.realty.price_line_through)
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "price-text-desk" }, [
-                            _vm._v("€ " + _vm._s(_vm.realty.price))
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "v-btn",
-                            {
-                              staticClass: "btn-more-desk",
-                              attrs: { large: "", href: _vm.realtyPage }
-                            },
-                            [
-                              _vm._v(
-                                _vm._s(_vm.trans("text.btn_more")) +
-                                  "\n                        "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("hr", { staticClass: "grey lighten-5 mt-4" })
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true&":
-/*!********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true& ***!
-  \********************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-container",
-    { staticClass: "hidden-md-and-up bg-color-card-mini-mob" },
-    [
-      _c(
-        "v-layout",
-        { attrs: { row: "", wrap: "" } },
-        [
-          _c(
-            "v-flex",
-            { attrs: { xs6: "" } },
-            [
-              _c(
-                "v-card",
-                {
-                  staticClass: "text-xs-left",
-                  attrs: { dark: "", href: _vm.realtyPage, hover: "" }
-                },
-                [
-                  _c("v-img", {
-                    staticClass: "white--text",
-                    attrs: {
-                      src: _vm.realty.images[0].path,
-                      "aspect-ratio": "1.5"
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-flex",
-            { attrs: { xs6: "" } },
-            [
-              _c(
-                "v-card",
-                {
-                  staticClass: "pl-3 card-mini-right-text-mob",
-                  attrs: { flat: "" }
-                },
-                [
-                  _c(
-                    "a",
-                    { attrs: { href: _vm.realtyPage, id: "headline-wrap" } },
-                    [_c("h4", [_vm._v(_vm._s(_vm.realty.name))])]
-                  ),
-                  _vm._v(" "),
-                  _c("ul", [
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.square")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.square) +
-                          " " +
-                          _vm._s(_vm.trans("text.realty.meters"))
-                      ),
-                      _c("sup", [_c("small", [_vm._v("2")])])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.dist_sea")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.dist_sea) +
-                          " " +
-                          _vm._s(_vm.trans("text.realty.meters")) +
-                          "\n                    "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.bedrooms")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.bedrooms) +
-                          "\n                    "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("b", [
-                        _vm._v(_vm._s(_vm.trans("text.realty.capacity")) + ":")
-                      ]),
-                      _vm._v(
-                        " \n                        " +
-                          _vm._s(_vm.realty.capacity) +
-                          " " +
-                          _vm._s(_vm.trans("text.realty.persons")) +
-                          "\n                    "
-                      )
-                    ])
-                  ])
-                ]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-flex",
-            { staticClass: "pt-3", attrs: { "d-flex": "", "xs-12": "" } },
-            [
-              _c(
-                "v-layout",
-                { attrs: { row: "", wrap: "", "align-end": "" } },
-                [
-                  _c(
-                    "v-flex",
-                    { attrs: { xs6: "" } },
-                    [
-                      _c(
-                        "v-btn",
-                        {
-                          staticClass: "btn-more-mob",
-                          style: { marginBottom: 0 },
-                          attrs: { href: _vm.realtyPage }
-                        },
-                        [
-                          _vm._v(
-                            _vm._s(_vm.trans("text.btn_more")) +
-                              "\n                    "
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-flex", { attrs: { xs6: "", "text-xs-right": "" } }, [
-                    _c("span", { staticClass: "price-text-through-mob" }, [
-                      _vm._v(
-                        _vm._s(_vm.trans("text.from")) +
-                          " € " +
-                          _vm._s(_vm.realty.price_line_through)
-                      )
-                    ]),
-                    _vm._v("    \n                    "),
-                    _c("span", { staticClass: "price-text-mob" }, [
-                      _vm._v("€ " + _vm._s(_vm.realty.price))
-                    ])
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true& ***!
@@ -45698,19 +45194,457 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._l(JSON.parse(_vm.realties), function(realty) {
-        return _c("realty-card-mini-desk", {
-          key: realty.name,
-          attrs: { realty: realty, locale: _vm.locale }
-        })
+      _vm._l(_vm.realties, function(realty) {
+        return _c(
+          "v-container",
+          {
+            key: realty.name,
+            staticClass: "hidden-sm-and-down realties-desk-wrap"
+          },
+          [
+            _c(
+              "v-layout",
+              { staticClass: "mb-5", attrs: { row: "", wrap: "" } },
+              [
+                _c(
+                  "v-flex",
+                  { attrs: { xs4: "" } },
+                  [
+                    _c(
+                      "v-card",
+                      {
+                        staticClass: "text-xs-left",
+                        attrs: {
+                          dark: "",
+                          href: "realty/" + realty.id,
+                          hover: ""
+                        }
+                      },
+                      [
+                        _c("v-img", {
+                          staticClass: "white--text",
+                          attrs: {
+                            src: realty.images[0].path,
+                            "aspect-ratio": "1.5"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-flex",
+                  { attrs: { xs4: "" } },
+                  [
+                    _c(
+                      "v-card",
+                      {
+                        staticClass: "pl-3 card-mini-right-text-desk",
+                        attrs: { flat: "" }
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "realty/" + realty.id,
+                              id: "headline-wrap-desk"
+                            }
+                          },
+                          [
+                            _c("h3", { staticClass: "headline" }, [
+                              _vm._v(_vm._s(realty.name))
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("h4", { staticClass: "pt-3 mb-4" }, [
+                          _vm._v(_vm._s(realty["subname_" + _vm.locale]))
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.square")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.square) +
+                                " " +
+                                _vm._s(_vm.trans("text.realty.meters"))
+                            ),
+                            _c("sup", [_c("small", [_vm._v("2")])])
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.dist_sea")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.dist_sea) +
+                                " " +
+                                _vm._s(_vm.trans("text.realty.meters")) +
+                                "\n                        "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.bedrooms")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.bedrooms) +
+                                "\n                        "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.capacity")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.capacity) +
+                                "\n                        "
+                            )
+                          ])
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-flex",
+                  { attrs: { "d-flex": "", xs4: "" } },
+                  [
+                    _c(
+                      "v-layout",
+                      {
+                        attrs: {
+                          column: "",
+                          "align-end": "",
+                          "justify-space-between": "",
+                          "fill-height": ""
+                        }
+                      },
+                      [
+                        _c(
+                          "v-flex",
+                          [
+                            _c(
+                              "v-img",
+                              {
+                                attrs: {
+                                  src: "/images/booking-logo.jpg",
+                                  height: "50",
+                                  width: "50"
+                                }
+                              },
+                              [
+                                _c("span", { staticClass: "booking-mark" }, [
+                                  _vm._v(_vm._s(_vm.getBookingMark(realty)))
+                                ])
+                              ]
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-flex",
+                          { attrs: { "d-flex": "" } },
+                          [
+                            _c(
+                              "v-layout",
+                              {
+                                attrs: {
+                                  column: "",
+                                  "align-end": "",
+                                  "justify-space-between": "",
+                                  "fill-height": ""
+                                }
+                              },
+                              [
+                                _c(
+                                  "span",
+                                  { staticClass: "price-text-through-desk" },
+                                  [
+                                    _vm._v(
+                                      _vm._s(_vm.trans("text.from")) +
+                                        " € " +
+                                        _vm._s(realty.price_line_through)
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "price-text-desk" }, [
+                                  _vm._v("€ " + _vm._s(realty.price))
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "v-btn",
+                                  {
+                                    staticClass: "btn-more-desk",
+                                    attrs: {
+                                      large: "",
+                                      href: "realty/" + realty.id
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      _vm._s(_vm.trans("text.btn_more")) +
+                                        "\n                            "
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("hr", { staticClass: "grey lighten-5 mt-4" })
+          ],
+          1
+        )
       }),
       _vm._v(" "),
-      _vm._l(JSON.parse(_vm.realties), function(realty) {
-        return _c("realty-card-mini-mob", {
-          key: realty.id,
-          attrs: { realty: realty, locale: _vm.locale }
-        })
-      })
+      _vm._l(_vm.realties, function(realty) {
+        return _c(
+          "v-container",
+          {
+            key: realty.id,
+            staticClass:
+              "hidden-md-and-up bg-color-card-mini-mob realties-mob-wrap"
+          },
+          [
+            _c(
+              "v-layout",
+              { attrs: { row: "", wrap: "" } },
+              [
+                _c(
+                  "v-flex",
+                  { attrs: { xs6: "" } },
+                  [
+                    _c(
+                      "v-card",
+                      {
+                        staticClass: "text-xs-left",
+                        attrs: {
+                          dark: "",
+                          href: "realty/" + realty.id,
+                          hover: ""
+                        }
+                      },
+                      [
+                        _c("v-img", {
+                          staticClass: "white--text",
+                          attrs: {
+                            src: realty.images[0].path,
+                            "aspect-ratio": "1.5"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-flex",
+                  { attrs: { xs6: "" } },
+                  [
+                    _c(
+                      "v-card",
+                      {
+                        staticClass: "pl-3 card-mini-right-text-mob",
+                        attrs: { flat: "" }
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "realty/" + realty.id,
+                              id: "headline-wrap-mob"
+                            }
+                          },
+                          [_c("h4", [_vm._v(_vm._s(realty.name))])]
+                        ),
+                        _vm._v(" "),
+                        _c("ul", [
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.square")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.square) +
+                                " " +
+                                _vm._s(_vm.trans("text.realty.meters"))
+                            ),
+                            _c("sup", [_c("small", [_vm._v("2")])])
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.dist_sea")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.dist_sea) +
+                                " " +
+                                _vm._s(_vm.trans("text.realty.meters")) +
+                                "\n                        "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.bedrooms")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.bedrooms) +
+                                "\n                        "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", [
+                            _c("b", [
+                              _vm._v(
+                                _vm._s(_vm.trans("text.realty.capacity")) + ":"
+                              )
+                            ]),
+                            _vm._v(
+                              " \n                            " +
+                                _vm._s(realty.capacity) +
+                                " " +
+                                _vm._s(_vm.trans("text.realty.persons")) +
+                                "\n                        "
+                            )
+                          ])
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-flex",
+                  { staticClass: "pt-1", attrs: { "d-flex": "", "xs-12": "" } },
+                  [
+                    _c(
+                      "v-layout",
+                      { attrs: { row: "", wrap: "", "align-end": "" } },
+                      [
+                        _c(
+                          "v-flex",
+                          { attrs: { xs6: "" } },
+                          [
+                            _c(
+                              "v-btn",
+                              {
+                                staticClass: "btn-more-mob",
+                                style: { marginBottom: 0 },
+                                attrs: { href: "realty/" + realty.id }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.trans("text.btn_more")) +
+                                    "\n                        "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-flex",
+                          { attrs: { xs6: "", "text-xs-right": "" } },
+                          [
+                            _c(
+                              "span",
+                              { staticClass: "price-text-through-mob" },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.trans("text.from")) +
+                                    " € " +
+                                    _vm._s(realty.price_line_through)
+                                )
+                              ]
+                            ),
+                            _vm._v("    \n                        "),
+                            _c("span", { staticClass: "price-text-mob" }, [
+                              _vm._v("€ " + _vm._s(realty.price))
+                            ])
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      }),
+      _vm._v(" "),
+      _c(
+        "v-container",
+        [
+          _c("v-pagination", {
+            style: { marginLeft: "-10px" },
+            attrs: { length: Math.ceil(_vm.total / _vm.perPage) },
+            model: {
+              value: _vm.page,
+              callback: function($$v) {
+                _vm.page = $$v
+              },
+              expression: "page"
+            }
+          })
+        ],
+        1
+      )
     ],
     2
   )
@@ -87369,180 +87303,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/RealtyCardMiniDesk.vue":
-/*!********************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniDesk.vue ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _RealtyCardMiniDesk_vue_vue_type_template_id_69a7032e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true& */ "./resources/js/components/RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true&");
-/* harmony import */ var _RealtyCardMiniDesk_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtyCardMiniDesk.vue?vue&type=script&lang=js& */ "./resources/js/components/RealtyCardMiniDesk.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _RealtyCardMiniDesk_vue_vue_type_style_index_0_id_69a7032e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css& */ "./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _RealtyCardMiniDesk_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _RealtyCardMiniDesk_vue_vue_type_template_id_69a7032e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _RealtyCardMiniDesk_vue_vue_type_template_id_69a7032e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "69a7032e",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/RealtyCardMiniDesk.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/RealtyCardMiniDesk.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniDesk.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniDesk.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css& ***!
-  \*****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_style_index_0_id_69a7032e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=style&index=0&id=69a7032e&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_style_index_0_id_69a7032e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_style_index_0_id_69a7032e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_style_index_0_id_69a7032e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_style_index_0_id_69a7032e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_style_index_0_id_69a7032e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "./resources/js/components/RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true&":
-/*!***************************************************************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true& ***!
-  \***************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_template_id_69a7032e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniDesk.vue?vue&type=template&id=69a7032e&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_template_id_69a7032e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniDesk_vue_vue_type_template_id_69a7032e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/RealtyCardMiniMob.vue":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniMob.vue ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _RealtyCardMiniMob_vue_vue_type_template_id_31974f7b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true& */ "./resources/js/components/RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true&");
-/* harmony import */ var _RealtyCardMiniMob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RealtyCardMiniMob.vue?vue&type=script&lang=js& */ "./resources/js/components/RealtyCardMiniMob.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _RealtyCardMiniMob_vue_vue_type_style_index_0_id_31974f7b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css& */ "./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _RealtyCardMiniMob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _RealtyCardMiniMob_vue_vue_type_template_id_31974f7b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _RealtyCardMiniMob_vue_vue_type_template_id_31974f7b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "31974f7b",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/RealtyCardMiniMob.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/RealtyCardMiniMob.vue?vue&type=script&lang=js&":
-/*!********************************************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniMob.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniMob.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css&":
-/*!****************************************************************************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css& ***!
-  \****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_style_index_0_id_31974f7b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=style&index=0&id=31974f7b&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_style_index_0_id_31974f7b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_style_index_0_id_31974f7b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_style_index_0_id_31974f7b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_style_index_0_id_31974f7b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_style_index_0_id_31974f7b_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "./resources/js/components/RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/components/RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true& ***!
-  \**************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_template_id_31974f7b_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RealtyCardMiniMob.vue?vue&type=template&id=31974f7b&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_template_id_31974f7b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RealtyCardMiniMob_vue_vue_type_template_id_31974f7b_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/components/Toolbar.vue":
 /*!*********************************************!*\
   !*** ./resources/js/components/Toolbar.vue ***!
@@ -87902,7 +87662,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ContentRealties_vue_vue_type_template_id_cd44f02e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ContentRealties.vue?vue&type=template&id=cd44f02e&scoped=true& */ "./resources/js/components/content/ContentRealties.vue?vue&type=template&id=cd44f02e&scoped=true&");
 /* harmony import */ var _ContentRealties_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ContentRealties.vue?vue&type=script&lang=js& */ "./resources/js/components/content/ContentRealties.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _ContentRealties_vue_vue_type_style_index_0_id_cd44f02e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css& */ "./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -87910,7 +87672,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _ContentRealties_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ContentRealties_vue_vue_type_template_id_cd44f02e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ContentRealties_vue_vue_type_template_id_cd44f02e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -87939,6 +87701,22 @@ component.options.__file = "resources/js/components/content/ContentRealties.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentRealties.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentRealties.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_style_index_0_id_cd44f02e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader/dist/cjs.js??ref--7-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/content/ContentRealties.vue?vue&type=style&index=0&id=cd44f02e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_style_index_0_id_cd44f02e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_style_index_0_id_cd44f02e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_style_index_0_id_cd44f02e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_style_index_0_id_cd44f02e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ContentRealties_vue_vue_type_style_index_0_id_cd44f02e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

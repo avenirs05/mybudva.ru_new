@@ -35,6 +35,8 @@ class ImagesTableSeeder extends Seeder
 		]);
 		
 		
+		
+		
 		Image::create(
 		[
 			'realty_id' => 2,
@@ -55,6 +57,9 @@ class ImagesTableSeeder extends Seeder
 			'type' => 'secondary',
 			'path' => '/images/upload/realties/Begonia/03.jpg',
 		]);
+		
+		
+		
 		
 		Image::create(
 		[
@@ -77,6 +82,9 @@ class ImagesTableSeeder extends Seeder
 			'path' => '/images/upload/realties/Heart_Of_Budva/03.jpg',
 		]);
 		
+		
+		
+		
 		Image::create(
 		[
 			'realty_id' => 4,
@@ -96,6 +104,138 @@ class ImagesTableSeeder extends Seeder
 			'realty_id' => 4,
 			'type' => 'secondary',
 			'path' => '/images/upload/realties/Astra_I/03.jpg',
+		]);
+		
+		
+		Image::create(
+				[
+					'realty_id' => 5,
+					'type' => 'primary',
+					'path' => '/images/upload/realties/Astra_I/01.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 5,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/02.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 5,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/03.jpg',
+		]);
+		
+		
+		Image::create(
+				[
+					'realty_id' => 6,
+					'type' => 'primary',
+					'path' => '/images/upload/realties/Astra_I/01.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 6,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/02.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 6,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/03.jpg',
+		]);
+		
+		
+		Image::create(
+				[
+					'realty_id' => 7,
+					'type' => 'primary',
+					'path' => '/images/upload/realties/Astra_I/01.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 7,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/02.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 7,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/03.jpg',
+		]);
+		
+		
+		Image::create(
+		[
+					'realty_id' => 8,
+					'type' => 'primary',
+					'path' => '/images/upload/realties/Astra_I/01.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 8,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/02.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 8,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/03.jpg',
+		]);
+		
+		
+		Image::create(
+				[
+					'realty_id' => 9,
+					'type' => 'primary',
+					'path' => '/images/upload/realties/Astra_I/01.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 9,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/02.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 9,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/03.jpg',
+		]);
+		
+		
+		Image::create(
+				[
+					'realty_id' => 10,
+					'type' => 'primary',
+					'path' => '/images/upload/realties/Astra_I/01.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 10,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/02.jpg',
+		]);
+
+		Image::create(
+				[
+					'realty_id' => 10,
+					'type' => 'secondary',
+					'path' => '/images/upload/realties/Astra_I/03.jpg',
 		]);
 	}
 }

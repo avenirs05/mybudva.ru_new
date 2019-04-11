@@ -58,4 +58,4 @@ Route::get('/contact', 'ContactController');
 
 Route::get('/realty/{id}', 'RealtyController')->name('realtyPage');
 
-
+Route::get('/realties-data', 'RealtiesDataController');

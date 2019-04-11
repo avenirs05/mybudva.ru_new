@@ -11,7 +11,7 @@
 		
 		<content-realties 
 			locale="{{ app()->getLocale() }}"
-			realties="{{ $realties }}"
+			realties-json="{{ $realties }}"
 		></content-realties>
 		
 		<footer-component></footer-component>
