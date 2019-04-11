@@ -22,23 +22,10 @@ class RealtiesDataController extends Controller
 		$realties = Realty::with(array('images' => function($query) {
 						$query->where('type', 'primary');}))
 			->where('type', $request->type_of_realty)
-			->paginate($request->per_page, ['*'], 'page', $request->page)->toJson();			
-		
+			->paginate($request->per_page, ['*'], 'page', $request->page)->toJson();
 						
-		//dd(count($realties));				
+		
 		return $realties;
-	}
-	
-	
-	protected static function realtyType(Request $request) {
-		switch ($request->path()) {
-			case 'villas':
-				return 'villa';
-				break;
-			case 'apartments':
-				return 'apartment';
-				break;
-		}
 	}
 
 }

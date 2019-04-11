@@ -569,7 +569,8 @@ class ContentsTableSeeder extends Seeder
 						</v-layout>    
 					</v-container>
 				',
-					'contact_page' => '
+				
+				'contact_page' => '
 					<v-layout class="mt-2"> 
 						<v-flex class="contacts-wrapper mt-4">
 							<p><b>en_Адрес:</b> Budva 85310</p>

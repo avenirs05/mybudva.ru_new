@@ -12,6 +12,7 @@ class RealtiesController extends Controller
 {
     public function __invoke(Request $request) 
 	{
+		$per_page = 2;
 		$locale = app()->getLocale();
 		$content = Content::select('phone_main')->where('lang', $locale)->get()->toArray()[0];
 		
@@ -24,7 +25,7 @@ class RealtiesController extends Controller
 							$query->where('type', 'primary');
 						}))
 						->where('type', $realty_type)						
-						->paginate(2);	
+						->paginate($per_page);	
 		
 		$data = [
 			'title' => $title,

@@ -9,7 +9,7 @@
 		></toolbar>
 		<content-feedbacks
 			locale="{{ app()->getLocale() }}"
-			feedbacks="{{ $feedbacks }}"
+			feedbacks-json="{{ $feedbacks }}"
 		></content-feedbacks>
 		<footer-component></footer-component>
 	</v-app>
